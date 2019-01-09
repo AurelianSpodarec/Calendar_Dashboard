@@ -1,0 +1,89 @@
+// ==========================================================================
+// #Main Sidebar
+// ==========================================================================
+
+.main-sidebar {
+    background: linear-gradient(180deg,#fb404b 0,#bb0502);
+    background-size: 150% 150%;
+    transition: all linear .25s;
+    @include absolute(top 0 bottom 0 left 0);
+
+    // @include media-breakpoint-up(lg) {
+        margin-right: -264px;
+        width: 264px;
+        min-height: 100vh;
+    // }
+
+    &:before,
+    &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: .33;
+        background: #000;
+    }
+
+    &[data-color=red]:after {
+        background: linear-gradient(180deg,#fb404b 0,#bb0502);
+        background-size: 150% 150%;
+    }
+
+    
+    &__background {
+        @include absolute(top 0 right 0 bottom 0 left 0);
+        background-size: cover;
+        background-position: 50%;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    &__wrapper {
+        z-index: 5;
+        position: relative;
+ 
+        height: calc(100vh - 75px);
+        overflow: auto;
+        width: 260px;
+        z-index: 4;
+        padding-bottom: 30px;
+
+        &::-webkit-scrollbar-track
+            {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                border-radius: 10px;
+                background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar
+            {
+                width: 12px;
+                background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                background-color: #555;
+            }
+    }
+
+    &__logo-brand {
+        height: 64px;
+        padding: 10px 30px;
+        border-bottom: 1px solid hsla(0,0%,100%,.2);
+        position: relative;
+        z-index: 4;
+
+        img {
+            height: 100%;
+        }
+    }
+}

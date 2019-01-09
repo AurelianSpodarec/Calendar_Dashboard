@@ -1,0 +1,15 @@
+// ==========================================================================
+// #Main Footer
+// ==========================================================================
+
+.main-footer {
+    background-color: #fff;
+    text-align: center;
+    color: #FAFBFB;
+    padding: 7px 0;
+    font-size: 12px;
+
+    //@include media-breakpoint-up(lg) {
+        @include absolute(right 0 bottom 0 left 0);
+    //}
+}
