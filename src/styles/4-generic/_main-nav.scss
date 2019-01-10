@@ -1,0 +1,51 @@
+// ==========================================================================
+// #Main Nav
+// ==========================================================================
+
+
+.main-nav {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    &__item {
+        position: relative;
+        display: block;
+    }
+
+    &__link {
+        color: #fff;
+        opacity: 1;
+        background: hsla(0,0%,100%,.23);
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 5px 15px 0;
+        border-radius: 4px;
+        position: relative;
+        display: block;
+    }
+
+    &__icon {
+
+    }
+
+    &__text {
+        margin: 0;
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        white-space: nowrap;
+        position: relative;
+        color: #fff;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        display: block;
+        height: auto;
+        opacity: 1;
+    }
+}

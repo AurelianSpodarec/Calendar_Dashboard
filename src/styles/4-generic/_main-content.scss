@@ -1,0 +1,18 @@
+.main-content {
+    position: relative;
+    background-color: grey;
+    transition: all linear .25s;
+    overflow: hidden;
+
+    // @include media-breakpoint-up(lg) {
+        flex: 1;
+        margin-left: 264px;
+
+        &--is-active {
+            transition: all linear .25s;
+            max-width: 100%;
+            width: 100%;
+            flex: 1;
+        }
+    // }
+}

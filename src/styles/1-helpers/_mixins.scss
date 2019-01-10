@@ -4,11 +4,27 @@
 //
 //  Table of Content
 //  
+//  - Media Query
 //  - Position Dynamic
 //
 //
 //
 
+// #Mixins: Media Query
+// ==========================================================================
+
+    //Mixin: Media Query
+    @mixin media-query($name) {
+
+        @if not map-has-key($breakpoints, $name) {
+            @warn "Warning: `#{$name}` is not a valid breakpoint name.";
+        } @else {
+            @media (min-width: map-get($breakpoints, $name)) {
+                @content;
+                }
+            }
+    
+      }
 
 // #Mixins: Position Dynamic
 // ==========================================================================

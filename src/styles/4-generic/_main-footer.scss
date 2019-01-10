@@ -8,8 +8,9 @@
     color: #FAFBFB;
     padding: 7px 0;
     font-size: 12px;
-
+    color: red;
     //@include media-breakpoint-up(lg) {
         @include absolute(right 0 bottom 0 left 0);
+        border-top: 1px solid #e7e7e7;
     //}
 }

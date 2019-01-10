@@ -17,15 +17,15 @@
     <div class="main-wrapper">
         
 
-        <aside class="main-sidebar" data-color="red" style="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);">
+        <aside class="main-sidebar" data-color="red" data-image="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);">
         <div class="main-sidebar__inner">
 
             <div class="main-sidebar__background" style="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);"></div>
 
-            <div class="main-sidebar__header">
+            <!-- <div class="main-sidebar__header">
             
 
-            </div>
+            </div> -->
 
             <div class="main-sidebar__logo-brand">
                 <img src="public/img/brand/github-logo-black.png" alt="">
@@ -33,17 +33,21 @@
             </div>
 
             <div class="main-sidebar__wrapper">
-            <nav class="main-nav">
-            <ul class="main-nav__list">
+            <ul class="main-nav">
                 <li class="main-nav__item">
-                    <i>icon</i>
-                    <a class="main-nav__link" href="src/login.html">Login</a>
+                <a class="main-nav__link" href="src/login.html">
+                    <i class="main-nav__icon">icon</i>
+                    <span class="main-nav__text">Login</span>
+                </a>
                 </li>
 
                 <li class="main-nav__item">
                     <a class="main-nav__link" href="src/dashboard.html">Dashboard</a>
                 </li>
 
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="">Notifications</a>
+                </li>
                 <li class="main-nav__item">
                     <a class="main-nav__link" href="">Notifications</a>
                 </li>
@@ -61,25 +65,37 @@
                 </li>
 
             </ul>
-            </nav>
-            </div><!-- /main-sidebar__wrapper -->
+            </div><!-- /main-nav__wrapper -->
 
         </div>            
         </aside>
 
-        <main class="main-container">
+
+        <main class="main-panel">
+            <header class="main-header">
+                header
+            </header>
+            <div class="main-container">
+                sd
+            </div>
+            <footer class="main-footer">
+                <p>GitHub Footer</p>
+            </footer>
+        </main>
+
+        <!-- <main class="main-content">
             <header class="main-header">
                 header
             </header>
 
-            <section class="main-section">
+            <section class="main-container">
                 main view
             </section>
 
             <footer class="main-footer">
                 <p>GitHub Footer</p>
             </footer>
-        </main>
+        </main> -->
 
 
     </div><!-- /main-wrapper-->

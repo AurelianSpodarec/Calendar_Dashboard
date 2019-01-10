@@ -3,15 +3,16 @@
 // ==========================================================================
 
 .main-sidebar {
-    background: linear-gradient(180deg,#fb404b 0,#bb0502);
-    background-size: 150% 150%;
-    transition: all linear .25s;
-    @include absolute(top 0 bottom 0 left 0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
 
     // @include media-breakpoint-up(lg) {
-        margin-right: -264px;
-        width: 264px;
-        min-height: 100vh;
+        // margin-right: -264px;
+        // width: 264px;
+        // min-height: 100vh;
     // }
 
     &:before,
@@ -33,6 +34,10 @@
         background-size: 150% 150%;
     }
 
+    &[data-image]:after {
+        opacity: .77;
+    }
+
     
     &__background {
         @include absolute(top 0 right 0 bottom 0 left 0);
@@ -45,9 +50,7 @@
     }
 
     &__wrapper {
-        z-index: 5;
         position: relative;
- 
         height: calc(100vh - 75px);
         overflow: auto;
         width: 260px;
@@ -81,9 +84,11 @@
         border-bottom: 1px solid hsla(0,0%,100%,.2);
         position: relative;
         z-index: 4;
-
+ 
         img {
             height: 100%;
         }
     }
+
+ 
 }
