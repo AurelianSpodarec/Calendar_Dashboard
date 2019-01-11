@@ -19,17 +19,30 @@
     &__link {
         color: #fff;
         opacity: 1;
-        background: hsla(0,0%,100%,.23);
         padding-left: 10px;
         padding-right: 10px;
         margin: 5px 15px 0;
         border-radius: 4px;
         position: relative;
         display: block;
+        transition: background .15s ease-in;
+        padding: 10px 15px;
+        &:hover {
+            background: hsla(0,0%,100%,.23);
+        }
+
+        &--active {
+            background: hsla(0,0%,100%,.23);
+        }
     }
 
     &__icon {
-
+        font-size: 28px;
+        float: left;
+        margin-right: 15px;
+        line-height: 30px;
+        width: 30px;
+        text-align: center;
     }
 
     &__text {
@@ -41,9 +54,6 @@
         white-space: nowrap;
         position: relative;
         color: #fff;
-        -webkit-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        transform: translateZ(0);
         display: block;
         height: auto;
         opacity: 1;

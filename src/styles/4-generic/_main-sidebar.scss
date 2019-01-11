@@ -34,6 +34,12 @@
         background-size: 150% 150%;
     }
 
+    &[data-color=black]:after {
+        background: #292929;
+        background: linear-gradient(180deg,#282828 0,#111);
+        background-size: 150% 150%;
+    }
+
     &[data-image]:after {
         opacity: .77;
     }
