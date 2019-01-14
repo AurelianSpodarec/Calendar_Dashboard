@@ -1,61 +1,88 @@
 // ==========================================================================
 // #Main Nav
 // ==========================================================================
-
+// nav-link-title
 
 .main-nav {
-    margin: 0;
+    margin: 20px 0 0;
     padding: 0;
-    margin-top: 20px;
-    padding-left: 0;
-    margin-bottom: 0;
     list-style: none;
+
+    &__heading {
+        text-transform: uppercase;
+        height: 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 48px;
+        font-weight: 600;
+        padding-left: 24px;
+        margin-top: 8px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
 
     &__item {
         position: relative;
         display: block;
+
+        &.open {
+            background: rgba(0,0,0,.12);
+        }
     }
 
     &__link {
-        color: #fff;
-        opacity: 1;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin: 5px 15px 0;
-        border-radius: 4px;
+        height: 40px;
+        padding: 0 12px 0 24px;
+        border-radius: 0 20px 20px 0;
+        margin-right: 16px;
+        text-decoration: none!important;
+        display: flex;
+        align-items: center;
         position: relative;
-        display: block;
-        transition: background .15s ease-in;
-        padding: 10px 15px;
+        overflow: hidden;
+        cursor: pointer;
+        
         &:hover {
             background: hsla(0,0%,100%,.23);
         }
 
         &--active {
-            background: hsla(0,0%,100%,.23);
+            background: #e91e63;
         }
     }
 
     &__icon {
-        font-size: 28px;
-        float: left;
-        margin-right: 15px;
-        line-height: 30px;
-        width: 30px;
-        text-align: center;
+        margin-right: 16px;
+        color: white;
     }
 
     &__text {
-        margin: 0;
-        line-height: 30px;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
+        flex: 1 1 auto;
         white-space: nowrap;
-        position: relative;
-        color: #fff;
-        display: block;
-        height: auto;
-        opacity: 1;
+        color: white;
     }
+
+    &__icon-arrow {
+        color: white;
+    }
+
+    &__sub-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        & li {
+            padding-left: 56px;
+        }
+
+        & a {
+            color: white;
+            height: 40px;
+    padding: 0 12px 0 24px;
+    border-radius: 0 20px 20px 0;
+    margin-right: 16px;
+        }
+    }
+
 }

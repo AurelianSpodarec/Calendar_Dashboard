@@ -18,10 +18,10 @@
         
         <div class="settings-widget"><i class="fas fa-cog"></i></div>
 
-        <aside class="main-sidebar" data-color="black" data-image="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);">
+        <aside class="main-sidebar" data-color="charade" data-image="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);">
         <div class="main-sidebar__inner">
 
-            <div class="main-sidebar__background" style="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);"></div>
+            <!-- <div class="main-sidebar__background" style="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);"></div> -->
 
             <!-- <div class="main-sidebar__header">
             
@@ -29,38 +29,107 @@
             </div> -->
 
             <div class="main-sidebar__logo-brand">
-                <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com">
-                    <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
-                </a>
-                <span>GitHub</span>
+                <div class="main-sidebar__logo">
+                    <i class="fas fa-dice-d20"></i>
+                    <span class="main-sidebar__logo-text">Hobo</span>
+                </div>
+
+                <button class="main-sidebar__toggle-sidebar"><i class="fas fa-bars"></i></button>
             </div>
 
             <div class="main-sidebar__wrapper">
             <ul class="main-nav">
+                <li class="main-nav__heading">
+                    <span class="">Applications</span>
+                </li>
                 <li class="main-nav__item">
                 <a href="src/dashboard.html" class="main-nav__link main-nav__link--active">
-                    <i class="main-nav__icon fas fa-columns"></i>
+                    <i class="main-nav__icon fas fa-rocket"></i>
                     <span class="main-nav__text">Dashboard</span>
                 </a>
                 </li>
-                <li class="main-nav__item"> 
+                <li class="main-nav__item open">
+                <a class="main-nav__link" href="">
+                    <i class="main-nav__icon fas fa-cogs"></i>
+                    <span class="main-nav__text">GitHub</span>
+                    <i class="main-nav__icon-arrow fas fa-angle-down"></i>
+                </a>
+                <ul class="main-nav__sub-list">
+                    <li><a class="active" href="">My Profile</a></li>
+                    <li><a href="">Search User</a></li>
+                </ul>
+                </li>
+                <!-- <li class="main-nav__item"> 
                 <a class="main-nav__link" href="">
                     <i class="main-nav__icon fas fa-user-alt"></i>
                     <span class="main-nav__text">Profile</span>
                 </a>
                 </li>
                 <li class="main-nav__item">
+                <a href="src/dashboard.html" class="main-nav__link main-nav__link--active">
+                    <i class="main-nav__icon fas fa-rocket"></i>
+                    <span class="main-nav__text">Calendar</span>
+                </a>
+                </li>
+                <li class="main-nav__item"> 
                 <a class="main-nav__link" href="">
                     <i class="main-nav__icon fas fa-user-alt"></i>
-                    <span class="main-nav__text">Search User</span>
+                    <span class="main-nav__text">Chat</span>
                 </a>
+                </li>
+                <li class="main-nav__item"> 
+                <a class="main-nav__link" href="">
+                    <i class="main-nav__icon fas fa-user-alt"></i>
+                    <span class="main-nav__text">Friends</span>
+                </a>
+                </li>
+                <li class="main-nav__item"> 
+                <a class="main-nav__link" href="">
+                    <i class="main-nav__icon fas fa-user-alt"></i>
+                    <span class="main-nav__text">Users</span>
+                </a>
+                </li>
+                <li class="main-nav__item">
+                    <span class="main-nav__heading">Social Media</span>
+                </li>
+                <li class="main-nav__item">
+                <a class="main-nav__link" href="">
+                    <i class="main-nav__icon fas fa-cogs"></i>
+                    <span class="main-nav__text">GitHub</span>
+                </a>
+                <ul>
+                    <li><a href="">My Profile</a></li>
+                    <li><a href="">Search User</a></li>
+                </ul>
+                </li>
+                <li class="main-nav__item">
+                    <span class="main-nav__heading">Develop</span>
+                </li>
+                <li class="main-nav__item">
+                <a class="main-nav__link" href="">
+                    <i class="main-nav__icon fas fa-cogs"></i>
+                    <span class="main-nav__text">UI Elements</span>
+                </a>
+                <ul class="main-nav__sub-item">
+                    <li><a href="">Buttons</a></li>
+                    <li><a href="">Typography</a></li>
+                    <li><a href="">Forms</a></li>
+                </ul>
+                </li>
+                <li class="main-nav__item">
+                    <span class="main-nav__heading">Custom Function</span>
                 </li>
                 <li class="main-nav__item">
                 <a class="main-nav__link" href="">
                     <i class="main-nav__icon fas fa-cogs"></i>
                     <span class="main-nav__text">Settings</span>
+                    <i class="fas fa-angle-down"></i>
+                    <ul>
+                        <li><a href="">General Settings</a></li>
+                        <li><a href="">Theme Settings</a></li>
+                    </ul>
                 </a>
-                </li>
+                </li> -->
             </ul>
             </div><!-- /main-nav__wrapper -->
 
@@ -74,7 +143,8 @@
 
                 <div>
                     <img alt="@AurelianSpodarec" src="https://avatars0.githubusercontent.com/u/10155855?s=40&amp;v=4" height="20" width="20">
-
+                    Aurelian Spodarec
+                    <i class="fas fa-angle-down"></i>
                 </div>
             </header>
             <div class="main-container">
@@ -94,23 +164,19 @@
 
             </footer>
         </main>
-
-        <!-- <main class="main-content">
-            <header class="main-header">
-                header
-            </header>
-
-            <section class="main-container">
-                main view
-            </section>
-
-            <footer class="main-footer">
-                <p>GitHub Footer</p>
-            </footer>
-        </main> -->
-
-
     </div><!-- /main-wrapper-->
+
+
+    <aside>
+        <div></div>
+        <div>
+            <div class="contact-list-item">
+                <img class="contact-list-item__img" src="" alt="">
+                <div class="contact-list-item__unread-count">2</div>
+                <div class="contact-list-item__status-icon--online"></div>
+            </div>
+        </div>
+    </aside>
 
 </body>
 </html>
