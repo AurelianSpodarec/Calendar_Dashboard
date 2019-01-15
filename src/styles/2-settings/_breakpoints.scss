@@ -1,10 +1,72 @@
 // ==========================================================================
-// #Breakpoints
+// #Breakpoints - https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
+// ==========================================================================
+//
+//	Table of Context
+//
+//	- Media Query Settings
+//	- Media Query Up
+//	- Media Query Down
+//	- Media Query Between
+//
+//
+
+
+// #Breakpoints: Settings
 // ==========================================================================
 
 $breakpoints: (
-	small: 480px,
-	medium: 720px,
-  	large: 960px,
-	x-large: 1200px
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
 );
+
+
+// #Breakpoints: Up
+// ==========================================================================
+
+@mixin breakpoint-up($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+
+// #Breakpoints: Down
+// ==========================================================================
+@mixin breakpoint-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+
+// #Breakpoints: Between
+// ==========================================================================
+@mixin breakpoint-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  } @else {
+    @if (map-has-key($breakpoints, $lower) == false) {
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+    @if (map-has-key($breakpoints, $upper) == false) {
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}
