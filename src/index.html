@@ -38,18 +38,43 @@
             </div>
 
             <div class="main-sidebar__wrapper">
+
+            <ul class="nav-main">
+                <li class="nav-group-heading">
+                    <span>Applications</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="nav-link-icon fas fa-rocket"></i>
+                        <span class="nav-link-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-mother open">
+                    <a class="nav-link nav-link-mother" href="#">
+                        <i class="nav-link-icon fas fa-cogs"></i>
+                        <span class="nav-link-title">GitHub</span>
+                        <i class="nav-link-carrot fas fa-angle-down"></i>
+                    </a>
+                    <ul class="nav-sub-list">
+                        <li><a class="nav-link active" href=""><span class="nav-link-title">My Profile</span></a></li>
+                        <li><a class="nav-link" href=""><span class="nav-link-title">Search User</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+
+<!-- 
             <ul class="main-nav">
                 <li class="main-nav__heading">
                     <span class="">Applications</span>
                 </li>
                 <li class="main-nav__item">
-                <a href="src/dashboard.html" class="main-nav__link main-nav__link--active">
+                <a href="src/dashboard.html" class="nav-link nav-link--active">
                     <i class="main-nav__icon fas fa-rocket"></i>
                     <span class="main-nav__text">Dashboard</span>
                 </a>
                 </li>
                 <li class="main-nav__item open">
-                <a class="main-nav__link" href="">
+                <a class="nav-link" href="">
                     <i class="main-nav__icon fas fa-cogs"></i>
                     <span class="main-nav__text">GitHub</span>
                     <i class="main-nav__icon-arrow fas fa-angle-down"></i>
@@ -59,32 +84,32 @@
                     <li><a href="">Search User</a></li>
                 </ul>
                 </li>
-                <!-- <li class="main-nav__item"> 
-                <a class="main-nav__link" href="">
+                <li class="main-nav__item"> 
+                <a class="nav-link" href="">
                     <i class="main-nav__icon fas fa-user-alt"></i>
                     <span class="main-nav__text">Profile</span>
                 </a>
-                </li>
-                <li class="main-nav__item">
-                <a href="src/dashboard.html" class="main-nav__link main-nav__link--active">
+                </li> -->
+                <!-- <li class="main-nav__item">
+                <a href="src/dashboard.html" class="nav-link nav-link--active">
                     <i class="main-nav__icon fas fa-rocket"></i>
                     <span class="main-nav__text">Calendar</span>
                 </a>
                 </li>
                 <li class="main-nav__item"> 
-                <a class="main-nav__link" href="">
+                <a class="nav-link" href="">
                     <i class="main-nav__icon fas fa-user-alt"></i>
                     <span class="main-nav__text">Chat</span>
                 </a>
                 </li>
                 <li class="main-nav__item"> 
-                <a class="main-nav__link" href="">
+                <a class="nav-link" href="">
                     <i class="main-nav__icon fas fa-user-alt"></i>
                     <span class="main-nav__text">Friends</span>
                 </a>
                 </li>
                 <li class="main-nav__item"> 
-                <a class="main-nav__link" href="">
+                <a class="nav-link" href="">
                     <i class="main-nav__icon fas fa-user-alt"></i>
                     <span class="main-nav__text">Users</span>
                 </a>
@@ -93,7 +118,7 @@
                     <span class="main-nav__heading">Social Media</span>
                 </li>
                 <li class="main-nav__item">
-                <a class="main-nav__link" href="">
+                <a class="nav-link" href="">
                     <i class="main-nav__icon fas fa-cogs"></i>
                     <span class="main-nav__text">GitHub</span>
                 </a>
@@ -106,7 +131,7 @@
                     <span class="main-nav__heading">Develop</span>
                 </li>
                 <li class="main-nav__item">
-                <a class="main-nav__link" href="">
+                <a class="nav-link" href="">
                     <i class="main-nav__icon fas fa-cogs"></i>
                     <span class="main-nav__text">UI Elements</span>
                 </a>
@@ -120,7 +145,7 @@
                     <span class="main-nav__heading">Custom Function</span>
                 </li>
                 <li class="main-nav__item">
-                <a class="main-nav__link" href="">
+                <a class="nav-link" href="">
                     <i class="main-nav__icon fas fa-cogs"></i>
                     <span class="main-nav__text">Settings</span>
                     <i class="fas fa-angle-down"></i>
@@ -130,8 +155,8 @@
                     </ul>
                 </a>
                 </li> -->
-            </ul>
-            </div><!-- /main-nav__wrapper -->
+            <!-- </ul>
+            </div>/main-nav__wrapper -->
 
         </div>            
         </aside>
@@ -139,9 +164,11 @@
 
         <main class="main-panel">
             <header class="main-header">
-                <div><span>Profile</span></div>
+                <div class="">
+                    SAVINGS
+                </div>
 
-                <div>
+                <div class="">
                     <img alt="@AurelianSpodarec" src="https://avatars0.githubusercontent.com/u/10155855?s=40&amp;v=4" height="20" width="20">
                     Aurelian Spodarec
                     <i class="fas fa-angle-down"></i>
