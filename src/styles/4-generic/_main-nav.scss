@@ -68,7 +68,7 @@
 
 .nav-item-mother {
     &.open  {
-        background: rgba(0,0,0,.12);
+        background: rgba(33, 36, 45, 0.36);//rgba(0,0,0,.12);
     }
 }
 
@@ -86,7 +86,7 @@
     color: white;
 
     &:hover {
-        background-color: rgba(88, 88, 88, 0.1);
+        background-color: #272935;
     }    
 }
 
