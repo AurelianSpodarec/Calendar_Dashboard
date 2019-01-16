@@ -1,6 +1,6 @@
-export default class Sidebar {
+import SidebarController from '../../controller/SidebarController';
 
- 
+export default class Sidebar {
 
     displaySidebar() {
         const sidebar = `
@@ -17,7 +17,7 @@ export default class Sidebar {
                         <span class="main-sidebar__logo-text">Hobo</span>
                     </div>
 
-                    <button class="main-sidebar__toggle-sidebar"><i class="fas fa-bars"></i></button>
+                    <button data-toggle="main-view" onClick="toggleSidebar()" class="main-sidebar__toggle-sidebar"><i class="fas fa-bars"></i></button>
                 </div>
 
                 <div class="main-sidebar__wrapper">

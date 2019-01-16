@@ -8,9 +8,12 @@
     right: 0;
     left: 280px;
     height: 64px;
-    background-color: #303030;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-    display: flex;
+    
+    &__outer {
+        background-color: #303030;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        display: flex;
+    }
 
     &__left {
         flex-direction: row;
