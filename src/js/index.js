@@ -8,3 +8,8 @@ fontawesome.library.add(solid)
 fontawesome.library.add(brands)
 
 import '../styles/index.scss';
+import Layout from './views/Layout';
+
+
+const layout = new Layout;
+layout.displayLayout();
