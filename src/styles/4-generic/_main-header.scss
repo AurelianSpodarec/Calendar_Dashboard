@@ -8,6 +8,10 @@
     right: 0;
     left: 280px;
     height: 64px;
+    transition: all linear .25s;
+    &.is-toggle {
+        left: 64px;
+    }
     
     &__outer {
         background-color: #303030;

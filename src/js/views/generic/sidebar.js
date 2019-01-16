@@ -13,7 +13,7 @@ export default class Sidebar {
 
                 <div class="main-sidebar__logo-brand">
                     <div class="main-sidebar__logo">
-                        <i class="fas fa-fire"></i>
+                        <i class="main-sidebar__logo-icon fas fa-fire"></i>
                         <span class="main-sidebar__logo-text">Hobo</span>
                     </div>
 

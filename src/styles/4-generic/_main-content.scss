@@ -1,17 +1,20 @@
 .main-content {
     position: relative;
     background-color: grey;
-    transition: all linear .25s;
+    // transition-property: transform,width,min-width,max-width,-webkit-transform;
+    // transition-duration: 150ms;
+    // transition-timing-function: ease-in-out;
     overflow: hidden;
 
     // @include media-breakpoint-up(lg) {
         flex: 1;
         margin-left: 264px;
 
-        &--is-active {
-            transition: all linear .25s;
-            max-width: 100%;
-            width: 100%;
+        &.is-toggle {
+           
+            // max-width: 100%;
+            // width: 100%;
+            margin-left: 64px;
             flex: 1;
         }
     // }

@@ -10,11 +10,99 @@
     width: 280px;
     background-color: #2d323e!important;
     color: #fff!important;
-    // @include media-breakpoint-up(lg) {
-        // margin-right: -264px;
-        // width: 264px;
-        // min-height: 100vh;
-    // }
+    transition-property: transform,width,min-width,max-width,-webkit-transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    z-index: 10;
+    &.is-folded {
+        width: 64px;
+        
+        .nav-group-heading span {
+            display: none;
+        }
+
+        .nav-group-heading:before {
+            content: '';
+            display: block;
+            position: absolute;
+            min-width: 1.6rem;
+            border-top: 2px solid;
+            opacity: .2;
+        }
+
+        .nav-sub-list {
+            display: none;
+        }
+
+        .main-sidebar__wrapper {
+            overflow: hidden;
+        }
+
+
+        .main-sidebar__toggle-sidebar {
+            display: none;
+        }
+
+        .main-sidebar__logo-text {
+            display: none;
+        }
+
+        .nav-link-title {
+            opacity: 0;
+            transition: opacity .2s ease;
+        }
+
+        .nav-link {
+            border-radius: 20px;
+            margin: 0 12px;
+            padding: 0 12px;
+        }
+
+       
+
+        &:hover {
+            width: 280px;
+
+            .nav-group-heading span {
+                display: block
+            }
+    
+            .nav-group-heading:before {
+
+                display: none;
+            }
+
+            .nav-sub-list {
+                display: block;
+            }
+
+            .main-sidebar__wrapper {
+                overflow: auto;
+            }
+
+            .nav-link {
+                padding: 0 12px 0 24px;
+                border-radius: 0 20px 20px 0;
+                margin: 0 16px 0 0;
+            }
+            .nav-sub-list .nav-link {
+                padding-left: 56px;
+            }
+
+            .main-sidebar__toggle-sidebar { 
+                display: block;
+            }
+
+            .main-sidebar__logo-text {
+                display: block;
+            }
+
+            .nav-link-title {
+                opacity: 1;
+                transition: opacity .2s ease;
+            }
+        }
+    }
 
     &:before,
     &:after {
@@ -60,9 +148,17 @@
         display: block;
     }
 
+    &__logo-icon {
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
     &__toggle-sidebar {
         background: none;
         border: none;
+        transition-property: transform,width,min-width,max-width,-webkit-transform;
+        transition-duration: 150ms;
+        transition-timing-function: ease-in-out;
     }
 
     &__wrapper {
@@ -92,6 +188,16 @@
                 box-shadow: inset 0 0 0 12px rgba(0,0,0,.37);
                 border-radius: 12px;
             }
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo-text {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.1em;
     }
 
     &__logo-brand {

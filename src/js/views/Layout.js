@@ -11,10 +11,10 @@ export default class Layout {
     displayLayout() {
         this.layout.innerHTML = `
         <div class="main-wrapper">
-            <aside id="main-sidebar" class="main-sidebar"></aside>
+            <aside id="main-sidebar" class="main-sidebar is-folded"></aside>
 
-            <main class="main-panel">
-                <header id="main-header" class="main-header"></header>
+            <main id="main-panel" class="main-panel is-toggle">
+                <header id="main-header" class="main-header is-toggle"></header>
 
                 <section class="main-container">
                     sd<br><br><br><br>dsdsdsdds
