@@ -9,7 +9,11 @@ fontawesome.library.add(brands)
 
 import '../styles/index.scss';
 import Layout from './views/Layout';
+import Sidebar from './views/generic/Sidebar';
 
 
 const layout = new Layout;
 layout.displayLayout();
+
+const sidebar = new Sidebar;
+sidebar.displaySidebar();
