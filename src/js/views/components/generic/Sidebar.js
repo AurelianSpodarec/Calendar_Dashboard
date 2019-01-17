@@ -1,4 +1,4 @@
-import SidebarController from '../../controller/SidebarController';
+// import SidebarController from '../../controller/SidebarController';
 
 export default class Sidebar {
 
@@ -65,9 +65,9 @@ export default class Sidebar {
                         </a>
                         <div class="nav-sub-list-collapse">
                         <ul class="nav-sub-list">
-                            <li class="nav-item"><a class="nav-link active" href="#"><span class="nav-link-title">My Profile</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><span class="nav-link-title">Stats</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><span class="nav-link-title">Search User</span></a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#/github/profile"><span class="nav-link-title">My Profile</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#/github/stats"><span class="nav-link-title">Stats</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#/github/search-user"><span class="nav-link-title">Search User</span></a></li>
                         </ul>
                         </div>
                     </li>
@@ -78,8 +78,8 @@ export default class Sidebar {
                             <i class="nav-link-carrot fas fa-angle-down"></i>
                         </a>
                         <ul class="nav-sub-list">
-                            <li><a class="nav-link" href="#"><span class="nav-link-title">My Profile</span></a></li>
-                            <li><a class="nav-link" href="#"><span class="nav-link-title">Get tweets</span></a></li>
+                            <li><a class="nav-link" href="#/twitter/profile"><span class="nav-link-title">My Profile</span></a></li>
+                            <li><a class="nav-link" href="#/twitter/tweets"><span class="nav-link-title">Get tweets</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-group-heading">
