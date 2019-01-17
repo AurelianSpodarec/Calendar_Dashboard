@@ -2,6 +2,16 @@ import SidebarController from '../../controller/SidebarController';
 
 export default class Sidebar {
 
+    toggleSidebar() {
+        const sidebar = document.getElementById('main-sidebar');
+        const mainPanel = document.getElementById('main-panel');
+        const mainHeader = document.getElementById('main-header');
+    
+        sidebar.classList.toggle('is-folded');
+        mainPanel.classList.toggle('is-toggle');
+        mainHeader.classList.toggle('is-toggle');
+    }
+
     displaySidebar() {
         const sidebar = `
             <div class="main-sidebar__inner">
@@ -17,7 +27,7 @@ export default class Sidebar {
                         <span class="main-sidebar__logo-text">Hobo</span>
                     </div>
 
-                    <button data-toggle="main-view" onClick="toggleSidebar()" class="main-sidebar__toggle-sidebar"><i class="fas fa-bars"></i></button>
+                    <button data-toggle="main-view" class="main-sidebar__toggle-sidebar"><i class="fas fa-bars"></i></button>
                 </div>
 
                 <div class="main-sidebar__wrapper">
@@ -27,19 +37,19 @@ export default class Sidebar {
                         <span>Applications</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#/dashboard">
                             <i class="nav-link-icon fas fa-rocket"></i>
                             <span class="nav-link-title">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#/todo">
                             <i class="nav-link-icon far fa-calendar-check"></i>
                             <span class="nav-link-title">To-Do</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#/calendar">
                             <i class="nav-link-icon fas fa-calendar"></i>
                             <span class="nav-link-title">Calendar</span>
                         </a>
