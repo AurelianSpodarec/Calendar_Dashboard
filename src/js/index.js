@@ -68,11 +68,73 @@ function removeHash () {
 
 window.addEventListener("DOMContentLoaded", function() {
     // The value gets the file/folder name so it basically gets its content
-    let routes = {
-        '/dashboard': dashboardPage,
-        '/todo': todoPage,
-        '/calendar': calendarPage,
-    };
+    // let routes = {
+    //     '#/dashboard': dashboardPage,
+    //     '#/todo': todoPage,
+    //     '#/calendar': calendarPage,
+    // };
+ 
+
+    const routes = [
+        {
+            component: dashboardPage,
+            path: '#/dashboard',
+        },
+        {
+            component: todoPage,
+            path: '#/todo',
+        },
+        {
+            component: calendarPage,
+            path: '#/calendar',
+        }
+    ]
+
+
+// const getRoute = (location) => {
+//     // const route = routes.filter(obj => obj.path === location);
+//     routes.filter(obj => obj.path === location)
+//     // return route.length !== 0 ? route[0] : undefined;
+// return;
+//     // return route.length !== 0 ? obj.component : undefined;
+// }
+// const getRoute = location => routes.filter(obj => obj.path === location);
+
+const getRoute = location => {
+    let filteredRoutes = routes.filter(obj => obj.path === location);
+    // filderedRoute should exactly be 1 element long, if not, we do not have a match
+    return filteredRoutes ? filteredRoutes[0].component : myDefaultFallbackComponent;
+}
+
+console.log(getRoute("#/dashboard"));
+
+console.log(getRoute("#/dashboard"));
+    // Match the location with the object path
+    // console.log(routes)
+    // routes.path == location
+
+    // If 
+    // routes.map(function(obj) {
+    //     if(obj.path === location) return;
+    // })
+
+    
+
+    // routes.map(function(e) {
+    //     if (e.path === location)
+    //     return true;
+    // })
+
+        // routes.map(e => {
+        //     if (e.path === location) return;
+        // });
+
+    // let index = routes.findIndex(route => route.path === location);
+    // return index;
+
+
+// console.log(getRoute(window.location.hash))
+
 
     // Toggle Sidebar
     const toggleSidebarBtn = document.querySelector('.main-sidebar__toggle-sidebar');
@@ -85,10 +147,12 @@ window.addEventListener("DOMContentLoaded", function() {
 
         // try to render Router[pathName] inside that content div.  If its null u will load the 404.js page
         let mainView = document.querySelector('.main-container');
-        mainView.innerHTML = routes[window.location.pathname];
+        console.log(mainView.innerHTML = getRoute(window.location.hash));
+        console.log('Did you get the display?')
         
+        // removeHash(window.location.hash)
 
-        console.log(window.location.pathname)
+        // console.log(window.location)
 
         //  also need a browser history to be maintained
         
