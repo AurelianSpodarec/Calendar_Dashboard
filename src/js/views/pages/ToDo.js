@@ -1,8 +1,8 @@
-let GithubSearchUser = {
+let Todo = {
     render : async () => {
         let view =  /*html*/`
             <section class="section">
-                <h1> GithubSearchUser </h1>
+                <h1> Todo </h1>
             </section>
         `
         return view
@@ -10,4 +10,4 @@ let GithubSearchUser = {
 
 }
 
-export default GithubSearchUser;
+export default Todo;

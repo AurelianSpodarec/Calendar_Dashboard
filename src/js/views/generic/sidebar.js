@@ -47,33 +47,35 @@ export default class Sidebar {
                     <li class="nav-group-heading">
                         <span>Connected APIs</span>
                     </li>
-                    <li class="nav-item nav-item-mother open">
+                    <li class="nav-item nav-item-mother nav-has-dropdown">
                         <a class="nav-link nav-link-mother" href="#">
                             <i class="nav-link-icon fab fa-github"></i>
                             <span class="nav-link-title">GitHub</span>
                             <i class="nav-link-carrot fas fa-angle-down"></i>
                         </a>
+                        <div class="nav-sub-list-collapse">
                         <ul class="nav-sub-list">
-                            <li><a class="nav-link active" href=""><span class="nav-link-title">My Profile</span></a></li>
-                            <li><a class="nav-link" href=""><span class="nav-link-title">Stats</span></a></li>
-                            <li><a class="nav-link" href=""><span class="nav-link-title">Search User</span></a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#"><span class="nav-link-title">My Profile</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span class="nav-link-title">Stats</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span class="nav-link-title">Search User</span></a></li>
                         </ul>
+                        </div>
                     </li>
-                    <li class="nav-item nav-item-mother open">
+                    <li class="nav-item nav-item-mother nav-has-dropdown">
                         <a class="nav-link nav-link-mother" href="#">
                             <i class="nav-link-icon fab fa-twitter"></i>
                             <span class="nav-link-title">Twitter</span>
                             <i class="nav-link-carrot fas fa-angle-down"></i>
                         </a>
                         <ul class="nav-sub-list">
-                            <li><a class="nav-link" href=""><span class="nav-link-title">My Profile</span></a></li>
-                            <li><a class="nav-link" href=""><span class="nav-link-title">Get tweets</span></a></li>
+                            <li><a class="nav-link" href="#"><span class="nav-link-title">My Profile</span></a></li>
+                            <li><a class="nav-link" href="#"><span class="nav-link-title">Get tweets</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-group-heading">
                         <span>Develop</span>
                     </li>
-                    <li class="nav-item nav-item-mother open">
+                    <li class="nav-item nav-item-mother nav-has-dropdown">
                         <a class="nav-link nav-link-mother" href="#">
                             <i class="nav-link-icon fab fa-uikit"></i>
                             <span class="nav-link-title">UI Elements</span>
@@ -88,7 +90,7 @@ export default class Sidebar {
                     <li class="nav-group-heading">
                         <span>Custom Functions</span>
                     </li>
-                    <li class="nav-item nav-item-mother open">
+                    <li class="nav-item nav-item-mother">
                         <a class="nav-link nav-link-mother" href="#">
                             <i class="nav-link-icon fas fa-cogs"></i>
                             <span class="nav-link-title">Settings</span>

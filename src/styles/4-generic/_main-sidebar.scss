@@ -32,6 +32,7 @@
 
         .nav-sub-list {
             display: none;
+            height: 0px;
         }
 
         .main-sidebar__wrapper {
@@ -73,7 +74,9 @@
             }
 
             .nav-sub-list {
-                display: block;
+                display: none;
+                height: 0px;
+
             }
 
             .main-sidebar__wrapper {

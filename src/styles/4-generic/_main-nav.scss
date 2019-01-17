@@ -28,8 +28,6 @@
     list-style: none;
 }
 
-
-
 .nav-group-heading {
     text-transform: uppercase;
     height: 40px;
@@ -46,7 +44,6 @@
     font-weight: 600;
 }
 
-
 .nav-link-icon {
     margin-right: 16px;
     width: 16px;
@@ -56,21 +53,28 @@
     line-height: 16px;
 }
 
-
-.nav-carrot {
+.nav-link-carrot {
     font-size: 16px;
     width: 16px;
     height: 16px;
     min-width: 16px;
     min-height: 16px;
     line-height: 16px;
+    transition: .15s;
+    transform: rotate(90deg);
 }
 
 .nav-item-mother {
     &.open  {
         background: rgba(33, 36, 45, 0.36);//rgba(0,0,0,.12);
+
+        .nav-link-carrot {
+            transform: rotate(0deg);
+        }
     }
 }
+
+
 
 .nav-link {
     height: 40px;
@@ -103,6 +107,15 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+   
+}
+
+.nav-sub-list-collapse {
+    height: 0px; // get the ul height and add it here
+    overflow: hidden;
+    transition: linear .15s;
+
 }
 
 .active {
