@@ -19,33 +19,11 @@ export default class Router {
 
     }
 
-}
-
-// WHat the hell am I doing
-
-const views = [
-    {
-        path: '/',
-        name: "Dahsboard"
-    },
-    {
-        path: '/todo',
-        name: "To-Do"
-    },
-    {
-        path: '/calendar',
-        name: "Calendar"
-    },
-    {
-        path: '/github/my-profile',
-        name: "My Profile"
-    },
-    {
-        path: '/github/stats',
-        name: "Stats"
-    },
-    {
-        path: '/github/search-user',
-        name: "Search User"
+    async show(pageName) {
+        const page = this.routes[pageName];
+        await page.load();
+        this.el.innerHTML = '';
+        page.show(this.el);
     }
-]
+
+}
