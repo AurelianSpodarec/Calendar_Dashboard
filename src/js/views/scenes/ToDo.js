@@ -1,7 +1,7 @@
-let todoPage = `
+let ToDo = `
     <section class="section">
         <h1> Todo </h1>
     </section>
 `;
 
-export default todoPage;
+export default ToDo;

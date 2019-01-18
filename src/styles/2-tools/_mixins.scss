@@ -1,0 +1,137 @@
+// ==========================================================================
+// #Mixins
+// ==========================================================================
+//
+//  Table of Content
+//  
+//  - Position Dynamic
+//  - Z-index
+//	- Breakpoint Up
+//	- Breakpoint Down
+//	- Breakpoint Between
+//  - Font Weight
+//
+//
+
+
+// #Mixins: Position Dynamic
+// ==========================================================================
+
+@mixin position($position, $args: ()) {
+    $offsets: top right bottom left;
+    position: $position;
+
+    @each $offset in $offsets {
+
+        $index: index($args, $offset);
+
+        @if $index {
+
+            @if $index == length($args) {
+                #{$offset}: 0;
+            }
+
+            @else {
+                $next: nth($args, $index + 1);
+
+                @if is-valid-length($next) {
+                    #{$offset}: $next;
+                }
+
+                @else if index($offsets, $next) {
+                    #{$offset}: 0;
+                }
+
+                @else {
+                    @warn 'Invalid value `#{$next}` for offset `#{$offset}`.';
+                }
+            }
+        }
+    }
+}
+
+@mixin absolute($args: ()) {
+    @include position(absolute, $args);
+}
+
+@mixin fixed($args: ()) {
+    @include position(fixed, $args);
+}
+
+@mixin relative($args: ()) {
+    @include position(relative, $args);
+}
+
+
+
+// #Mixins: Z-index
+// ==========================================================================
+@function z-index($key) {
+    @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+    z-index: z-index($key);
+}
+
+
+
+  // #Breakpoints: Up
+// ==========================================================================
+
+@mixin breakpoint-up($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+        @content;
+    }
+    } @else {
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+
+// #Breakpoints: Down
+// ==========================================================================
+@mixin breakpoint-down($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+    } @else {
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+
+// #Breakpoints: Between
+// ==========================================================================
+@mixin breakpoint-between($lower, $upper) {
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+        $lower-breakpoint: map-get($breakpoints, $lower);
+        $upper-breakpoint: map-get($breakpoints, $upper);
+        @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+            @content;
+        }
+    } @else {
+        @if (map-has-key($breakpoints, $lower) == false) {
+            @warn 'Your lower breakpoint was invalid: #{$lower}.';
+        }
+        @if (map-has-key($breakpoints, $upper) == false) {
+            @warn 'Your upper breakpoint was invalid: #{$upper}.';
+        }
+    }
+}
+
+
+// #Mixins: Font Weight
+// ==========================================================================
+
+@function weight($key: 'normal') {
+	@return map-get($font-weight, $key);
+}
+
+@mixin font-weight($key) {
+	font-weight: weight($key);
+}

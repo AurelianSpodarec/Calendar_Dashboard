@@ -20,10 +20,7 @@ export default class Router {
     }
 
     async show(pageName) {
-        const page = this.routes[pageName];
-        await page.load();
-        this.el.innerHTML = '';
-        page.show(this.el);
+     
     }
 
 }

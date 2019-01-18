@@ -19,7 +19,7 @@ export default class Header {
             </div>
         </div>
         `;
-        var mainHeader = document.getElementById('main-header');
+        var mainHeader = document.querySelector('[data-js="main-header"]');
         mainHeader.innerHTML = header;
     }
 }

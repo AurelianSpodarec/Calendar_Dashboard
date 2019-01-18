@@ -1,7 +1,7 @@
-let error404Page = `
+let Error404 = `
     <section class="section">
         <h1> Error </h1>
     </section>
 `;
 
-export default error404Page;
+export default Error404;

@@ -3,9 +3,9 @@
 export default class Sidebar {
 
     toggleSidebar() {
-        const sidebar = document.getElementById('main-sidebar');
-        const mainPanel = document.getElementById('main-panel');
-        const mainHeader = document.getElementById('main-header');
+        const sidebar = document.querySelector('[data-js="main-sidebar"]');
+        const mainPanel = document.querySelector('[data-js="main-panel"]');
+        const mainHeader = document.querySelector('[data-js="main-header"]');
     
         sidebar.classList.toggle('is-folded');
         mainPanel.classList.toggle('is-toggle');
@@ -27,7 +27,7 @@ export default class Sidebar {
                         <span class="main-sidebar__logo-text">Hobo</span>
                     </div>
 
-                    <button data-toggle="main-view" class="main-sidebar__toggle-sidebar"><i class="fas fa-bars"></i></button>
+                    <button data-js="toggle-sidebar" class="main-sidebar__toggle-sidebar"><i class="fas fa-bars"></i></button>
                 </div>
 
                 <div class="main-sidebar__wrapper">
@@ -114,7 +114,7 @@ export default class Sidebar {
                 </ul>
             </div>            
         `;
-        var mainSidebar = document.getElementById('main-sidebar');
+        var mainSidebar = document.querySelector('[data-js="main-sidebar"]');
         mainSidebar.innerHTML = sidebar;
     }
 

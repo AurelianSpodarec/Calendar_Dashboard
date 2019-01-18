@@ -10,14 +10,18 @@
 @import "0-lib/lib";
 
 // ==========================================================================
-// 1-helpers
+// 1-settings
 // ==========================================================================
-@import "1-helpers/mixins";
+@import "1-settings/breakpoints";
+@import "1-settings/colors";
+@import "1-settings/theming";
+@import "1-settings/typography";
+@import "1-settings/z-index";
 
 // ==========================================================================
-// 2-settings
+// 2-tools
 // ==========================================================================
-@import "2-settings/breakpoints";
+@import "2-tools/mixins";
 
 // ==========================================================================
 // 3-base

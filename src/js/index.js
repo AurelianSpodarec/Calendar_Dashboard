@@ -39,22 +39,21 @@ window.addEventListener("DOMContentLoaded", function() {
     ///////////////////////////////////
     const getRoute = location => {
         let filteredRoutes = routes.filter(obj => obj.path === location);console.log(filteredRoutes);
-        return filteredRoutes ? filteredRoutes[0].component : error404Page;
+        return filteredRoutes ? filteredRoutes[0].component : Error404;
         
     }
 
     window.addEventListener('popstate', function(e) {
-        let mainView = document.querySelector('.main-container');
+        let mainView = document.querySelector('[data-js="main-container"]');
         mainView.innerHTML = getRoute(window.location.hash);
+        // mainView.appendChild(component.render()
     });
     
-
-
 
     /////////////////////////////////////
     // Toggle Sidebar
     ///////////////////////////////////
-    const toggleSidebarBtn = document.querySelector('.main-sidebar__toggle-sidebar');
+    const toggleSidebarBtn = document.querySelector('[data-js="toggle-sidebar"]');
     toggleSidebarBtn.addEventListener('click', sidebar.toggleSidebar)
 
 

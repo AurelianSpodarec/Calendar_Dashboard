@@ -11,16 +11,16 @@ export default class Layout {
     displayLayout() {
         this.layout.innerHTML = `
         <div class="main-wrapper">
-            <aside id="main-sidebar" class="main-sidebar"></aside>
+            <aside data-js="main-sidebar" class="main-sidebar"></aside>
 
-            <main id="main-panel" class="main-panel">
-                <header id="main-header" class="main-header"></header>
+            <main data-js="main-panel" class="main-panel">
+                <header data-js="main-header" class="main-header"></header>
 
-                <section class="main-container">
+                <section data-js="main-container" class="main-container">
                     sd<br><br><br><br>dsdsdsdds
                 </section>
 
-                <footer id="main-footer" class="main-footer"></footer>
+                <footer data-js="main-footer" class="main-footer"></footer>
             </main>
         </div>
         `;

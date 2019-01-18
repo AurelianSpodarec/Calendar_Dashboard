@@ -11,7 +11,7 @@ export default class Footer {
             </div>
         </div>
         `;
-        var mainFooter = document.getElementById('main-footer');
+        var mainFooter = document.querySelector('[data-js="main-footer"]');
         mainFooter.innerHTML = footer;
     }
 }
