@@ -1,3 +1,5 @@
+import views from "./routing";
+
 export default class Router {
     constructor() {
 
@@ -19,8 +21,9 @@ export default class Router {
 
     }
 
+    //  display the page
     async show(pageName) {
-     
+    
     }
 
 }

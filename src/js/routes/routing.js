@@ -6,15 +6,15 @@ import Error404 from './../views/scenes/Error404';
 
 export const routes = [
     {
-        component: Dashboard,
+        scene: Dashboard,
         path: '#dashboard'
     },
     {
-        component: ToDo,
+        scene: ToDo,
         path: '#todo'
     },
     {
-        component: Calendar,
+        scene: Calendar,
         path: '#calendar'
     },
 

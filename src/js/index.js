@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function() {
     ///////////////////////////////////
     const getRoute = location => {
         let filteredRoutes = routes.filter(obj => obj.path === location);console.log(filteredRoutes);
-        return filteredRoutes ? filteredRoutes[0].component : Error404;
+        return filteredRoutes ? filteredRoutes[0].scene : Error404;
         
     }
 

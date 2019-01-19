@@ -1,7 +1,9 @@
-# New GitHub
+# Hobo Dashboard
 
-A replica of GitHub using their RESTful API. A new UI and UX with some cool new features alongside.
+I've build Hobo Dashboard to connect and different RESTful APIs such as GitHub, Wikipedia, Twitter and so on. 
+I've also incoporated a desing library and a UI system
 
+To be re-factored
 
 ## Getting Started
 
