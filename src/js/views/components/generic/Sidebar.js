@@ -1,6 +1,10 @@
-// import SidebarController from '../../controller/SidebarController';
+import Component from "../../../core/Component";
 
-export default class Sidebar {
+
+class Sidebar extends Component{
+    constructor(props) {
+        super(props);
+    }
 
     toggleSidebar() {
         const sidebar = document.querySelector('[data-js="main-sidebar"]');
@@ -12,7 +16,7 @@ export default class Sidebar {
         mainHeader.classList.toggle('is-toggle');
     }
 
-    displaySidebar() {
+    render() {
         const sidebar = `
             <div class="main-sidebar__inner">
 
@@ -119,3 +123,5 @@ export default class Sidebar {
     }
 
 }
+
+export default Sidebar;

@@ -1,6 +1,13 @@
-export default class Footer {
+import Component from "../../../core/Component";
 
-    displayFooter() {
+class Footer extends Component{
+
+    constructor(props) {
+        super(props);
+
+    }
+
+    render() {
         const footer = `
         <div class="main-footer__outer">
             <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com">
@@ -15,3 +22,5 @@ export default class Footer {
         mainFooter.innerHTML = footer;
     }
 }
+
+export default Footer;

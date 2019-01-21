@@ -3,6 +3,7 @@ export default class Page {
     }
 
     render(el) {
-         
+        el.innerHTML = this.html;
+        return;
     }
 }

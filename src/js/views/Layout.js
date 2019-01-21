@@ -8,7 +8,7 @@ export default class Layout {
         this.layout.innerHTML = "";
     }
 
-    displayLayout() {
+    render() {
         this.layout.innerHTML = `
         <div class="main-wrapper">
             <aside data-js="main-sidebar" class="main-sidebar"></aside>

@@ -14,22 +14,27 @@ import Header from './views/components/generic/Header';
 import Footer from './views/components/generic/Footer';
 
 // import routes from './routes/routing';
+// import { routes } from './lib/utils/routing';
 
-import { routes } from './routes/routing';
+import Router from './lib/core/Router';
 
 const layout = new Layout;
-layout.displayLayout();
+layout.render();
 
 const sidebar = new Sidebar;
-sidebar.displaySidebar();
-
+sidebar.render();
 
 const header = new Header;
-header.displayHeader();
+header.render();
 
 const footer = new Footer;
-footer.displayFooter();
+footer.render();
 
+
+
+const router = new Router;
+router.onHashChange.call(router)
+router.render();
 
 window.addEventListener("DOMContentLoaded", function() {
 
@@ -37,17 +42,17 @@ window.addEventListener("DOMContentLoaded", function() {
     /////////////////////////////////////
     // Routing
     ///////////////////////////////////
-    const getRoute = location => {
-        let filteredRoutes = routes.filter(obj => obj.path === location);console.log(filteredRoutes);
-        return filteredRoutes ? filteredRoutes[0].scene : Error404;
+    // const getRoute = location => {
+    //     let filteredRoutes = routes.filter(obj => obj.path === location);console.log(filteredRoutes);
+    //     return filteredRoutes ? filteredRoutes[0].scene : Error404;
         
-    }
+    // }
 
-    window.addEventListener('popstate', function(e) {
-        let mainView = document.querySelector('[data-js="main-container"]');
-        mainView.innerHTML = getRoute(window.location.hash);
-        // mainView.appendChild(component.render()
-    });
+    // window.addEventListener('popstate', function(e) {
+    //     let mainView = document.querySelector('[data-js="main-container"]');
+    //     mainView.innerHTML = getRoute(window.location.hash);
+    //     // mainView.appendChild(component.render()
+    // });
     
 
     /////////////////////////////////////

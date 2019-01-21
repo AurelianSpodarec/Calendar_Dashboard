@@ -9,6 +9,17 @@ To be re-factored
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+
+
+
+
+Create a API system so you can add new APIS
+GitHub API extends API for example
+
+
+
+
+
 ### Prerequisites
 
 Things you need to install

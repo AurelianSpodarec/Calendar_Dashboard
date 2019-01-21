@@ -1,6 +1,13 @@
-export default class Header {
+import Component from "../../../core/Component";
 
-    displayHeader() {
+class Header extends Component{
+
+    constructor(props) {
+        super(props);
+
+    }
+
+    render() {
         const header = `
         <div class="main-header__outer">
             <div class="main-header__left">
@@ -23,3 +30,5 @@ export default class Header {
         mainHeader.innerHTML = header;
     }
 }
+
+export default Header;
