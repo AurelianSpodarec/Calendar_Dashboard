@@ -1,89 +1,22 @@
 import { routes } from "../utils/routing";
+import Error404 from '../../views/pages/Error404';
 
 class Router {
     constructor() {
         window.addEventListener("hashchange", this.onHashChange.bind(this));
     }
 
-    onHashChange() {
+    async onHashChange() {
         let filteredRoutes = routes.filter(obj => obj.path === window.location.hash);
-        console.log(filteredRoutes);
-        this.render(filteredRoutes ? filteredRoutes[0].scene : Error404);
+        this.render(filteredRoutes.length ? filteredRoutes[0].page : Error404);
     }
 
-    render(pageName) {
+    async render(page) {
         let mainView = document.querySelector('[data-js="main-container"]');
-        mainView.innerHTML = pageName;
+    
+        mainView.innerHTML = await page.render();    
     }
 
 }
 
 export default Router;
-
-
-        // if(location) {
-        //     console.log("hello");
-        //     let filteredRoutes = routes.filter(obj => obj.path === this.listen)
-        //     filteredRoutes[0].scene
-        //     // Get the correct page
-        //     return; // returing page and then in render pass it in the view.page(dynamic)
-        // } else {
-        //     //page.view(Error404); - idea we want this right
-        //     console.log('Page error');
-        //     return Error404;
-        // }
-
-    // // Compare URL with registered 'routes'
-    // check() {
-    //     console.log('checkkkkkkkkkkkk')
-
-    //     const registeredRoutes = routes;
-        
-
-
-    //     let filteredRoutes = routes.filter(obj => obj.path === window.location.hash);
-    //     console.log(filteredRoutes);
-    // }
-
-    // // Did the URL change?
-    // hasChanged(changed) {
-         
-    // }
-
-    // // Monitor for change in address bar
-    // listen() {
-    //     window.addEventListener("hashchange", () => {
-    //        console.log(window.location.hash)
-
-    //        let filteredRoutes = routes.filter(obj => obj.path === window.location.hash);
-    //        console.log(filteredRoutes);
-    //        return filteredRoutes ? filteredRoutes[0].scene : Error404;
-    //     });
-    // }
-
-    // //changes the current address and fires the route's handler.
-    // navigate() {
-
-    // }
-
-    // //  display the page
-    // render(pageName) {
-        
-    // }
-
-
-
-
-
-
-// const getRoute = location => {
-//     let filteredRoutes = routes.filter(obj => obj.path === location);console.log(filteredRoutes);
-//     return filteredRoutes ? filteredRoutes[0].scene : Error404;
-    
-// }
-
-// window.addEventListener('popstate', function(e) {
-//     let mainView = document.querySelector('[data-js="main-container"]');
-//     mainView.innerHTML = getRoute(window.location.hash);
-//     // mainView.appendChild(component.render()
-// });

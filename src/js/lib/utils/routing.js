@@ -1,20 +1,20 @@
-import Dashboard from '../../views/scenes/Dashboard';
-import ToDo from '../../views/scenes/ToDo';
-import Calendar from '../../views/scenes/Calendar';
-import Error404 from '../../views/scenes/Error404';
+import Dashboard from '../../views/pages/Dashboard';
+import ToDo from '../../views/pages/ToDo';
+import Calendar from '../../views/pages/Calendar';
+import Error404 from '../../views/pages/Error404';
 
 
 export const routes = [
     {
-        scene: Dashboard,
+        page: Dashboard,
         path: '#dashboard'
     },
     {
-        scene: ToDo,
+        page: ToDo,
         path: '#todo'
     },
     {
-        scene: Calendar,
+        page: Calendar,
         path: '#calendar'
     },
 
