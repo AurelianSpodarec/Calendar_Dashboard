@@ -13,8 +13,6 @@ import Sidebar from './views/components/generic/Sidebar';
 import Header from './views/components/generic/Header';
 import Footer from './views/components/generic/Footer';
 
-// import routes from './routes/routing';
-// import { routes } from './lib/utils/routing';
 
 import Router from './lib/core/Router';
 
@@ -32,12 +30,11 @@ footer.render();
 
 
 
-const router = new Router;
-router.onHashChange.call(router)
-router.render();
 
 window.addEventListener("DOMContentLoaded", function() {
 
+    const router = new Router;
+    router.onHashChange.call(router)
  
     /////////////////////////////////////
     // Routing

@@ -1,7 +1,6 @@
-import Component from "../../../core/Component";
+import Component from "../../../lib/core/Component";
 
-class Header extends Component{
-
+class Header extends Component {
     constructor(props) {
         super(props);
 

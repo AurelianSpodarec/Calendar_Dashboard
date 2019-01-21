@@ -1,7 +1,6 @@
-import Component from "../../../core/Component";
+import Component from "../../../lib/core/Component";
 
-class Footer extends Component{
-
+class Footer extends Component {
     constructor(props) {
         super(props);
 

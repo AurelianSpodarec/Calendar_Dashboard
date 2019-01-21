@@ -5,28 +5,12 @@ class Router {
         window.addEventListener("hashchange", this.onHashChange.bind(this));
     }
 
-
-    // Monitor changes in the address bar
-    // - Get the url
     onHashChange() {
         let filteredRoutes = routes.filter(obj => obj.path === window.location.hash);
         console.log(filteredRoutes);
         this.render(filteredRoutes ? filteredRoutes[0].scene : Error404);
     }
 
-    // Compare URl with registered routes
-    // Get the current url and compare
-    // FIlter the routes
-    check() {
-    
-
-    }
-
-    navigation() {
-
-    }
-
-    // Render the correct page
     render(pageName) {
         let mainView = document.querySelector('[data-js="main-container"]');
         mainView.innerHTML = pageName;
