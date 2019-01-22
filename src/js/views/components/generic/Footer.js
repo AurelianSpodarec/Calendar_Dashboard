@@ -16,7 +16,8 @@ class Footer extends Component {
                 © ${new Date().getFullYear()} made with love by Aurelian Spodarec
             </div>
         </div>
-        `;
+        `
+        return view;
     }
 }
 

@@ -28,8 +28,8 @@ window.addEventListener("DOMContentLoaded", function() {
     /////////////////////////////////////
     // Toggle Sidebar
     ///////////////////////////////////
-    const toggleSidebarBtn = document.querySelector('[data-js="toggle-sidebar"]');
-    toggleSidebarBtn.addEventListener('click', sidebar.toggleSidebar)
+    // const toggleSidebarBtn = document.querySelector('[data-js="toggle-sidebar"]');
+    // toggleSidebarBtn.addEventListener('click', sidebar.toggleSidebar)
 
 
 

@@ -116,7 +116,8 @@ class Sidebar extends Component {
                     </li>
                 </ul>
             </div>            
-        `;
+        `
+        return view;
    
     }
 
