@@ -22,8 +22,10 @@ layout.render();
 window.addEventListener("DOMContentLoaded", function() {
     
 
-    const router = new Router;
-    router.onHashChange.call(router)
+    const router = new Router();
+    router.navigate.call(router)
+    // router.setDocumentTitle();
+
   
     /////////////////////////////////////
     // Toggle Sidebar

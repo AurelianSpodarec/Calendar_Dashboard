@@ -13,6 +13,8 @@ import DevelopTypography from '../../views/pages/develop/Typography';
 import DevelopButtons from '../../views/pages/develop/Buttons';
 import DevelopForms from '../../views/pages/develop/Forms';
 
+// Not Found
+import NotFound from '../../views/pages/NotFound';
 
 export const routes = [
     // Application Generic
@@ -50,5 +52,8 @@ export const routes = [
         component: DevelopForms,
         path: '#develop/forms'
     },
+    {
+        component: NotFound
+    }
 
 ]
