@@ -95,9 +95,9 @@ class Sidebar extends Component {
                             <i class="nav-link-carrot fas fa-angle-down"></i>
                         </a>
                         <ul class="nav-sub-list">
-                            <li><a class="nav-link" href=""><span class="nav-link-title">Typography</span></a></li>
-                            <li><a class="nav-link" href=""><span class="nav-link-title">Buttons</span></a></li>
-                            <li><a class="nav-link" href=""><span class="nav-link-title">Forms</span></a></li>
+                            <li><a class="nav-link" href="#develop/typography"><span class="nav-link-title">Typography</span></a></li>
+                            <li><a class="nav-link" href="#develop/buttons"><span class="nav-link-title">Buttons</span></a></li>
+                            <li><a class="nav-link" href="#develop/forms"><span class="nav-link-title">Forms</span></a></li>
                         </ul>
                     </li>
                     <li class="nav-group-heading">

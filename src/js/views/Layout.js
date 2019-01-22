@@ -28,7 +28,7 @@ class Layout extends Component{
                     <header data-js="main-header" class="main-header"></header>
 
                     <section data-js="main-container" class="main-container">
-                        sd<br><br><br><br>dsdsdsdds
+                        
                     </section>
 
                     <footer data-js="main-footer" class="main-footer"></footer>
@@ -37,6 +37,14 @@ class Layout extends Component{
         `;
 
     }
+
+    // state = {
+    //     isHamburgerToggle: false,
+    // }
+
+    // isHamburgerToggle = () => {
+    //     state.isHamburgerToggle: true;
+    // }
     
     show(region, view) {
       var el = document.querySelector(this.regions[region]);
