@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
 
     const router = new Router();
-    router.navigate.call(router)
+    // router.navigate.call(router)
     // router.setDocumentTitle();
 
   

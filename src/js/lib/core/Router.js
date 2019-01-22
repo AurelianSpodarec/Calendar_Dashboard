@@ -1,4 +1,5 @@
 import { routes } from "../utils/routing";
+import NotFound from "../../views/pages/NotFound";
 
 //
 //  Get current location
@@ -12,6 +13,7 @@ import { routes } from "../utils/routing";
 class Router {
     constructor() {
         window.addEventListener("hashchange", this.navigate.bind(this));
+        this.navigate();
     }
 
     getCurrentLocation() {
@@ -28,14 +30,18 @@ class Router {
         return documentTitle;
     }
 
-    async navigate() {
-        let filteredRoutes = routes.filter(obj => obj.path === this.getCurrentLocation().hash);
-        this.render(filteredRoutes.length ? filteredRoutes[0].component : NotFound);
-        this.setDocumentTitle();
+    notFound() {
+
     }
 
     hashChanged() {
 
+    }
+
+    async navigate() {
+        let filteredRoutes = routes.filter(obj => obj.path === this.getCurrentLocation().hash);
+        this.render(filteredRoutes.length ? filteredRoutes[0].component : NotFound);
+        this.setDocumentTitle();
     }
 
     async render(pageName) {
