@@ -5,16 +5,15 @@ class Router {
     constructor() {
         window.addEventListener("hashchange", this.onHashChange.bind(this));
     }
-
+        
     async onHashChange() {
         let filteredRoutes = routes.filter(obj => obj.path === window.location.hash);
-        this.render(filteredRoutes.length ? filteredRoutes[0].page : Error404);
+        this.render(filteredRoutes.length ? filteredRoutes[0].component : Error404);
     }
 
-    async render(page) {
+    async render(pageName) {
         let mainView = document.querySelector('[data-js="main-container"]');
-    
-        mainView.innerHTML = await page.render();    
+        mainView.innerHTML = await pageName.render();    
     }
 
 }

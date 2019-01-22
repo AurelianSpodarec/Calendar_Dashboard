@@ -1,11 +1,11 @@
 let GithubProfile = {
     render : async () => {
-        let view =  /*html*/`
+        let view = /*html*/`
             <section class="section">
-                <h1> GithubProfile </h1>
+                <h1> Github Profile </h1>
             </section>
         `
-        return view
+        return view;
     }
 
 }

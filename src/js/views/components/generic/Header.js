@@ -7,7 +7,7 @@ class Header extends Component {
     }
 
     render() {
-        const header = `
+        const view = /*html*/`
         <div class="main-header__outer">
             <div class="main-header__left">
                 SAVINGS
@@ -25,8 +25,7 @@ class Header extends Component {
             </div>
         </div>
         `;
-        var mainHeader = document.querySelector('[data-js="main-header"]');
-        mainHeader.innerHTML = header;
+        
     }
 }
 

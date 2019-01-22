@@ -1,10 +1,10 @@
 class Component {
-    constructor() {}
-    // constructor(props = {}) {
-    //     this.refs = {}; // Re-render just the component
-    //     this.state = {}; // Store local state
-    //     this.props = props;
-    // }
+    // constructor() {}
+    constructor(props = {}) {
+        this.refs = {}; // Re-render just the component
+        this.state = {}; // Store local state
+        this.props = props;
+    }
 
 
     // // See 'state' of application - conecting all components

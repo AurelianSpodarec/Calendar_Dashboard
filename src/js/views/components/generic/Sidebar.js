@@ -4,7 +4,7 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
     }
-
+    
     toggleSidebar() {
         const sidebar = document.querySelector('[data-js="main-sidebar"]');
         const mainPanel = document.querySelector('[data-js="main-panel"]');
@@ -16,7 +16,7 @@ class Sidebar extends Component {
     }
 
     render() {
-        const sidebar = `
+        const view = /*html*/`
             <div class="main-sidebar__inner">
 
                 <!-- <div class="main-sidebar__background" style="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);"></div> -->
@@ -66,7 +66,7 @@ class Sidebar extends Component {
                             <span class="nav-link-title">GitHub</span>
                             <i class="nav-link-carrot fas fa-angle-down"></i>
                         </a>
-                        <div class="nav-sub-list-collapse">
+                        <div class="nav-sub-list-collapseee">
                         <ul class="nav-sub-list">
                             <li class="nav-item"><a class="nav-link active" href="#github/profile"><span class="nav-link-title">My Profile</span></a></li>
                             <li class="nav-item"><a class="nav-link" href="#github/stats"><span class="nav-link-title">Stats</span></a></li>
@@ -117,8 +117,7 @@ class Sidebar extends Component {
                 </ul>
             </div>            
         `;
-        var mainSidebar = document.querySelector('[data-js="main-sidebar"]');
-        mainSidebar.innerHTML = sidebar;
+   
     }
 
 }

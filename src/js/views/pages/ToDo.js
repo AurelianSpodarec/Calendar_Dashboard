@@ -1,6 +1,6 @@
 let ToDo = {
     render : async () => {
-        let view =  /*html*/`
+        let view = /*html*/`
             <section class="section">
                 <h1> ToDo </h1>
             </section>

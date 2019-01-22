@@ -1,6 +1,6 @@
 let Dashboard = {
     render: async () => {
-        let view =  /*html*/`
+        let view = /*html*/`
             <section class="section">
                 <h1> Dashboard </h1>
             </section>

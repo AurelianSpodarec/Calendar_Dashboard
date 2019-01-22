@@ -1,21 +1,31 @@
 import Dashboard from '../../views/pages/Dashboard';
 import ToDo from '../../views/pages/ToDo';
 import Calendar from '../../views/pages/Calendar';
-import Error404 from '../../views/pages/Error404';
+
+import GithubProfile from '../../views/pages/github/Profile';
+import GithubSearchUser from '../../views/pages/github/SearchUser';
 
 
 export const routes = [
     {
-        page: Dashboard,
+        component: Dashboard,
         path: '#dashboard'
     },
     {
-        page: ToDo,
+        component: ToDo,
         path: '#todo'
     },
     {
-        page: Calendar,
+        component: Calendar,
         path: '#calendar'
+    },
+    {
+        component: GithubProfile,
+        path: '#github/profile'
+    },
+    {
+        component: GithubSearchUser,
+        path: '#github/search-user'
     },
 
 ]
