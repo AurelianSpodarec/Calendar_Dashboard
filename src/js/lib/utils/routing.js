@@ -33,27 +33,44 @@ export const routes = [
     // GitHub
     {
         component: GithubProfile,
-        path: '#github/profile'
+        path: '#github/profile',
+        match: {
+            controller: 'github',
+        },
     },
     {
         component: GithubSearchUser,
-        path: '#github/search-user'
+        path: '#github/search-user',
+        match: {
+            controller: 'github',
+        },
     },
     // Develop
     {
         component: DevelopButtons,
-        path: '#develop/buttons'
+        path: '#develop/buttons',
+        match: {
+            controller: 'develop',
+        },
     },
     {
         component: DevelopTypography,
-        path: '#develop/typography'
+        path: '#develop/typography',
+        match: {
+            controller: 'develop',
+        },
     },
     {
         component: DevelopForms,
-        path: '#develop/forms'
+        path: '#develop/forms',
+        match: {
+            controller: 'develop',
+        },
     },
+    // Not Found
     {
-        component: NotFound
+        component: NotFound,
+        path: '#notfound',
     }
 
 ]

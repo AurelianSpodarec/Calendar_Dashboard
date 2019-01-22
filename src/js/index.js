@@ -10,29 +10,7 @@ fontawesome.library.add(brands)
 import '../styles/index.scss';
 
 import Layout from './views/Layout';
-import Router from './lib/core/Router';
+let layout = new Layout;
 
 
 
-const layout = new Layout;
-layout.render();
-
-
-
-window.addEventListener("DOMContentLoaded", function() {
-    
-
-    const router = new Router();
-    // router.navigate.call(router)
-    // router.setDocumentTitle();
-
-  
-    /////////////////////////////////////
-    // Toggle Sidebar
-    ///////////////////////////////////
-    // const toggleSidebarBtn = document.querySelector('[data-js="toggle-sidebar"]');
-    // toggleSidebarBtn.addEventListener('click', sidebar.toggleSidebar)
-
-
-
-});

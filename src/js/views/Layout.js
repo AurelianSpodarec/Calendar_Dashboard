@@ -3,12 +3,13 @@ import Component from "../lib/core/Component";
 import Header from "./components/generic/Header";
 import Footer from "./components/generic/Footer";
 import Sidebar from "./components/generic/Sidebar";
+import Router from "../lib/core/Router";
 
 class Layout extends Component{
 
     constructor() {
         super()
-
+        
         this.regions = {
             'header': '[data-js="main-header"]',
             'sidebar': '[data-js="main-sidebar"]',
@@ -36,6 +37,7 @@ class Layout extends Component{
             </div>
         `;
 
+        this.render();
     }
 
     // state = {
@@ -61,6 +63,8 @@ class Layout extends Component{
         this.show('header', header); 
         this.show('sidebar', sidebar); 
         this.show('footer', footer); 
+
+        const router = new Router();
         
     }
     
