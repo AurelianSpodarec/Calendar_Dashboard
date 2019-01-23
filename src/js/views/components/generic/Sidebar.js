@@ -3,17 +3,17 @@ import Component from "../../../lib/core/Component";
 class Sidebar extends Component {
     constructor(props) {
         super(props);
+
+        // state = {
+        //     isActive: false
+        // }
     }
     
-    toggleSidebar() {
-        const sidebar = document.querySelector('[data-js="main-sidebar"]');
-        const mainPanel = document.querySelector('[data-js="main-panel"]');
-        const mainHeader = document.querySelector('[data-js="main-header"]');
-    
-        sidebar.classList.toggle('is-folded');
-        mainPanel.classList.toggle('is-toggle');
-        mainHeader.classList.toggle('is-toggle');
-    }
+    // toggleSidebar() {
+    //    setState = () => {
+    //        this.state.isActive = true
+    //    }
+    //}
 
     render() {
         const view = /*html*/`
@@ -61,11 +61,11 @@ class Sidebar extends Component {
                         <span>Connected APIs</span>
                     </li>
                     <li class="nav-item nav-item-mother nav-has-dropdown">
-                        <a class="nav-link nav-link-mother" href="#">
+                        <span class="nav-link nav-link-mother">
                             <i class="nav-link-icon fab fa-github"></i>
                             <span class="nav-link-title">GitHub</span>
                             <i class="nav-link-carrot fas fa-angle-down"></i>
-                        </a>
+                        </span>
                         <div class="nav-sub-list-collapseee">
                         <ul class="nav-sub-list">
                             <li class="nav-item"><a class="nav-link active" href="#github/profile"><span class="nav-link-title">My Profile</span></a></li>
@@ -75,11 +75,11 @@ class Sidebar extends Component {
                         </div>
                     </li>
                     <li class="nav-item nav-item-mother nav-has-dropdown">
-                        <a class="nav-link nav-link-mother" href="#">
+                        <span class="nav-link nav-link-mother">
                             <i class="nav-link-icon fab fa-twitter"></i>
                             <span class="nav-link-title">Twitter</span>
                             <i class="nav-link-carrot fas fa-angle-down"></i>
-                        </a>
+                        </span>
                         <ul class="nav-sub-list">
                             <li><a class="nav-link" href="#twitter/profile"><span class="nav-link-title">My Profile</span></a></li>
                             <li><a class="nav-link" href="#twitter/tweets"><span class="nav-link-title">Get tweets</span></a></li>
@@ -89,11 +89,11 @@ class Sidebar extends Component {
                         <span>Develop</span>
                     </li>
                     <li class="nav-item nav-item-mother nav-has-dropdown">
-                        <a class="nav-link nav-link-mother" href="#">
+                        <span class="nav-link nav-link-mother">
                             <i class="nav-link-icon fab fa-uikit"></i>
                             <span class="nav-link-title">UI Elements</span>
                             <i class="nav-link-carrot fas fa-angle-down"></i>
-                        </a>
+                        </span>
                         <ul class="nav-sub-list">
                             <li><a class="nav-link" href="#develop/typography"><span class="nav-link-title">Typography</span></a></li>
                             <li><a class="nav-link" href="#develop/buttons"><span class="nav-link-title">Buttons</span></a></li>
@@ -104,11 +104,11 @@ class Sidebar extends Component {
                         <span>Custom Functions</span>
                     </li>
                     <li class="nav-item nav-item-mother">
-                        <a class="nav-link nav-link-mother" href="#">
+                        <span class="nav-link nav-link-mother">
                             <i class="nav-link-icon fas fa-cogs"></i>
                             <span class="nav-link-title">Settings</span>
                             <i class="nav-link-carrot fas fa-angle-down"></i>
-                        </a>
+                        </span>
                         <ul class="nav-sub-list">
                             <li><a class="nav-link" href=""><span class="nav-link-title">General</span></a></li>
                             <li><a class="nav-link" href=""><span class="nav-link-title">Theme</span></a></li>

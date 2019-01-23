@@ -6,23 +6,11 @@ class Component {
         this.props = props;
     }
 
-    beforeRender() {
+    setState() {
 
     }
 
-    afterRender() {
-
-    }
-
-    beforeLoad() {
-
-    }
-
-    afterLoad() {
-
-    }
-
-    init() {
+    getState() {
         
     }
 

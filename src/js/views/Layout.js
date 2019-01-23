@@ -39,18 +39,9 @@ class Layout extends Component{
 
         this.render();
     }
-
-    // state = {
-    //     isHamburgerToggle: false,
-    // }
-
-    // isHamburgerToggle = () => {
-    //     state.isHamburgerToggle: true;
-    // }
     
     show(region, view) {
       var el = document.querySelector(this.regions[region]);
-      console.log(el);
       el.innerHTML = view.render();
     }
     
@@ -64,7 +55,7 @@ class Layout extends Component{
         this.show('sidebar', sidebar); 
         this.show('footer', footer); 
 
-        const router = new Router();
+        new Router();
         
     }
     

@@ -20,57 +20,61 @@ export const routes = [
     // Application Generic
     {
         component: Dashboard,
-        path: '#dashboard'
+        match: {
+            action: 'index',
+            controller: 'dashboard',
+        }
     },
     {
         component: ToDo,
-        path: '#todo'
+        match: {
+            action: 'index',
+            controller: 'todo',
+        },
     },
     {
         component: Calendar,
-        path: '#calendar'
+        match: {
+            action: 'index',
+            controller: 'calendar',
+        },
     },
     // GitHub
     {
         component: GithubProfile,
-        path: '#github/profile',
         match: {
+            action: 'profile',
             controller: 'github',
         },
     },
     {
         component: GithubSearchUser,
-        path: '#github/search-user',
         match: {
+            action: 'search-user',
             controller: 'github',
         },
     },
     // Develop
     {
         component: DevelopButtons,
-        path: '#develop/buttons',
         match: {
+            action: 'buttons',
             controller: 'develop',
         },
     },
     {
         component: DevelopTypography,
-        path: '#develop/typography',
         match: {
+            action: 'typography',
             controller: 'develop',
         },
     },
     {
         component: DevelopForms,
-        path: '#develop/forms',
         match: {
+            action: 'forms',
             controller: 'develop',
-        },
-    },
-    // Not Found
-    {
-        component: NotFound,
-        path: '#notfound',
+        }
     }
 
 ]
