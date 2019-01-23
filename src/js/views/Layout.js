@@ -22,19 +22,17 @@ class Layout extends Component{
         `;
 
         this.template = /*html*/`
-            <div class="main-wrapper">
+            <main class="main-wrapper">
                 <aside data-js="main-sidebar" class="main-sidebar"></aside>
 
-                <main data-js="main-panel" class="main-panel">
+                <div data-js="main-panel" class="main-panel">
                     <header data-js="main-header" class="main-header"></header>
-
-                    <section data-js="main-container" class="main-container">
-                        
-                    </section>
+                    
+                    <section data-js="main-container" class="main-container"></section>
 
                     <footer data-js="main-footer" class="main-footer"></footer>
-                </main>
-            </div>
+                </div>
+            </main>
         `;
 
         this.render();

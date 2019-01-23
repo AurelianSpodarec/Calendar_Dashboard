@@ -10,7 +10,7 @@ class Header extends Component {
         const view = /*html*/`
         <div class="main-header__outer">
             <div class="main-header__left">
-                SAVINGS
+                SAVINGS $233.90
             </div>
 
             <div class="main-header__right">

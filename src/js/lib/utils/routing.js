@@ -5,7 +5,7 @@ import ToDo from '../../views/pages/ToDo';
 import Calendar from '../../views/pages/Calendar';
 
 // GitHub
-import GithubProfile from '../../views/pages/github/Profile';
+import GithubProfile from '../../views/pages/github/profile/Profile';
 import GithubSearchUser from '../../views/pages/github/SearchUser';
 
 //Develop
