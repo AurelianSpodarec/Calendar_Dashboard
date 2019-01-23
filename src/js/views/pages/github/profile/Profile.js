@@ -62,6 +62,26 @@ let GithubProfile = {
               
             </div>
 
+            <div>
+                <h2>Pinned Repositories</h2>
+
+                <ol class="pinned-repo-list">
+                    <li class="pinned-repo-item">
+                    <div class="pinned-repo-content">
+                        <span>
+                            <span>Dragg</span>
+                            <span>Webpack-to-WordPress-Starting-Template</span>
+                        </span>
+                        <p>
+                            <span>CSS</span>
+                            <span>Starred 4</span>
+                            <span>Forked 3</span>
+                        </p>
+                    </div>
+                    </li>
+                </ol>
+            </div>
+
         `
         return view;
     }
