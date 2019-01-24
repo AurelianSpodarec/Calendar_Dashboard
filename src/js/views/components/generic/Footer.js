@@ -9,13 +9,19 @@ class Footer extends Component {
     render() {
         let view = /*html*/` 
         <div class="main-footer__outer">
-            <ul>
-                <li>
-                    <a href=""></a>
+            <ul class="main-footer__links">
+                <li class="main-footer__item">
+                    <a class="main-footer__link" href="">GitHub</a>
+                </li>
+                <li class="main-footer__item">
+                    <a class="main-footer__link" href="http://aurelianspodarec.co.uk">Portfolio</a>
+                </li>
+                <li class="main-footer__item">
+                    <a class="main-footer__link" href="http://creativeprogrammer.io">My Blog</a>
                 </li>
             </ul>
-            <div>
-                © ${new Date().getFullYear()} made with love by Aurelian Spodarec
+            <div class="main-footer__copyright">
+                <span>© ${new Date().getFullYear()} crafted with love by Aurelian Spodarec</span>
             </div>
         </div>
         `
