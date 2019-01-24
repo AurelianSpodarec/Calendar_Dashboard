@@ -27,8 +27,8 @@ class Layout extends Component{
 
                 <div data-js="main-panel" class="main-panel">
                     <header data-js="main-header" class="main-header"></header>
-                    
-                    <section data-js="main-container" class="main-container"></section>
+                    <!-- If GitHub == true, add: main-container--github -->
+                    <section data-js="main-container" class="main-container--github"></section>
 
                     <footer data-js="main-footer" class="main-footer"></footer>
                 </div>
