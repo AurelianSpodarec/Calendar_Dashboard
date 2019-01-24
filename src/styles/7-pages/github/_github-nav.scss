@@ -1,0 +1,83 @@
+// ==========================================================================
+// #Github Nav
+// ==========================================================================
+
+.github-nav {
+    @include fixed(top 64px right 0 left 280px);
+    background-color: #fff;
+    border-bottom: 1px solid #d1d5da;
+    box-shadow: 0 1px 2px rgba(0,0,0,.075);
+    height: 54px;
+    position: fixed;
+    transition: .2s;
+    
+    &__outer {
+        position: relative;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        padding: 10px 32px;
+    }
+
+    &__profile-info {
+        line-height: 1em;
+    }
+
+    &__profile-avatar {
+        height: 100%;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+    &__profile-details {
+        height: 100%;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+    }
+
+    &__profile-name {
+        color: #24292e;
+        display: block;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    &__profile-handler {
+        color: #586069;
+        display: block;
+        font-weight: 200;
+        font-size: 0.8em;
+    }
+
+
+    &__links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-left: auto;
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        color: #586069;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-right: 16px;
+        padding: 16px 8px;
+    }
+
+    &__item-counter {
+        background-color: rgba(27,31,35,.08);
+        border-radius: 20px;
+        color: #586069;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1;
+        padding: 2px 5px;
+    }
+}
