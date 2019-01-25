@@ -3,17 +3,19 @@
 // ==========================================================================
 
 .main-sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
     width: 280px;
+    @include fixed(top 0 bottom 0 left 0);
     background-color: #2d323e!important;
     color: #fff!important;
     transition-property: transform,width,min-width,max-width,-webkit-transform;
     transition-duration: 150ms;
     transition-timing-function: ease-in-out;
     z-index: 10;
+   
+    @include breakpoint-down(md) {
+        transform: translatex(-100%);
+    }
+
     &.is-folded {
         width: 64px;
         

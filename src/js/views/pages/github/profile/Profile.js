@@ -15,30 +15,30 @@ let GithubProfile = {
 
                 <ul class="github-nav__links">
                     <li class="github-nav__item">
-                        <a class="github-nav__link" href="#tab1">
+                        <a class="github-nav__link" href="#github/profile/#tab1">
                             <span class="github-nav__item-name">Overview</span>
                         </a>
                     </li>
                     <li class="github-nav__item">
-                        <a class="github-nav__link" href="#tab1">
+                        <a class="github-nav__link" href="#github/profile/#repositories">
                             <span class="github-nav__item-name">Repositories</span>
                             <span class="github-nav__item-counter">77</span>
                         </a>
                     </li>
                     <li class="github-nav__item">
-                        <a class="github-nav__link" href="#tab1">
+                        <a class="github-nav__link" href="#github/profile/#stars">
                             <span class="github-nav__item-name">Stars</span>
                             <span class="github-nav__item-counter">44</span>
                         </a>
                     </li>
                     <li class="github-nav__item">
-                        <a class="github-nav__link" href="#tab1">
+                        <a class="github-nav__link" href="#github/profile/#followers">
                             <span class="github-nav__item-name">Followers</span>
                             <span class="github-nav__item-counter">12</span>
                         </a>
                     </li>
                     <li class="github-nav__item">
-                        <a class="github-nav__link" href="#tab1">
+                        <a class="github-nav__link" href="#github/profile/#following">
                             <span class="github-nav__item-name">Following</span>
                             <span class="github-nav__item-counter">25</span>
                         </a>
@@ -97,6 +97,72 @@ let GithubProfile = {
                             <ul class="pinned-repo__info-list">
                                 <li>
                                     <span class="pinned-repo__language pinned-repo__language--css"></span>
+                                    <span>CSS</span>
+                                </li>
+                                <li>
+                                    <i class="far fa-star"></i>
+                                    <span>4</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-code-branch"></i> 
+                                    <span>3</span>
+                                </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li class="pinned-repo__item">
+                        <div class="pinned-repo__content">
+                            <div class="pinned-repo__name-wrap">
+                                <span><i class="fas fa-bars"></i></span>
+                                <span class="pinned-repo__name">Webpack-to-WordPress-Starting-Template</span>
+                            </div>
+                            <ul class="pinned-repo__info-list">
+                                <li>
+                                    <span class="pinned-repo__language pinned-repo__language--css"></span>
+                                    <span>CSS</span>
+                                </li>
+                                <li>
+                                    <i class="far fa-star"></i>
+                                    <span>4</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-code-branch"></i> 
+                                    <span>3</span>
+                                </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li class="pinned-repo__item">
+                        <div class="pinned-repo__content">
+                            <div class="pinned-repo__name-wrap">
+                                <span><i class="fas fa-bars"></i></span>
+                                <span class="pinned-repo__name">Webpack-to-WordPress-Starting-Template</span>
+                            </div>
+                            <ul class="pinned-repo__info-list">
+                                <li>
+                                    <span class="pinned-repo__language pinned-repo__language--css"></span>
+                                    <span>CSS</span>
+                                </li>
+                                <li>
+                                    <i class="far fa-star"></i>
+                                    <span>4</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-code-branch"></i> 
+                                    <span>3</span>
+                                </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li class="pinned-repo__item">
+                        <div class="pinned-repo__content">
+                            <div class="pinned-repo__name-wrap">
+                                <span><i class="fas fa-bars"></i></span>
+                                <span class="pinned-repo__name">Webpack-to-WordPress-Starting-Template</span>
+                            </div>
+                            <ul class="pinned-repo__info-list">
+                                <li>
+                                    <span class="pinned-repo__language pinned-repo__language--js"></span>
                                     <span>CSS</span>
                                 </li>
                                 <li>

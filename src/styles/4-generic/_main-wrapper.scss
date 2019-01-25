@@ -9,8 +9,12 @@
     transition: all linear .25s;
     overflow: hidden;
     flex: 1;
-    margin-left: 280px;
     margin-top: 64px;
+
+    @include breakpoint-up(md) {
+        margin-left: 280px;
+    }
+    
     &.is-toggle {
          
         // max-width: 100%;

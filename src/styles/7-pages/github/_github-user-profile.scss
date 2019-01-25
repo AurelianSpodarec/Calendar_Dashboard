@@ -3,10 +3,43 @@
 // ==========================================================================
 
 .github-user-profile {
-    display: flex;
+
+    @include breakpoint-up(md) {
+        display: flex;
+    }
 
     &__profile-info {
-        width: 25%;
+        width: 100%;
+        line-height: 1.5;
+        @include breakpoint-down(md) {
+            min-height: 140px;
+            overflow: visible;
+            padding: 15px 15px 10px 140px;
+            position: relative;
+        }
+        @include breakpoint-up(md) {
+            width: 25%;
+        }
+    }
+
+    &__main-view {
+        width: 100%;
+        @include breakpoint-up(md) {
+            width: 75%;
+            padding: 0 24px 32px;
+        }
+    }
+
+    &__img-wrap {
+        border-radius: 3px;
+        @include breakpoint-down(md) {
+            left: 15px;
+            margin-right: 15px;
+            position: absolute;
+            top: 15px;
+            width: 110px;
+            height: 110px;
+        }
     }
 
     &__details {
@@ -25,9 +58,6 @@
         color: #24292e;
     }
 
-    &__main-view {
-        width: 75%;
-        padding: 0 24px 32px;
-    }
+    
 
 }
