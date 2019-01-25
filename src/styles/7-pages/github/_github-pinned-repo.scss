@@ -1,0 +1,76 @@
+// ==========================================================================
+// #Github Pinned Repository
+// ==========================================================================
+
+.pinned-repo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        height: 98px;
+        display: flex;
+        border: 1px solid #e1e4e8;
+        padding: 16px;
+        width: 49.3%;
+        margin-top: 16px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+
+    &__info-list {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+    bottom: 0;
+        & li {
+            display: inline-block;
+        }
+    }
+
+    &__language {
+        border-radius: 50%;
+        display: inline-block;
+        height: 12px;
+        position: relative;
+        top: 1px;
+        width: 12px;
+
+        &--html {
+
+        }
+
+        &--css {
+            background-color: #563d7c;
+        }
+
+        &--js {
+            background-color: #f1e05a;
+        }
+
+        &--php {
+
+        }
+
+        &--python {
+
+        }
+
+        &--go {
+
+        }
+
+        &--rust {
+
+        }
+    }
+
+}

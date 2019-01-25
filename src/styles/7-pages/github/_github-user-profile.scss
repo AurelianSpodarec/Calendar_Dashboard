@@ -4,8 +4,25 @@
 
 .github-user-profile {
     display: flex;
-    &__details {
+
+    &__profile-info {
         width: 25%;
+    }
+
+    &__details {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__details-icon {
+        margin-top: 3px;
+        text-align: center;
+        width: 16px!important;
+    }
+
+    &__details-name {
+        color: #24292e;
     }
 
     &__main-view {

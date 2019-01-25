@@ -51,7 +51,7 @@ let GithubProfile = {
             
             <div class="github-user-profile">
 
-                <div class="github-user-profile__details">
+                <div class="github-user-profile__profile-info">
 
                     <div class="github-user-profile__img-wrap">
                         <img class="github-user-profile__img" src="https://avatars2.githubusercontent.com/u/10155855?s=460&v=4" alt=""/>
@@ -63,24 +63,54 @@ let GithubProfile = {
                     <div class="github-user-profile__bio">
                         <p>Apparently, this user prefers to keep an air of mystery about them. - You can always visit my website and find out more about how I can help you! 🥇 💯 👍 🥇 💯</p>
                     </div>
-                    <ul class="github-details">
-                        <li class="github-details__item">
-                            <span class="github-details__icon"><i class="fas fa-home"></i></span>
-                            <span class="github-details__name">LoveToCode</span>
+                    <ul class="github-user-profile__details">
+                        <li class="github-user-profile__details-item">
+                            <i class="fas fa-home github-user-profile__details-icon"></i>
+                            <span class="github-user-profile__details-name">CreativeProgrammer</span>
                         </li>
-                        <li class="github-details__item">
-                            <span class="github-details__icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <span class="github-details__name">Poland/UK</span>
+                        <li class="github-user-profile__details-item">
+                            <i class="github-user-profile__details-icon fas fa-map-marker-alt"></i>
+                            <span class="github-user-profile__details-name">Poland/UK</span>
                         </li>
-                        <li class="github-details__item">
-                            <span class="github-details__icon"><i class="far fa-envelope"></i></span>
-                            <a class="github-details__link" href="mailto:aurelianxspodarec@gmail.com">aurelianxspodarec@gmail.com</a>
+                        <li class="github-user-profile__details-item">
+                            <i class="github-user-profile__details-icon far fa-envelope"></i>
+                            <a class="github-user-profile__details-link" href="mailto:aurelianxspodarec@gmail.com">aurelianxspodarec@gmail.com</a>
                         </li>
-                        <li class="github-details__item">
-                            <span class="github-details__icon"><i class="fas fa-link"></i></span>
-                            <a class="github-details__link" href="http://aurelianspodarec.co.uk/">http://aurelianspodarec.co.uk/</a>
+                        <li class="github-user-profile__details-item">
+                            <i class="github-user-profile__details-icon fas fa-link"></i>
+                            <a class="github-user-profile__details-link" href="http://aurelianspodarec.co.uk/">http://aurelianspodarec.co.uk/</a>
                         </li>
-                    </ul>
+                    </ul> 
+                </div><!-- /github-user-profile__details -->
+
+                    
+                <div class="github-user-profile__main-view">
+                    <h2>Pinned Repositories</h2>
+
+                    <ol class="pinned-repo">
+                        <li class="pinned-repo__item">
+                        <div class="pinned-repo__content">
+                            <div class="pinned-repo__name-wrap">
+                                <span><i class="fas fa-bars"></i></span>
+                                <span class="pinned-repo__name">Webpack-to-WordPress-Starting-Template</span>
+                            </div>
+                            <ul class="pinned-repo__info-list">
+                                <li>
+                                    <span class="pinned-repo__language pinned-repo__language--css"></span>
+                                    <span>CSS</span>
+                                </li>
+                                <li>
+                                    <i class="far fa-star"></i>
+                                    <span>4</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-code-branch"></i> 
+                                    <span>3</span>
+                                </li>
+                            </ul>
+                        </div>
+                        </li>
+                    </ol>
 
                     <div class="speciality">
                         <span class="speciality__title">Topics & Specialities</span>
@@ -102,27 +132,6 @@ let GithubProfile = {
                             </li>
                         </ul>
                     </div>
-                </div><!-- /github-user-profile__details -->
-
-                    
-                <div class="github-user-profile__main-view">
-                    <h2>Pinned Repositories</h2>
-
-                    <ol class="pinned-repo-list">
-                        <li class="pinned-repo-item">
-                        <div class="pinned-repo-content">
-                            <span>
-                                <span>Dragg</span>
-                                <span>Webpack-to-WordPress-Starting-Template</span>
-                            </span>
-                            <p>
-                                <span>CSS</span>
-                                <span>Starred 4</span>
-                                <span>Forked 3</span>
-                            </p>
-                        </div>
-                        </li>
-                    </ol>
                 </div>
 
 
