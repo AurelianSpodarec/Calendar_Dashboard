@@ -43,8 +43,8 @@
         padding: 0 32px;
         flex: 1 0 auto;
         flex: 1 0 auto;
-    min-height: 64px;
-    font-size: 16px;
+        min-height: 64px;
+        font-size: 16px;
     }
 
     &__search-bar-content {
@@ -130,6 +130,10 @@
         font-size: 14px;
         color: white;
         font-weight: 600;
+        display: none;
+        @include breakpoint-up(md) {
+            display: block;
+        }
     }
 
     

@@ -10,7 +10,7 @@ class Header extends Component {
         const view = /*html*/`
         <div class="main-header__outer">
 
-            <button data-js="toggle-sidebar-mobile" class="main-header__sidebar-toggle-mobile">
+            <button data-js="toggle-sidebar-mobile" class="main-header__sidebar-toggle-mobile main-header__item">
                 <i class="fas fa-bars"></i>
             </button>
                 
@@ -26,7 +26,7 @@ class Header extends Component {
             </div>
 
             <div class="main-header__left">
-                SAVINGS $233.90
+                
             </div>
 
             <div class="main-header__right">
