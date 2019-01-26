@@ -34,10 +34,15 @@
         list-style: none;
         padding: 0;
         position: absolute;
-    bottom: 0;
+        bottom: 0;
         & li {
             display: inline-block;
         }
+    }
+
+    &__name {
+        padding-left: 7px;
+        position: absolute;
     }
 
     &__language {

@@ -163,7 +163,7 @@ let GithubProfile = {
                             <ul class="pinned-repo__info-list">
                                 <li>
                                     <span class="pinned-repo__language pinned-repo__language--js"></span>
-                                    <span>CSS</span>
+                                    <span>JavaScript</span>
                                 </li>
                                 <li>
                                     <i class="far fa-star"></i>

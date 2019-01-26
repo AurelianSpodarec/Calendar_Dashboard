@@ -13,7 +13,65 @@
 html, body {
     height: 100%;
     font-size: 14px;
+    // overflow: hidden;
 }
+
+// [data-js="app"] {
+//     overflow: auto;
+//   visibility: hidden;
+// }
+// .scrollbox {
+//     width: 100%;
+//     height: 100%;
+//     overflow: auto;
+//     visibility: hidden;    
+//     transition: 0.2s;
+//      &::-webkit-scrollbar-thumb {
+//         border: 2px solid transparent;
+//         box-shadow: inset 0 0 0 12px rgba(0,0,0,.37);
+//         border-radius: 12px;
+//     }
+//     &::-webkit-scrollbar-track {
+//         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//         border-radius: 10px;
+//         background-color: #F5F5F5;
+//     }
+//     &::-webkit-scrollbar-thumb {
+//         border: 2px solid transparent;
+//         box-shadow: inset 0 0 0 12px rgba(0, 0, 0, 0.37);
+//         border-radius: 12px;
+//     }
+//     &::-webkit-scrollbar-thumb {
+//         border: 2px solid transparent;
+//         box-shadow: inset 0 0 0 12px rgba(0, 0, 0, 0.37);
+//         border-radius: 12px;
+//     }
+//     &::-webkit-scrollbar {
+//         width: 12px;
+//         height: 12px;
+//         background-color: rgba(0,0,0,0);
+//     }
+//   }
+// .main-wrapper,
+// .scrollbox:hover
+//   {
+//   visibility: visible;
+
+// }
+// .scrollbox:hover {
+//     transition: 0s 0.2s;
+// }
+ 
+//  .main-wrapper {
+//     visibility: visible;
+//  }
+
+   
+ 
+
+
+ 
+
 
 a {
     text-decoration: none;

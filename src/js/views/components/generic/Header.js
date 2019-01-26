@@ -9,6 +9,22 @@ class Header extends Component {
     render() {
         const view = /*html*/`
         <div class="main-header__outer">
+
+            <button data-js="toggle-sidebar-mobile" class="main-header__sidebar-toggle-mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+                
+            <div class="main-header__search-bar-wrap">
+            <div class="main-header__search-bar-wrap-inner">
+        <div class="main-header__search-bar-content">
+                <input class="main-header__search-bar" placeholder="Search..." />
+                 
+                    <i class=" main-header__search-bar-close fas fa-bars"></i>
+                 
+    </div>
+            </div>
+            </div>
+
             <div class="main-header__left">
                 SAVINGS $233.90
             </div>

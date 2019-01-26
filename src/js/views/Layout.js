@@ -22,17 +22,22 @@ class Layout extends Component{
         `;
 
         this.template = /*html*/`
-            <main class="main-wrapper">
-                <aside data-js="main-sidebar" class="main-sidebar"></aside>
+            <div class="scrollbox" tabindex="0">
 
-                <div data-js="main-panel" class="main-panel">
-                    <header data-js="main-header" class="main-header"></header>
-                    <!-- If GitHub == true, add: main-container--github -->
-                    <section data-js="main-container" class="main-container--github"></section>
+                <main class="main-wrapper">
+                    <aside data-js="main-sidebar" class="main-sidebar"></aside>
 
-                    <footer data-js="main-footer" class="main-footer"></footer>
-                </div>
-            </main>
+                    <div data-js="main-panel" class="main-panel">
+                        <header data-js="main-header" class="main-header"></header>
+                        <!-- If GitHub == true, add: main-container--github -->
+                        <section data-js="main-container" class="main-container--github"></section>
+
+                        <footer data-js="main-footer" class="main-footer"></footer>
+                    </div>
+                    
+                </main>
+
+            </div>
         `;
 
         this.render();
