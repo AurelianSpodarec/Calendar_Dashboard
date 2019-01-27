@@ -6,6 +6,10 @@ class Component {
         this.props = props;
     }
 
+    getStoreState() {
+        return store.state;
+    }
+
     setState() {
 
     }

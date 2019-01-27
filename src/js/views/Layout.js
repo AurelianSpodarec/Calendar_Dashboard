@@ -10,6 +10,10 @@ class Layout extends Component{
     constructor() {
         super()
         
+        this.state = {
+            hamburgerToggle: false
+        }
+
         this.regions = {
             'header': '[data-js="main-header"]',
             'sidebar': '[data-js="main-sidebar"]',
@@ -25,10 +29,10 @@ class Layout extends Component{
             <div class="scrollbox" tabindex="0">
 
                 <main class="main-wrapper">
-                    <aside data-js="main-sidebar" class="main-sidebar"></aside>
+                    <aside data-js="main-sidebar" class="main-sidebar ${this.state.hamburgerToggle ? 'is-folded' : '' }"></aside>
 
-                    <div data-js="main-panel" class="main-panel">
-                        <header data-js="main-header" class="main-header"></header>
+                    <div data-js="main-panel" class="main-panel ${this.state.hamburgerToggle ? 'is-toggle' : '' }">
+                        <header data-js="main-header" class="main-header ${this.state.hamburgerToggle ? 'is-toggle' : '' }"></header>
                         <!-- If GitHub == true, add: main-container--github -->
                         <section data-js="main-container" class="main-container--github"></section>
 
@@ -41,6 +45,10 @@ class Layout extends Component{
         `;
 
         this.render();
+    }
+
+    toggleHamburger() {
+       this.state.toggleHamburger = true
     }
     
     show(region, view) {

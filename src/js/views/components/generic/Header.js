@@ -5,23 +5,25 @@ class Header extends Component {
         super(props);
 
     }
+    
 
     render() {
-        const view = /*html*/`
+        return /*html*/`
         <div class="main-header__outer">
 
-            <button data-js="toggle-sidebar-mobile" class="main-header__sidebar-toggle-mobile main-header__item">
-                <i class="fas fa-bars"></i>
+            <button data-js="toggle-sidebar-mobile" class="main-header__sidebar-toggle-mobile main-header__item" onClick={this.props.toggleHamburger}
+            >
+            <i class="fas fa-bars"></i>
             </button>
                 
             <div class="main-header__search-bar-wrap">
             <div class="main-header__search-bar-wrap-inner">
-        <div class="main-header__search-bar-content">
-                <input class="main-header__search-bar" placeholder="Search..." />
-                 
+
+                <div class="main-header__search-bar-content">
+                    <input class="main-header__search-bar" placeholder="Search..." />
                     <i class=" main-header__search-bar-close fas fa-bars"></i>
-                 
-    </div>
+                </div>
+
             </div>
             </div>
 
@@ -40,9 +42,7 @@ class Header extends Component {
                 </div>
             </div>
         </div>
-        `
-        return view;
-        
+        `;
     }
 }
 

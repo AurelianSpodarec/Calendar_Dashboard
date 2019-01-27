@@ -1,6 +1,6 @@
 let Dashboard = {
     render: async () => {
-        let view = /*html*/`
+        return /*html*/`
              
             <h1> Dashboard </h1>
 
@@ -8,8 +8,7 @@ let Dashboard = {
             
             </div>
             
-        `
-        return view;
+        `;
     }
 }
 

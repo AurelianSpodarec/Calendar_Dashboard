@@ -7,16 +7,21 @@ class Sidebar extends Component {
         // state = {
         //     isActive: false
         // }
+        // this.state = {
+        //     isActive: false
+        // }
     }
     
+
     // toggleSidebar() {
-    //    setState = () => {
+    // //    setState = () => {
     //        this.state.isActive = true
-    //    }
-    //}
+    // //    }
+    // }
+
 
     render() {
-        const view = /*html*/`
+        return /*html*/`
             <div class="main-sidebar__inner">
 
                 <!-- <div class="main-sidebar__background" style="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);"></div> -->
@@ -30,7 +35,9 @@ class Sidebar extends Component {
                         <span class="main-sidebar__logo-text">Hobo</span>
                     </div>
 
-                    <button data-js="toggle-sidebar" class="main-sidebar__toggle-sidebar"><i class="fas fa-bars"></i></button>
+                    <button data-js="toggle-sidebar" class="main-sidebar__toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
 
                 <div class="main-sidebar__wrapper">
@@ -116,9 +123,7 @@ class Sidebar extends Component {
                     </li>
                 </ul>
             </div>            
-        `
-        return view;
-   
+        `;
     }
 
 }

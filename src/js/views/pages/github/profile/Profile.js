@@ -1,6 +1,6 @@
 let GithubProfile = {
     render : async () => {
-        let view = /*html*/`
+        return /*html*/`
 
             <div class="github-nav">
             <div class="github-nav__outer">
@@ -204,8 +204,7 @@ let GithubProfile = {
             </div><!-- /github-user-profile -->
 
 
-        `
-        return view;
+        `;
     }
 
 }

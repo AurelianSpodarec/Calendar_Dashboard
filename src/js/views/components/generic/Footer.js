@@ -7,7 +7,7 @@ class Footer extends Component {
     }
   
     render() {
-        let view = /*html*/` 
+        return /*html*/` 
         <div class="main-footer__outer">
             <ul class="main-footer__links">
                 <li class="main-footer__item">
@@ -24,8 +24,7 @@ class Footer extends Component {
                 <span>© ${new Date().getFullYear()} crafted with love by Aurelian Spodarec</span>
             </div>
         </div>
-        `
-        return view;
+        `;
     }
 }
 
