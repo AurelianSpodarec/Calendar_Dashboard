@@ -5,7 +5,7 @@ class Header extends Component {
     constructor(props) {
         super(props)
         this.onEvent = this.onEvent.bind(this);
-        this.setSubscriber("header", this.onEvent);
+        // this.setSubscriber("header", this.onEvent);
     }
     
     closeSearchField(event) {

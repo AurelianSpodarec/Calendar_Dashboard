@@ -12,27 +12,14 @@ import NotFound from "../../views/pages/NotFound";
 
 class Router {
     constructor() {
-        window.addEventListener("hashchange", this.navigate.bind(this), false);
-        window.addEventListener("hashchange", this.removeLocationHash.bind(this), false)
-        this.navigate();
-
+        this.listen = this.listen.bind(this);
+        this.listen();
     }
 
     setDocumentTitle() {
         let documentTitle = window.location.hash;
         document.title = "Hobo | " + documentTitle.substring(1);
         return documentTitle;
-    }
-
-    // TODO: Remove hash from the URL
-    removeLocationHash (event) { 
-        
-        // event.preventDefault();
-        // let windowDom = window.location.pathname.split("#")
-        // let windowLocationNoHash = `${window.location.hash.split('#').slice(1).join(' ')}`;
-        // let cleanURL =  `${window.location = window.location.origin + windowDom + windowLocationNoHash}`;
-        // window.history.pushState('' ,document.title, cleanURL);
-        // event.preventDefault();
     }
 
     checkRoute() {
@@ -53,6 +40,13 @@ class Router {
             return filteredRoutes.component;
         }
 
+    }
+
+    listen() {
+        window.addEventListener("hashchange", () => {
+            this.navigate();
+        });
+        this.navigate();
     }
 
     async navigate() {

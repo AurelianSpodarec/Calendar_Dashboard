@@ -4,7 +4,7 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
         this.onEvent = this.onEvent.bind(this);
-        this.setSubscriber("sidebar", this.onEvent);
+        // this.setSubscriber("sidebar", this.onEvent);
     }
 
     onEvent(state, action) {

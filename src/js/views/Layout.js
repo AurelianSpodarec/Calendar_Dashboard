@@ -9,6 +9,7 @@ class Layout extends Component{
     constructor(props) {
         super(props)
         this.onEvent = this.onEvent.bind(this);
+        // this.setSubscriber("layout", this.onEvent);
 
         this.state = {
             hamburgerToggle: false
@@ -26,29 +27,25 @@ class Layout extends Component{
         `;
 
         this.template = /*html*/`
-            <div class="scrollbox" tabindex="0">
+            <main class="main-wrapper">
+                <aside data-js="main-sidebar" class="main-sidebar ${this.state.hamburgerToggle ? 'is-folded' : '' }"></aside>
 
-                <main class="main-wrapper">
-                    <aside data-js="main-sidebar" class="main-sidebar ${this.state.hamburgerToggle ? 'is-folded' : '' }"></aside>
+                <div data-js="main-panel" class="main-panel ${this.state.hamburgerToggle ? 'is-toggle' : '' }">
+                    <header data-js="main-header" class="main-header ${this.state.hamburgerToggle ? 'is-toggle' : '' }"></header>
+                    <!-- If GitHub == true, add: main-container--github -->
+                    <section data-js="main-container" class="main-container--github"></section>
 
-                    <div data-js="main-panel" class="main-panel ${this.state.hamburgerToggle ? 'is-toggle' : '' }">
-                        <header data-js="main-header" class="main-header ${this.state.hamburgerToggle ? 'is-toggle' : '' }"></header>
-                        <!-- If GitHub == true, add: main-container--github -->
-                        <section data-js="main-container" class="main-container--github"></section>
-
-                        <footer data-js="main-footer" class="main-footer"></footer>
-                    </div>
-                    
-                </main>
-
-            </div>
+                    <footer data-js="main-footer" class="main-footer"></footer>
+                </div>
+                
+            </main>
         `;
 
         this.render();
     }
 
     onEvent(state, action) {
-
+        console.log('Layout Event Yay');
     }
 
     toggleHamburger() {
