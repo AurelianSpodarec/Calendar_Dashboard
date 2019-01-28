@@ -1,5 +1,4 @@
-import Component from "../../../../lib/core/Component";
-
+import Component from "../component/index";
 
 class Header extends Component {
     constructor(props) {

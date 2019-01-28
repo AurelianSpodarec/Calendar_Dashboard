@@ -1,4 +1,4 @@
-import { routes } from "../utils/routing";
+import { routes } from "./routing";
 import NotFound from "../../views/pages/NotFound";
 
 //  
@@ -12,14 +12,14 @@ import NotFound from "../../views/pages/NotFound";
 
 class Router {
     constructor() {
-        this.listen = this.listen.bind(this);
         this.listen();
     }
 
-    setDocumentTitle() {
-        let documentTitle = window.location.hash;
-        document.title = "Hobo | " + documentTitle.substring(1);
-        return documentTitle;
+    listen() {
+        window.addEventListener("hashchange", () => {
+            this.navigate();
+        });
+        this.navigate();
     }
 
     checkRoute() {
@@ -42,18 +42,15 @@ class Router {
 
     }
 
-    listen() {
-        window.addEventListener("hashchange", () => {
-            this.navigate();
-        });
-        this.navigate();
+    setDocumentTitle() {
+        let documentTitle = window.location.hash;
+        document.title = "Hobo | " + documentTitle.substring(1);
+        return documentTitle;
     }
 
     async navigate() {
-        
         this.render(this.checkRoute());
         this.setDocumentTitle();
-      
     }
 
     async render(pageName) {

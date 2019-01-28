@@ -1,9 +1,13 @@
-import Component from "../lib/core/Component";
+import Component from "../components/component/index";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+import Sidebar from "../components/sidebar/Sidebar";
 
-import Header from "./components/generic/header/Header";
-import Footer from "./components/generic/footer/Footer";
-import Sidebar from "./components/generic/sidebar/Sidebar";
-import Router from "../lib/core/Router";
+// import Header from "./components/generic/header/Header";
+// import Footer from "./components/generic/footer/Footer";
+// import Sidebar from "./components/generic/sidebar/Sidebar";
+import Router from "../lib/router/Router";
+
 
 class Layout extends Component{
     constructor(props) {

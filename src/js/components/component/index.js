@@ -1,5 +1,4 @@
-import store from './store/Store';
-
+import Store from "../../lib/store/index";
 
 class Component {
     constructor(props = {}) {
