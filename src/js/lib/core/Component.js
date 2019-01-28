@@ -1,27 +1,33 @@
+import store from './store/Store';
+
+
 class Component {
-
     constructor(props = {}) {
-        this.refs = {}; // Re-render just the component
-        this.state = {}; // Store local state
-        this.props = props;
+      this.refs = {};
+      this.state = {};
+      this.props = props;
+      this.children = {};
+      this.dispatch = store.dispatch.bind(this);
+      this.setChild = this.setChild.bind(this);
+      this.setReducer = this.setReducer.bind(this);
+      this.setSubscriber = this.setSubscriber.bind(this);
     }
-
+  
     getStoreState() {
-        return store.state;
+      return store.state;
     }
-
-    setState() {
-
+  
+    setReducer(name, reducer, initState = {}) {
+      store.setReducer(name, reducer, initState);
     }
-
-    getState() {
-        
+  
+    setSubscriber(name, subscriber) {
+      store.setSubscriber(name, subscriber);
     }
-
-    render() {
-
+  
+    setChild(name, child) {
+      this.children[name] = createElement(child);
     }
-       
-}
+  }
 
 export default Component;

@@ -24,7 +24,8 @@
         min-width: 64px;
         height: 64px;
         font-size: 13px;
-    display: none;
+        background: white;
+        display: none;
         &.is-expanded {
             display: block;
         }
@@ -49,14 +50,15 @@
 
     &__search-bar-content {
         display: flex;
-    flex: 1 1 auto;
-    align-items: center;
-    justify-content: flex-start;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: flex-start;
     }
+
 
     &__search-bar-close {
         
-        width: 64px;
+        width: 64px!important;
         height: 64px;
             display: flex;
     }
@@ -67,8 +69,9 @@
         color: white;
 
         @include breakpoint-up(md) {
-            display: none;
+            display: none!important;
         }
+
     }
 
     &__outer {

@@ -1,15 +1,15 @@
 import Component from "../lib/core/Component";
 
-import Header from "./components/generic/Header";
-import Footer from "./components/generic/Footer";
-import Sidebar from "./components/generic/Sidebar";
+import Header from "./components/generic/header/Header";
+import Footer from "./components/generic/footer/Footer";
+import Sidebar from "./components/generic/sidebar/Sidebar";
 import Router from "../lib/core/Router";
 
 class Layout extends Component{
+    constructor(props) {
+        super(props)
+        this.onEvent = this.onEvent.bind(this);
 
-    constructor() {
-        super()
-        
         this.state = {
             hamburgerToggle: false
         }
@@ -45,6 +45,10 @@ class Layout extends Component{
         `;
 
         this.render();
+    }
+
+    onEvent(state, action) {
+
     }
 
     toggleHamburger() {

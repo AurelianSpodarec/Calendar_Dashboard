@@ -1,24 +1,15 @@
-import Component from "../../../lib/core/Component";
+import Component from "../../../../lib/core/Component";
 
 class Sidebar extends Component {
     constructor(props) {
         super(props);
-
-        // state = {
-        //     isActive: false
-        // }
-        // this.state = {
-        //     isActive: false
-        // }
+        this.onEvent = this.onEvent.bind(this);
+        this.setSubscriber("sidebar", this.onEvent);
     }
-    
 
-    // toggleSidebar() {
-    // //    setState = () => {
-    //        this.state.isActive = true
-    // //    }
-    // }
+    onEvent(state, action) {
 
+    }
 
     render() {
         return /*html*/`
@@ -35,7 +26,7 @@ class Sidebar extends Component {
                         <span class="main-sidebar__logo-text">Hobo</span>
                     </div>
 
-                    <button data-js="toggle-sidebar" class="main-sidebar__toggle-sidebar">
+                    <button data-js="toggle-sidebar" class="main-sidebar__toggle-sidebar" onClick={this.props.toggleHamburger}>
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>

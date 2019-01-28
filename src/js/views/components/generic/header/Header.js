@@ -1,17 +1,29 @@
-import Component from "../../../lib/core/Component";
+import Component from "../../../../lib/core/Component";
+
 
 class Header extends Component {
     constructor(props) {
-        super(props);
-
+        super(props)
+        this.onEvent = this.onEvent.bind(this);
+        this.setSubscriber("header", this.onEvent);
     }
     
+    closeSearchField(event) {
+        event.preventDefault();
+        // this.dispatch(closeSearchField());
+        alert("Close Sercah field");
+    }
+
+    onEvent(state, action) {
+        
+    }
 
     render() {
         return /*html*/`
         <div class="main-header__outer">
 
-            <button data-js="toggle-sidebar-mobile" class="main-header__sidebar-toggle-mobile main-header__item" onClick={this.props.toggleHamburger}
+            <button data-js="toggle-sidebar-mobile" class="main-header__sidebar-toggle-mobile main-header__item"
+                onClick={this.props.toggleHamburger}
             >
             <i class="fas fa-bars"></i>
             </button>
@@ -21,14 +33,16 @@ class Header extends Component {
 
                 <div class="main-header__search-bar-content">
                     <input class="main-header__search-bar" placeholder="Search..." />
-                    <i class=" main-header__search-bar-close fas fa-bars"></i>
+                    <i class=" main-header__search-bar-close fas fa-times"></i>
                 </div>
 
             </div>
             </div>
 
             <div class="main-header__left">
-                
+            <div class="main-header__item">
+                Weather -10
+            </div>
             </div>
 
             <div class="main-header__right">
