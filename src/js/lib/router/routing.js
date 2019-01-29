@@ -1,20 +1,20 @@
 
 // Application Generic
-import Dashboard from './../../views/pages/Dashboard';
-import ToDo from './../../views/pages/ToDo';
-import Calendar from './../../views/pages/Calendar';
+import Dashboard from './../../views/scenes/Dashboard';
+import ToDo from './../../views/scenes/ToDo';
+import Calendar from './../../views/scenes/Calendar';
 
 // GitHub
-import GithubProfile from './../../views/pages/github/profile/Profile';
-import GithubSearchUser from './../../views/pages/github/SearchUser';
+import GithubProfile from './../../views/scenes/github/profile/Profile';
+import GithubSearchUser from './../../views/scenes/github/SearchUser';
 
 //Develop
-import DevelopTypography from './../../views/pages/develop/Typography';
-import DevelopButtons from './../../views/pages/develop/Buttons';
-import DevelopForms from './../../views/pages/develop/Forms';
+import DevelopTypography from './../../views/scenes/develop/Typography';
+import DevelopButtons from './../../views/scenes/develop/Buttons';
+import DevelopForms from './../../views/scenes/develop/Forms';
 
 // Not Found
-import NotFound from './../../views/pages/NotFound';
+import NotFound from './../../views/scenes/NotFound';
 
 export const routes = [
     // Application Generic

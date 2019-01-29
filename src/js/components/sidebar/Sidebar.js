@@ -3,13 +3,42 @@ import Component from "../component/index";
 class Sidebar extends Component {
     constructor(props) {
         super(props);
-        this.onEvent = this.onEvent.bind(this);
-        // this.setSubscriber("sidebar", this.onEvent);
+       
+        this.state = {
+            toggle: false
+        }
+        
+        this.onEvent();
+    }
+    
+    onEvent  = (e) => {
+    let _self = this;
+    document.addEventListener('DOMContentLoaded', function() { 
+        let items = document.querySelectorAll('.nav-link');
+        console.log(items)
+        items.forEach(item => {
+            
+            item.addEventListener('click', function() {
+                console.log('click')
+                 console.log(_self)
+                 let items = document.querySelectorAll('.nav-link');
+                 items.forEach(item => {
+                     item.classList.remove('active');
+                 })
+                
+            })
+            console.log(item.target.classList.add('active'));
+        })
+    })
     }
 
-    onEvent(state, action) {
-
-    }
+    updateItems = () => {
+        document.addEventListener('DOMContentLoaded', function() { 
+        console.log("Update items")
+        
+        
+    })
+    };
 
     render() {
         return /*html*/`
