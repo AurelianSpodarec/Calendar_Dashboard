@@ -12,7 +12,7 @@ import NotFound from "../../views/scenes/NotFound";
 
 class Router {
     constructor() {
-        this.listen();
+        this.listen = this.listen;
     }
 
     listen() {

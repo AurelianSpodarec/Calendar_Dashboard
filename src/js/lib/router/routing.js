@@ -13,8 +13,7 @@ import DevelopTypography from './../../views/scenes/develop/Typography';
 import DevelopButtons from './../../views/scenes/develop/Buttons';
 import DevelopForms from './../../views/scenes/develop/Forms';
 
-// Not Found
-import NotFound from './../../views/scenes/NotFound';
+import router from '.';
 
 export const routes = [
     // Application Generic
@@ -78,3 +77,5 @@ export const routes = [
     }
 
 ]
+
+router.listen();

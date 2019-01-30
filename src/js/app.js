@@ -8,6 +8,7 @@ fontawesome.library.add(solid)
 fontawesome.library.add(brands)
 
 import '../styles/index.scss';
+import Sidebar from './components/sidebar/index';
 
-import Layout from './views/Layout';
-let layout = new Layout;
+
+ 

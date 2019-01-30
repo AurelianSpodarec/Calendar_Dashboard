@@ -11,37 +11,17 @@ class Sidebar extends Component {
         this.onEvent();
     }
     
-    onEvent  = (e) => {
-    let _self = this;
-    document.addEventListener('DOMContentLoaded', function() { 
-        let items = document.querySelectorAll('.nav-link');
-        console.log(items)
-        items.forEach(item => {
-            
-            item.addEventListener('click', function() {
-                console.log('click')
-                 console.log(_self)
-                 let items = document.querySelectorAll('.nav-link');
-                 items.forEach(item => {
-                     item.classList.remove('active');
-                 })
-                
-            })
-            console.log(item.target.classList.add('active'));
-        })
-    })
+    onEvent() {
+    
     }
 
-    updateItems = () => {
-        document.addEventListener('DOMContentLoaded', function() { 
-        console.log("Update items")
-        
-        
-    })
-    };
+    updateItems() {
+  
+    }
 
     render() {
         return /*html*/`
+        <aside data-ref="main-sidebar" class="main-sidebar">
             <div class="main-sidebar__inner">
 
                 <!-- <div class="main-sidebar__background" style="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);"></div> -->
@@ -87,8 +67,8 @@ class Sidebar extends Component {
                     <li class="nav-group-heading">
                         <span>Connected APIs</span>
                     </li>
-                    <li class="nav-item nav-item-mother nav-has-dropdown">
-                        <span class="nav-link nav-link-mother">
+                    <li class="nav-item nav-has-dropdown">
+                        <span class="nav-link">
                             <i class="nav-link-icon fab fa-github"></i>
                             <span class="nav-link-title">GitHub</span>
                             <i class="nav-link-carrot fas fa-angle-down"></i>
@@ -101,7 +81,7 @@ class Sidebar extends Component {
                         </ul>
                         </div>
                     </li>
-                    <li class="nav-item nav-item-mother nav-has-dropdown">
+                    <li class="nav-item nav-has-dropdown">
                         <span class="nav-link nav-link-mother">
                             <i class="nav-link-icon fab fa-twitter"></i>
                             <span class="nav-link-title">Twitter</span>
@@ -115,7 +95,7 @@ class Sidebar extends Component {
                     <li class="nav-group-heading">
                         <span>Develop</span>
                     </li>
-                    <li class="nav-item nav-item-mother nav-has-dropdown">
+                    <li class="nav-item nav-has-dropdown">
                         <span class="nav-link nav-link-mother">
                             <i class="nav-link-icon fab fa-uikit"></i>
                             <span class="nav-link-title">UI Elements</span>
@@ -130,7 +110,7 @@ class Sidebar extends Component {
                     <li class="nav-group-heading">
                         <span>Custom Functions</span>
                     </li>
-                    <li class="nav-item nav-item-mother">
+                    <li class="nav-item">
                         <span class="nav-link nav-link-mother">
                             <i class="nav-link-icon fas fa-cogs"></i>
                             <span class="nav-link-title">Settings</span>
@@ -142,7 +122,8 @@ class Sidebar extends Component {
                         </ul>
                     </li>
                 </ul>
-            </div>            
+            </div>          
+        </aside>  
         `;
     }
 
