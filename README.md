@@ -5,19 +5,15 @@ I've also incoporated a desing library and a UI system
 
 To be re-factored
 
+
+
+The Webapp is created using React and Redux concepts
+
+
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-
-
-
-
-Create a API system so you can add new APIS
-GitHub API extends API for example
-
-
-
 
 
 ### Prerequisites
