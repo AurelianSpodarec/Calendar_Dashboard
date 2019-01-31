@@ -77,5 +77,3 @@ export const routes = [
     }
 
 ]
-
-router.listen();

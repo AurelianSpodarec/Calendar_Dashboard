@@ -6,6 +6,10 @@ class Component {
         this.state = {};
         this.props = props;
         this.children = {};
+        // this.dispatch = store.dispatch.bind(this);
+        // this.setChild = this.setChild.bind(this);
+        // this.setReducer = this.setReducer.bind(this);
+        // this.setSubscriber = this.setSubscriber.bind(this);
     }
   
     getStoreState() {
