@@ -2,32 +2,17 @@ import Component from "../component/index";
 
 class Sidebar extends Component {
     constructor(props) {
-        super(props);
-       
-        this.state = {
-            toggle: false
-        }
-        
-        this.onEvent();
+        super(props); 
     }
     
     onEvent() {
     
     }
 
-    updateItems() {
-  
-    }
-
     render() {
         return /*html*/`
         <aside data-ref="main-sidebar" class="main-sidebar">
             <div class="main-sidebar__inner">
-
-                <!-- <div class="main-sidebar__background" style="background-image: url(https://demos.creative-tim.com/light-bootstrap-dashboard-react/static/media/sidebar-3.34535b95.jpg);"></div> -->
-
-                <!-- <div class="main-sidebar__header">
-                </div> -->
 
                 <div class="main-sidebar__logo-brand">
                     <div class="main-sidebar__logo">

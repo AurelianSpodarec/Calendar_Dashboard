@@ -1,3 +1,3 @@
-const store = require("./Store");
+import store from "./store";
 
 export default store;
