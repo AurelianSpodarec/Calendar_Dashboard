@@ -14,18 +14,18 @@
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <main class="main-wrapper">
-        <aside data-js="main-sidebar" class="main-sidebar ${this.state.hamburgerToggle ? 'is-folded' : '' }"></aside>
+    <div class="main-wrapper">
+        <aside data-js="main-sidebar" class="main-sidebar"></aside>
 
-        <div data-js="main-panel" class="main-panel ${this.state.hamburgerToggle ? 'is-toggle' : '' }">
-            <header data-js="main-header" class="main-header ${this.state.hamburgerToggle ? 'is-toggle' : '' }"></header>
-            <!-- If GitHub == true, add: main-container--github -->
+        <main data-js="main-panel" class="main-panel">
+            <header data-js="main-header" class="main-header"></header>
+
             <section data-js="main-container" class="main-container"></section>
 
             <footer data-js="main-footer" class="main-footer"></footer>
-        </div>
+        </main>
         
-    </main>
+    </div>
 
 </body>
 </html>
