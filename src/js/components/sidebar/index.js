@@ -1,20 +1,24 @@
 import Sidebar from "./Sidebar";
 import makeCreateElement from "../../lib/createElement/index";
 
-document.addEventListener("DOMContentLoaded", function(event) {
- 
+const sidebar = new Sidebar();
+const sidebarElement = document.querySelector("[data-js=main-sidebar]");
 
-    
-    const mainSidebar = document.querySelector("[data-js=main-sidebar]");
+document.addEventListener("DOMContentLoaded", function(event) {
     const toggleSidebarButton = document.querySelector("[data-js=toggle-sidebar]");
 
+    
 
-    window.mainSidebar = new Sidebar();
-    const mainSidebarNode = makeCreateElement(window.mainSidebar);
+    toggleSidebarButton.addEventListener("click", event => {
+        alert("Change view");
+    })
+})
+
+window.sidebarElement = sidebar;
+const sidebarNode = makeCreateElement(window.sidebarElement);
 
 
-    mainSidebar.parentNode.replaceChild(mainSidebarNode, mainSidebar);
+sidebarElement.parentNode.replaceChild(sidebarNode, sidebarElement);
 
 
 
-});

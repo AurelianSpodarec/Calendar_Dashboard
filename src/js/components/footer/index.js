@@ -1,20 +1,16 @@
 import Footer from "./Footer";
 import makeCreateElement from "../../lib/createElement/index";
 
-document.addEventListener("DOMContentLoaded", function(event) {
  
-
-    
-    const mainFooter = document.querySelector("[data-js=main-footer]");
- 
+const footer = new Footer();
+const footerElement = document.querySelector("[data-js=main-footer]");
 
 
-    window.mainFooter = new Footer();
-    const mainFooterNode = makeCreateElement(window.mainFooter);
+window.footer = footer;
+const footerNode = makeCreateElement(window.footer);
 
 
-    mainFooter.parentNode.replaceChild(mainFooterNode, mainFooter);
+footerElement.parentNode.replaceChild(footerNode, footerElement);
 
 
 
-});

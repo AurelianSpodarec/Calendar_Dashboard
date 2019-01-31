@@ -1,4 +1,5 @@
-import Store from "../../lib/store/index";
+import store from "../../lib/store/index";
+import makeCreateElement from "../../lib/createElement/index";
 
 class Component {
     constructor(props = {}) {
@@ -7,9 +8,10 @@ class Component {
         this.props = props;
         this.children = {};
         // this.dispatch = store.dispatch.bind(this);
-        // this.setChild = this.setChild.bind(this);
-        // this.setReducer = this.setReducer.bind(this);
-        // this.setSubscriber = this.setSubscriber.bind(this);
+        this.setChild = this.setChild.bind(this);
+        this.setReducer = this.setReducer.bind(this);
+        this.setSubscriber = this.setSubscriber.bind(this);
+        // console.log(this.refs)
     }
   
     getStoreState() {
@@ -25,7 +27,7 @@ class Component {
     }
   
     setChild(name, child) {
-    //   this.children[name] = createElement(child);
+        this.children[name] = makeCreateElement(child);
     }
   }
 

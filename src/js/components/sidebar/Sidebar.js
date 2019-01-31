@@ -5,8 +5,9 @@ class Sidebar extends Component {
         super(props); 
     }
     
-    onEvent() {
-    
+    onEvent(event) {
+        event.preventDefault();
+        console.log(this.refs);
     }
 
     render() {
@@ -20,7 +21,7 @@ class Sidebar extends Component {
                         <span class="main-sidebar__logo-text">Hobo</span>
                     </div>
 
-                    <button data-js="toggle-sidebar" class="main-sidebar__toggle-sidebar" onClick={this.props.toggleHamburger}>
+                    <button data-js="toggle-sidebar" class="main-sidebar__toggle-sidebar" onClick="sidebar.onEvent()">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
