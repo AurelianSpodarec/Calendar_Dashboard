@@ -2,7 +2,7 @@ import Sidebar from "./Sidebar";
 import makeCreateElement from "../../lib/createElement";
 
 const sidebar = new Sidebar();
-const sidebarElement = document.querySelector("[data-js=main-sidebar]");
+const sidebarElement = document.querySelector("[data-js=sidebar-element]");
 
 document.addEventListener("DOMContentLoaded", function(event) {
     const toggleSidebarButton = document.querySelector("[data-js=toggle-sidebar]");

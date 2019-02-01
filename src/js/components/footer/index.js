@@ -3,7 +3,7 @@ import makeCreateElement from "../../lib/createElement/index";
 
  
 const footer = new Footer();
-const footerElement = document.querySelector("[data-js=main-footer]");
+const footerElement = document.querySelector("[data-js=footer-element]");
 
 
 window.footer = footer;

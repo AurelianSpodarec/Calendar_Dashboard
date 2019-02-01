@@ -3,7 +3,7 @@ import makeCreateElement from "../../lib/createElement";
 import store from "../../lib/store/Store";
 
 
-const headerElement = document.querySelector("[data-js=main-header]");
+const headerElement = document.querySelector("[data-js=header-element]");
 const header = new Header();
 const headerNode = makeCreateElement(header);
 

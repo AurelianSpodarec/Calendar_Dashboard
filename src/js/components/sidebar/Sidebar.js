@@ -12,21 +12,21 @@ class Sidebar extends Component {
 
     render() {
         return /*html*/`
-        <aside data-ref="main-sidebar" class="main-sidebar">
-            <div class="main-sidebar__inner">
+        <aside data-ref="sidebar-element" class="sidebar">
+            <div class="sidebar__inner">
 
-                <div class="main-sidebar__logo-brand">
-                    <div class="main-sidebar__logo">
-                        <i class="main-sidebar__logo-icon fas fa-fire"></i>
-                        <span class="main-sidebar__logo-text">Hobo</span>
+                <div class="sidebar__logo-brand">
+                    <div class="sidebar__logo">
+                        <i class="sidebar__logo-icon fas fa-fire"></i>
+                        <span class="sidebar__logo-text">Hobo</span>
                     </div>
 
-                    <button data-js="toggle-sidebar" class="main-sidebar__toggle-sidebar" onClick="sidebar.onEvent()">
+                    <button data-js="toggle-sidebar" class="sidebar__toggle-sidebar" onClick="sidebar.onEvent()">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
 
-                <div class="main-sidebar__wrapper">
+                <div class="sidebar__wrapper">
 
                 <ul class="nav-main">
                     <li class="nav-group-heading">

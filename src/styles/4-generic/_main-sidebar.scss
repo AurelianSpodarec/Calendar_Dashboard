@@ -1,11 +1,11 @@
 // ==========================================================================
-// #Main Sidebar
+// # Sidebar
 // ==========================================================================
 
-.main-sidebar {
+.sidebar {
     width: 280px;
     @include fixed(top 0 bottom 0 left 0);
-    background-color: #2d323e!important;
+    background-color: #14171c;
     color: #fff!important;
     transition-property: transform,width,min-width,max-width,-webkit-transform;
     transition-duration: 150ms;
@@ -37,16 +37,16 @@
             height: 0px;
         }
 
-        .main-sidebar__wrapper {
+        .sidebar__wrapper {
             overflow: hidden;
         }
 
 
-        .main-sidebar__toggle-sidebar {
+        .sidebar__toggle-sidebar {
             display: none;
         }
 
-        .main-sidebar__logo-text {
+        .sidebar__logo-text {
             display: none;
         }
 
@@ -81,7 +81,7 @@
 
             }
 
-            .main-sidebar__wrapper {
+            .sidebar__wrapper {
                 overflow: auto;
             }
 
@@ -94,11 +94,11 @@
                 padding-left: 56px;
             }
 
-            .main-sidebar__toggle-sidebar { 
+            .sidebar__toggle-sidebar { 
                 display: block;
             }
 
-            .main-sidebar__logo-text {
+            .sidebar__logo-text {
                 display: block;
             }
 
@@ -109,49 +109,7 @@
         }
     }
 
-    &:before,
-    &:after {
-        display: block;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        opacity: .33;
-        background: #000;
-    }
-
-    &[data-color=red]:after {
-        background: linear-gradient(180deg,#fb404b 0,#bb0502);
-        background-size: 150% 150%;
-    }
-
-    &[data-color=black]:after {
-        background: #292929;
-        background: linear-gradient(180deg,#282828 0,#111);
-        background-size: 150% 150%;
-    }
-
-    &[data-color=charade]:after {
-        background: #2d323e;
-    }
-
-    &[data-image]:after {
-        opacity: .77;
-    }
-
-    
-    &__background {
-        @include absolute(top 0 right 0 bottom 0 left 0);
-        background-size: cover;
-        background-position: 50%;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        display: block;
-    }
+  
 
     &__logo-icon {
         font-size: 22px;
