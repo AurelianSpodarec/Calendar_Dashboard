@@ -1,0 +1,112 @@
+// ==========================================================================
+// # Footer
+// ==========================================================================
+
+.footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 7px 32px;
+    font-size: 12px;
+    @include absolute(right 0 bottom 0 left 0);
+    border-top: 1px solid #e7e7e7;
+
+    &__outer {
+        display: flex;
+        align-items: center;        
+
+        @include breakpoint-down(sm) {
+            flex-flow: column;
+            padding: 10px 0 0;
+        }
+
+        @include breakpoint-up(sm) {
+            height: 50px;
+            justify-content: space-between;
+        }
+    }
+
+    &__links {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        padding: 0 14px;
+        color: #007791;
+
+        @include breakpoint-down(sm) {
+            margin-right: auto;
+            display: none;
+        }
+
+        @include breakpoint-up(sm) {
+            padding: 20px 25px 20px 0;
+        }
+    }
+
+    &__info {
+        @include breakpoint-down(sm) {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo-container {
+        vertical-align: middle;
+        
+        @include breakpoint-down(sm) {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__logo-icon {
+        font-size: 2em;
+    }
+
+    &__logo-text {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #333;
+        margin-left: 7px;
+        text-transform: uppercase;
+    }
+
+
+    &__social-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include breakpoint-up(sm) {
+            display: none;
+        }
+    }
+
+    &__social-item {
+        display: inline-block;
+    }
+
+    &__social-link {
+        padding-left: 6px;
+    }
+
+    &__social-icon {
+        color: #303030;
+        width: 17px !important;
+        height: 17px !important;
+    }
+    
+    &__copyright {
+        width: 100%;
+    }
+
+}
