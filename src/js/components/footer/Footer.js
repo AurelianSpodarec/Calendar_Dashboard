@@ -1,4 +1,4 @@
-import Component from "../component/index";
+import Component from "../component";
 
 class Footer extends Component {
     constructor(props) {

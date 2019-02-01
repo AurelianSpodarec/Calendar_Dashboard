@@ -10,9 +10,9 @@ fontawesome.library.add(brands)
 
 
 import '../styles/index.scss';
-import Sidebar from './components/sidebar/index';
-import Header from './components/header/index';
-import Footer from './components/footer/index';
+import Sidebar from './components/sidebar';
+import Header from './components/header';
+import Footer from './components/footer';
 import Router from './lib/router';
  
 

@@ -1,5 +1,5 @@
-import store from "../../lib/store/index";
-import makeCreateElement from "../../lib/createElement/index";
+import store from "../../lib/store";
+import makeCreateElement from "../../lib/createElement";
 
 class Component {
     constructor(props = {}) {
@@ -11,7 +11,6 @@ class Component {
         this.setChild = this.setChild.bind(this);
         this.setReducer = this.setReducer.bind(this);
         this.setSubscriber = this.setSubscriber.bind(this);
-        // console.log(this.refs)
     }
   
     getStoreState() {
