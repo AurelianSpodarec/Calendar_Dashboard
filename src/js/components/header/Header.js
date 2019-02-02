@@ -1,34 +1,22 @@
 import Component from "../component";
+import Search from "./components/search/Search";
 
 class Header extends Component {
     constructor(props) {
         super(props);
+        // this.search = this.search.bind(this);
         this.onEvent = this.onEvent.bind(this);
         // this.openSearch = this.openSearch.bind(this);
         // this.setSubscriber("header", this.onEvent);
     }
     
-    openSearch(event) {
-        event.preventDefault();
-        console.log("Open Search"); 
-        this.refs.headerSearchContainer.classList.add("is-expanded");
-    }
-
-    closeSearch(event) {
-        event.preventDefault();
-        this.refs.headerSearchContainer.classList.remove("is-expanded");
-    }
-
-    onSearch(event) {
-        event.preventDefault();
-        alert("Search");
-    }
-
     onEvent(state, action) {
         // if (action.type === )
     }
 
     render() {
+        this.search = new Search(render);
+        console.log(this.search)
         return /*html*/`
         <header class="header">
         <div class="header__outer">
@@ -45,21 +33,14 @@ class Header extends Component {
                     <i class="fas fa-search"></i>
                 </button>
                 <div class="header__item header__item--special">
-                    <img class="header__user-avatar" alt="@AurelianSpodarec" src="https://avatars0.githubusercontent.com/u/10155855?s=40&amp;v=4">
+                    <img class="header__user-avatar" alt="User Avatar" src="https://avatars0.githubusercontent.com/u/10155855?s=40&amp;v=4">
                     <span class="header__user-name">Aurelian Spodarec</span>
                     <i class="fas fa-angle-down"></i>
                 </div>
             </div>
 
             <div class="header__search-container" data-ref="headerSearchContainer">
-            <form onsubmit="header.onSearch(event)">
-                <div class="header__search-bar-content">
-                    <input name="search" class="header__search-input" placeholder="Search" />
-                    <button class="header__search-close-btn" onClick="header.closeSearch(event)" type="button">
-                        <i class="header__search-close-icon fas fa-times"></i>
-                    </button>
-                </div>
-            </form>
+                ${this.search}
             </div>
                  
 

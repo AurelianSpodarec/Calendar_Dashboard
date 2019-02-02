@@ -13,7 +13,8 @@ class Sidebar extends Component {
     render() {
         return /*html*/`
         <aside data-ref="sidebar-element" class="sidebar">
-            <div class="sidebar__inner">
+        <div class="sidebar__inner">
+
 
                 <div class="sidebar__logo-brand">
                     <div class="sidebar__logo">
@@ -25,6 +26,7 @@ class Sidebar extends Component {
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
+                
 
                 <div class="sidebar__wrapper">
 
@@ -108,7 +110,8 @@ class Sidebar extends Component {
                         </ul>
                     </li>
                 </ul>
-            </div>          
+
+        </div>          
         </aside>  
         `;
     }
