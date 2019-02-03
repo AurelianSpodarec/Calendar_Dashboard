@@ -1,5 +1,5 @@
 import Component from "../component";
-import Search from "./components/search/Search";
+import search from "./components/search";
 
 class Header extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class Header extends Component {
                 <div class="header__item">
                     Weather -10
                 </div>
-                <button class="header__item header__item--pull-right header__item--special header__search-btn" onClick="search.props.openSearch(event)">
+                <button class="header__item header__item--pull-right header__item--special header__search-btn" onClick="search.openSearch(event)">
                     <i class="fas fa-search"></i>
                 </button>
                 <div class="header__item header__item--special">
