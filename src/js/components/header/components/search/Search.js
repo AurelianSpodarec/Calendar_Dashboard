@@ -24,7 +24,6 @@ class Search extends Component {
     }
 
     render() {
-        this.setChild('searchContainer');
         return /*html*/`
         <div class="header__search-container">
         <form onsubmit="search.onSearch(event)">
