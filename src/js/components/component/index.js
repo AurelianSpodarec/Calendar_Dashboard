@@ -6,7 +6,7 @@ class Component {
         this.refs = {};
         this.state = {};
         this.props = props;
-        this.children = {};
+        console.log(this.children = {});
         // this.dispatch = store.dispatch.bind(this);
         this.setChild = this.setChild.bind(this);
         this.setReducer = this.setReducer.bind(this);

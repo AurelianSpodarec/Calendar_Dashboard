@@ -10,7 +10,7 @@ class Search extends Component {
     openSearch(event) {
         event.preventDefault();
         console.log("Open Search"); 
-        this.refs.headerSearchContainer.classList.add("is-expanded");
+        this.children.headerSearchContainer.classList.add("is-expanded");
     }
 
     closeSearch(event) {
@@ -24,6 +24,7 @@ class Search extends Component {
     }
 
     render() {
+        this.setChild('searchContainer');
         return /*html*/`
         <div class="header__search-container">
         <form onsubmit="search.onSearch(event)">

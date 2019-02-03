@@ -4,7 +4,7 @@ import search from "./components/search";
 class Header extends Component {
     constructor(props) {
         super(props);
-        // this.search = this.search.bind(this);
+        // this.search = this.search;
         this.onEvent = this.onEvent.bind(this);
         // this.openSearch = this.openSearch.bind(this);
         // this.setSubscriber("header", this.onEvent);
@@ -15,6 +15,7 @@ class Header extends Component {
     }
 
     render() {
+        this.setChild("headerSearchContainer", search);
         return /*html*/`
         <header class="header">
         <div class="header__outer">
