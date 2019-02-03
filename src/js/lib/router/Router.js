@@ -54,7 +54,7 @@ class Router {
     }
 
     async render(pageName) {
-        let mainView = document.querySelector('[data-js="main-container"]');
+        let mainView = document.querySelector('[data-js="container-element"]');
         mainView.innerHTML = await pageName.render(); ;
     }
 }
