@@ -9,6 +9,13 @@ class Header extends Component {
         // this.openSearch = this.openSearch.bind(this);
         // this.setSubscriber("header", this.onEvent);
     }
+
+    openSearch(event) {
+        event.preventDefault();
+        console.log("Open Search"); 
+        // console.log(this.refs)
+        this.refs.headerSearchElement.classList.add("is-expanded");
+    }
     
     onEvent(state, action) {
         // if (action.type === )
@@ -16,18 +23,19 @@ class Header extends Component {
 
     render() {
         this.setChild("headerSearchContainer", search);
+        console.log(this.refs);
         return /*html*/`
         <header class="header">
         <div class="header__outer">
 
             <div class="header__item-list">
-                <button class="header__item header__item--special header__toggle-view-btn" data-ref="toggleSidebarMobile" type="button">
+                <button data-ref="toggleSidebarMobile" class="header__item header__item--special header__toggle-view-btn" type="button">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="header__item">
                     Weather -10
                 </div>
-                <button class="header__item header__item--pull-right header__item--special header__search-btn" onClick="search.openSearch(event)">
+                <button class="header__item header__item--pull-right header__item--special header__search-btn" onClick="header.openSearch(event)">
                     <i class="fas fa-search"></i>
                 </button>
                 <div class="header__item header__item--special">
@@ -37,7 +45,7 @@ class Header extends Component {
                 </div>
             </div>
 
-            <div class="header__search-container" data-child="headerSearchContainer"></div>
+            <form data-ref="headerSearchElement" data-child="headerSearchContainer"  class="header__search-container"></form>
                  
         </div>
         </header>

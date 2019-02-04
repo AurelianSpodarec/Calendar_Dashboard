@@ -10,12 +10,13 @@ class Search extends Component {
     openSearch(event) {
         event.preventDefault();
         console.log("Open Search"); 
-        this.children.headerSearchContainer.classList.add("is-expanded");
+        // console.log(this.refs)
+        this.refs.headerSearchElement.classList.add("is-expanded");
     }
 
     closeSearch(event) {
         event.preventDefault();
-        this.refs.headerSearchContainer.classList.remove("is-expanded");
+        this.refs.headerSearchElement.classList.remove("is-expanded");
     }
 
     onSearch(event) {
@@ -25,8 +26,7 @@ class Search extends Component {
 
     render() {
         return /*html*/`
-        <div class="header__search-container">
-        <form onsubmit="search.onSearch(event)">
+        <form class="header__search-container" onsubmit="search.onSearch(event)">
             <div class="header__search-bar-content">
                 <input name="search" class="header__search-input" placeholder="Search" />
                 <button class="header__search-close-btn" onClick="search.closeSearch(event)" type="button">
@@ -34,7 +34,6 @@ class Search extends Component {
                 </button>
             </div>
         </form>
-        </div>
         `;
     }
 
