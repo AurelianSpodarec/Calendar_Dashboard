@@ -15,7 +15,7 @@ class Search extends Component {
         this.refs.headerSearchElement.classList.add("is-expanded");
     }
 
-    closeSearch(event) {
+    closeSearch = event => {
         event.preventDefault();
         console.log("CLose Search");
         this.refs.headerSearchElement.classList.remove("is-expanded");
@@ -36,7 +36,7 @@ class Search extends Component {
         return /*html*/`
         <form data-ref="headerSearchElement" class="header__search-container" onsubmit="search.onSearch(event)">
             <div class="header__search-bar-content">
-                <input name="search" class="header__search-input" placeholder="Search" />
+                <input name="searchInput" class="header__search-input" placeholder="Search" />
                 <button class="header__search-close-btn" onClick="search.closeSearch(event)" type="button">
                     <i class="header__search-close-icon fas fa-times"></i>
                 </button>
