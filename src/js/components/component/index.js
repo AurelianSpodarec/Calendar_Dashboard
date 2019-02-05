@@ -1,5 +1,5 @@
 import store from "../../lib/store";
-import makeCreateElement from "../../lib/createElement";
+import createElement from "../../lib/createElement";
 
 class Component {
     constructor(props = {}) {
@@ -26,7 +26,7 @@ class Component {
     }
   
     setChild(name, child) {
-        this.children[name] = makeCreateElement(child);
+        this.children[name] = createElement(child);
     }
   }
 

@@ -1,5 +1,5 @@
 import Sidebar from "./Sidebar";
-import makeCreateElement from "../../lib/createElement";
+import createElement from "../../lib/createElement";
 
 const sidebar = new Sidebar();
 const sidebarElement = document.querySelector("[data-js=sidebar-element]");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 window.sidebarElement = sidebar;
-const sidebarNode = makeCreateElement(window.sidebarElement);
+const sidebarNode = createElement(window.sidebarElement);
 
 
 sidebarElement.parentNode.replaceChild(sidebarNode, sidebarElement);

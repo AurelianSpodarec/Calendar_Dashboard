@@ -15,7 +15,7 @@ class Search extends Component {
         this.refs.headerSearchElement.classList.add("is-expanded");
     }
 
-    closeSearch = event => {
+    closeSearch(event) {
         event.preventDefault();
         console.log("CLose Search");
         this.refs.headerSearchElement.classList.remove("is-expanded");

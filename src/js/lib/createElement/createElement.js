@@ -6,7 +6,7 @@ const replaceNode = (childName, childElement) => element => {
     }
 }
 
-const makeCreateElement = domParser => {
+const createElement = domParser => {
     return component => {
         const doc = domParser.parseFromString(component.render(), "text/html");
         const children = Object.keys(component.children);
@@ -29,4 +29,4 @@ const makeCreateElement = domParser => {
     }
 }
 
-export default makeCreateElement;
+export default createElement;

@@ -1,3 +1,3 @@
-import makeCreateElement from "./createElement";
+import createElement from "./createElement";
 
-export default makeCreateElement(new DOMParser());
+export default createElement(new DOMParser());
