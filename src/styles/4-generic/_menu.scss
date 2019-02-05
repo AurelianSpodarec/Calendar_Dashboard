@@ -3,7 +3,6 @@
 // ==========================================================================
 
 
-
 .menu {
     margin: 20px 0 0;
     padding: 0;
@@ -81,6 +80,15 @@
         transform: rotate(90deg);
     }
 
+    &__has-dropdown {
+        &.is-expanded{
+            background: rgba(33, 36, 45, 0.36);//rgba(0,0,0,.12);
+            & .menu__caret {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
     &__dropdown-collapse {
         height: 0px; // get the ul height and add it here
         overflow: hidden;
@@ -102,27 +110,3 @@
     }
 
 }
-
-  
-
- 
-
-.nav-item-mother {
-    &.open  {
-        background: rgba(33, 36, 45, 0.36);//rgba(0,0,0,.12);
-
-        .nav-link-carrot {
-            transform: rotate(0deg);
-        }
-    }
-}
-
-
-
-
-
-
-
-
-    
-

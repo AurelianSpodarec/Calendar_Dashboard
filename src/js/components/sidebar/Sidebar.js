@@ -54,7 +54,7 @@ class Sidebar extends Component {
                 <li class="menu__section-heading">
                     <span>Connected APIs</span>
                 </li>
-                <li class="menu__item is-dropdown">
+                <li class="menu__item menu__has-dropdown is-expanded">
                     <span class="menu__link">
                         <i class="menu__icon fab fa-github"></i>
                         <span class="menu__text">GitHub</span>
@@ -68,7 +68,7 @@ class Sidebar extends Component {
                     </ul>
                     </div>
                 </li>
-                <li class="menu__item nav-has-dropdown">
+                <li class="menu__item menu__has-dropdown">
                     <span class="menu__link nav-link-mother">
                         <i class="menu__icon fab fa-twitter"></i>
                         <span class="menu__text">Twitter</span>
@@ -84,7 +84,7 @@ class Sidebar extends Component {
                 <li class="menu__section-heading">
                     <span>Develop</span>
                 </li>
-                <li class="menu__item nav-has-dropdown">
+                <li class="menu__item menu__has-dropdown">
                     <span class="menu__link nav-link-mother">
                         <i class="menu__icon fab fa-uikit"></i>
                         <span class="menu__text">UI Elements</span>
