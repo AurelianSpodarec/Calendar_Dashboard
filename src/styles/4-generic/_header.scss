@@ -34,7 +34,7 @@
         color: #6d6d6d;
         
         flex: 0 1 auto;
-        &--active {
+        &.is-active {
             display: block;
         }
     }
@@ -98,8 +98,6 @@
         color: rgba(255,255,255,.7);
         place-content: center;
         align-items: center;
-
-       
 
         &--has-submenu {
             display: none;

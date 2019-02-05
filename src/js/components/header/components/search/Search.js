@@ -10,12 +10,12 @@ class Search extends Component {
 
     openSearch(event) {
         event.preventDefault();
-        this.refs.headerSearchElement.classList.add("header__search-container--active");
+        this.refs.headerSearchElement.classList.add("is-active");
     }
 
     closeSearch(event) {
         event.preventDefault();
-        this.refs.headerSearchElement.classList.remove("header__search-container--active");
+        this.refs.headerSearchElement.classList.remove("is-active");
     }
 
     onSearch(event) {

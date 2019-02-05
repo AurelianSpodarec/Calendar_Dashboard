@@ -1,0 +1,128 @@
+// ==========================================================================
+// # Menu
+// ==========================================================================
+
+
+
+.menu {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+
+    &__section-heading {
+        text-transform: uppercase;
+        height: 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 48px;
+        font-weight: 600;
+        padding-left: 24px;
+        margin-top: 8px;
+        font-size: 12px;
+        white-space: nowrap;
+        color: rgba(255,255,255,.5);
+        font-weight: 600;
+    }
+
+    &__item {
+        position: relative;
+        display: block;
+
+        &.open {
+            background: rgba(0,0,0,.12);
+        }
+    }
+
+    &__link {
+        height: 40px;
+        padding: 0 12px 0 24px;
+        border-radius: 0 20px 20px 0;
+        margin-right: 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        color: white;
+    
+        &.is-active {
+            background-color: #e91e63!important;
+        }
+
+        &:hover {
+            background-color: #272935;
+        }
+    }
+
+    &__icon {
+        margin-right: 16px;
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        min-height: 16px;
+        line-height: 16px;
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        white-space: nowrap;
+    }
+
+    &__caret {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        min-height: 16px;
+        line-height: 16px;
+        transition: .15s;
+        transform: rotate(90deg);
+    }
+
+    &__dropdown-collapse {
+        height: 0px; // get the ul height and add it here
+        overflow: hidden;
+        transition: linear .15s;
+
+        &.is-expanded {
+            height: inherit;
+        }
+    }
+
+    &__dropdown {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & .menu__link {
+            padding-left: 56px;
+        }
+    }
+
+}
+
+  
+
+ 
+
+.nav-item-mother {
+    &.open  {
+        background: rgba(33, 36, 45, 0.36);//rgba(0,0,0,.12);
+
+        .nav-link-carrot {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+    
+

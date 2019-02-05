@@ -16,100 +16,105 @@ class Sidebar extends Component {
         <div class="sidebar__inner">
 
 
-                <div class="sidebar__logo-brand">
-                    <div class="sidebar__logo">
-                        <i class="sidebar__logo-icon fas fa-fire"></i>
-                        <span class="sidebar__logo-text">Hobo</span>
-                    </div>
-
-                    <button data-js="toggle-sidebar" class="sidebar__toggle-sidebar" onClick="sidebar.onEvent()">
-                        <i class="fas fa-bars"></i>
-                    </button>
+            <div class="sidebar__logo-brand">
+                <div class="sidebar__logo">
+                    <i class="sidebar__logo-icon fas fa-fire"></i>
+                    <span class="sidebar__logo-text">Hobo</span>
                 </div>
-                
 
-                <div class="sidebar__wrapper">
+                <button data-js="toggle-sidebar" class="sidebar__toggle-sidebar" onClick="sidebar.onEvent()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
 
-                <ul class="nav-main">
-                    <li class="nav-group-heading">
-                        <span>Applications</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#dashboard">
-                            <i class="nav-link-icon fas fa-rocket"></i>
-                            <span class="nav-link-title">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#todo">
-                            <i class="nav-link-icon far fa-calendar-check"></i>
-                            <span class="nav-link-title">To-Do</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#calendar">
-                            <i class="nav-link-icon fas fa-calendar"></i>
-                            <span class="nav-link-title">Calendar</span>
-                        </a>
-                    </li>
-                    <li class="nav-group-heading">
-                        <span>Connected APIs</span>
-                    </li>
-                    <li class="nav-item nav-has-dropdown">
-                        <span class="nav-link">
-                            <i class="nav-link-icon fab fa-github"></i>
-                            <span class="nav-link-title">GitHub</span>
-                            <i class="nav-link-carrot fas fa-angle-down"></i>
-                        </span>
-                        <div class="nav-sub-list-collapseee">
-                        <ul class="nav-sub-list">
-                            <li class="nav-item"><a class="nav-link active" href="#github/profile"><span class="nav-link-title">My Profile</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#github/stats"><span class="nav-link-title">Stats</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#github/search-user"><span class="nav-link-title">Search User</span></a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item nav-has-dropdown">
-                        <span class="nav-link nav-link-mother">
-                            <i class="nav-link-icon fab fa-twitter"></i>
-                            <span class="nav-link-title">Twitter</span>
-                            <i class="nav-link-carrot fas fa-angle-down"></i>
-                        </span>
-                        <ul class="nav-sub-list">
-                            <li><a class="nav-link" href="#twitter/profile"><span class="nav-link-title">My Profile</span></a></li>
-                            <li><a class="nav-link" href="#twitter/tweets"><span class="nav-link-title">Get tweets</span></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-group-heading">
-                        <span>Develop</span>
-                    </li>
-                    <li class="nav-item nav-has-dropdown">
-                        <span class="nav-link nav-link-mother">
-                            <i class="nav-link-icon fab fa-uikit"></i>
-                            <span class="nav-link-title">UI Elements</span>
-                            <i class="nav-link-carrot fas fa-angle-down"></i>
-                        </span>
-                        <ul class="nav-sub-list">
-                            <li><a class="nav-link" href="#develop/typography"><span class="nav-link-title">Typography</span></a></li>
-                            <li><a class="nav-link" href="#develop/buttons"><span class="nav-link-title">Buttons</span></a></li>
-                            <li><a class="nav-link" href="#develop/forms"><span class="nav-link-title">Forms</span></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-group-heading">
-                        <span>Custom Functions</span>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link nav-link-mother">
-                            <i class="nav-link-icon fas fa-cogs"></i>
-                            <span class="nav-link-title">Settings</span>
-                            <i class="nav-link-carrot fas fa-angle-down"></i>
-                        </span>
-                        <ul class="nav-sub-list">
-                            <li><a class="nav-link" href=""><span class="nav-link-title">General</span></a></li>
-                            <li><a class="nav-link" href=""><span class="nav-link-title">Theme</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="sidebar__wrapper">
+            <ul class="menu">
+                <li class="menu__section-heading">
+                    <span>Applications</span>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#dashboard">
+                        <i class="menu__icon fas fa-rocket"></i>
+                        <span class="menu__text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#todo">
+                        <i class="menu__icon far fa-calendar-check"></i>
+                        <span class="menu__text">To-Do</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#calendar">
+                        <i class="menu__icon fas fa-calendar"></i>
+                        <span class="menu__text">Calendar</span>
+                    </a>
+                </li>
+                <li class="menu__section-heading">
+                    <span>Connected APIs</span>
+                </li>
+                <li class="menu__item is-dropdown">
+                    <span class="menu__link">
+                        <i class="menu__icon fab fa-github"></i>
+                        <span class="menu__text">GitHub</span>
+                        <i class="menu__caret fas fa-angle-down"></i>
+                    </span>
+                    <div class="menu__dropdown-collapse is-expanded">
+                    <ul class="menu__dropdown">
+                        <li class="menu__item"><a class="menu__link is-active" href="#github/profile"><span class="menu__text">My Profile</span></a></li>
+                        <li class="menu__item"><a class="menu__link" href="#github/stats"><span class="menu__text">Stats</span></a></li>
+                        <li class="menu__item"><a class="menu__link" href="#github/search-user"><span class="menu__text">Search User</span></a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="menu__item nav-has-dropdown">
+                    <span class="menu__link nav-link-mother">
+                        <i class="menu__icon fab fa-twitter"></i>
+                        <span class="menu__text">Twitter</span>
+                        <i class="menu__caret fas fa-angle-down"></i>
+                    </span>
+                    <div class="menu__dropdown-collapse">
+                    <ul class="menu__dropdown">
+                        <li><a class="menu__link" href="#twitter/profile"><span class="menu__text">My Profile</span></a></li>
+                        <li><a class="menu__link" href="#twitter/tweets"><span class="menu__text">Get tweets</span></a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="menu__section-heading">
+                    <span>Develop</span>
+                </li>
+                <li class="menu__item nav-has-dropdown">
+                    <span class="menu__link nav-link-mother">
+                        <i class="menu__icon fab fa-uikit"></i>
+                        <span class="menu__text">UI Elements</span>
+                        <i class="menu__caret fas fa-angle-down"></i>
+                    </span>
+                    <div class="menu__dropdown-collapse">
+                    <ul class="menu__dropdown">
+                        <li><a class="menu__link" href="#develop/typography"><span class="menu__text">Typography</span></a></li>
+                        <li><a class="menu__link" href="#develop/buttons"><span class="menu__text">Buttons</span></a></li>
+                        <li><a class="menu__link" href="#develop/forms"><span class="menu__text">Forms</span></a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="menu__section-heading">
+                    <span>Custom Functions</span>
+                </li>
+                <li class="menu__item">
+                    <span class="menu__link nav-link-mother">
+                        <i class="menu__icon fas fa-cogs"></i>
+                        <span class="menu__text">Settings</span>
+                        <i class="menu__caret fas fa-angle-down"></i>
+                    </span>
+                    <div class="menu__dropdown-collapse">
+                    <ul class="menu__dropdown">
+                        <li><a class="menu__link" href=""><span class="menu__text">General</span></a></li>
+                        <li><a class="menu__link" href=""><span class="menu__text">Theme</span></a></li>
+                    </ul>
+                    </div>
+                </li>
+            </ul>
 
         </div>          
         </aside>  
