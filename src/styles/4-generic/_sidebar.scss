@@ -66,7 +66,7 @@
         transition-timing-function: ease-in-out;
     }
 
-    &.is-toggled {
+    &.is-toggle {
         width: 64px;
 
         .sidebar {
@@ -84,17 +84,17 @@
         .menu {
             overflow: hidden;
         
+            &__heading-item:before {
+                content: '';
+                display: block;
+                position: absolute;
+                min-width: 1.6rem;
+                border-top: 2px solid;
+                opacity: .2;
+            }
+
             &__heading-title {
                 display: none;
-
-                &:before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    min-width: 1.6rem;
-                    border-top: 2px solid;
-                    opacity: .2;
-                }
             }
 
             &__text {
@@ -133,11 +133,12 @@
             .menu {
                 overflow: auto;
 
+                &__heading-item:before {
+                    display: none;
+                }
+
                 &__heading-title {
                     display: block;
-                    &:before {
-                        display: none;
-                    }
                 }
 
                 &__link {

@@ -14,7 +14,7 @@ class Sidebar extends Component {
 
     render() {
         return /*html*/`
-        <aside data-ref="sidebar-element" class="sidebar is-toggled">
+        <aside data-ref="sidebar-element" class="sidebar">
         <div class="sidebar__inner">
 
             <div class="sidebar__header">

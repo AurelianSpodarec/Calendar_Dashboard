@@ -9,7 +9,7 @@ To be re-factored
 
 The Webapp is created using React and Redux concepts
 
-
+I've created this Web Application with Vanilla JavaScript using the ideas of React and Redux to for a 'Single Page Application' effect and manage the state. 
 
 ## Getting Started
 
