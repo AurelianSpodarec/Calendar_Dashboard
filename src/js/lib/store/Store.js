@@ -2,7 +2,7 @@ class Store {
     constructor() {
         this.state = {};
         this.reducers = {};
-        this.subscribers = {};
+        console.log(this.subscribers = {});
         this.setReducer = this.setReducer.bind(this);
         this.setSubscriber = this.setSubscriber.bind(this);
         this.dispatch = this.dispatch.bind(this);
