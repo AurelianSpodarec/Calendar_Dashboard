@@ -34,7 +34,7 @@
         color: #6d6d6d;
         
         flex: 0 1 auto;
-        &.is-expanded {
+        &--active {
             display: block;
         }
     }

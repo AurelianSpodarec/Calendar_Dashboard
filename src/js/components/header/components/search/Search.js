@@ -10,15 +10,12 @@ class Search extends Component {
 
     openSearch(event) {
         event.preventDefault();
-        console.log("Open Search"); 
-        console.log(this.refs)
-        this.refs.headerSearchElement.classList.add("is-expanded");
+        this.refs.headerSearchElement.classList.add("header__search-container--active");
     }
 
     closeSearch(event) {
         event.preventDefault();
-        console.log("CLose Search");
-        this.refs.headerSearchElement.classList.remove("is-expanded");
+        this.refs.headerSearchElement.classList.remove("header__search-container--active");
     }
 
     onSearch(event) {
