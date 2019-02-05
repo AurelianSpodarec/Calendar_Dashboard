@@ -4,11 +4,36 @@
 
 
 .menu {
-    margin: 20px 0 0;
-    padding: 0;
-    list-style: none;
+    position: relative;
+    height: calc(100vh - 64px);
+    overflow: auto;
+    z-index: 4;
+    padding-bottom: 30px;
 
-    &__section-heading {
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(0,0,0,0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 2px solid transparent;
+        box-shadow: inset 0 0 0 12px rgba(0,0,0,.37);
+        border-radius: 12px;
+    }
+    &__list {
+        margin: 20px 0 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__heading-item {
         text-transform: uppercase;
         height: 40px;
         position: relative;

@@ -3,6 +3,8 @@ import Component from "../component/index";
 class Sidebar extends Component {
     constructor(props) {
         super(props); 
+        this.onEvent = this.onEvent.bind(this);
+        this.setSubscriber("sidebar", this.onEvent);
     }
     
     onEvent(event) {
@@ -12,26 +14,23 @@ class Sidebar extends Component {
 
     render() {
         return /*html*/`
-        <aside data-ref="sidebar-element" class="sidebar">
+        <aside data-ref="sidebar-element" class="sidebar is-toggled">
         <div class="sidebar__inner">
 
-
-            <div class="sidebar__logo-brand">
-                <div class="sidebar__logo">
+            <div class="sidebar__header">
+                <a class="sidebar__logo-container" href="#dashboard" title="Hobo">
                     <i class="sidebar__logo-icon fas fa-fire"></i>
                     <span class="sidebar__logo-text">Hobo</span>
-                </div>
-
+                </a>
                 <button data-js="toggle-sidebar" class="sidebar__toggle-sidebar" onClick="sidebar.onEvent()">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
             
-
-            <div class="sidebar__wrapper">
-            <ul class="menu">
-                <li class="menu__section-heading">
-                    <span>Applications</span>
+            <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__heading-item">
+                    <span class="menu__heading-title">Applications</span>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#dashboard">
@@ -51,8 +50,8 @@ class Sidebar extends Component {
                         <span class="menu__text">Calendar</span>
                     </a>
                 </li>
-                <li class="menu__section-heading">
-                    <span>Connected APIs</span>
+                <li class="menu__heading-item">
+                    <span class="menu__heading-title">Connected APIs</span>
                 </li>
                 <li class="menu__item menu__has-dropdown is-expanded">
                     <span class="menu__link">
@@ -69,7 +68,7 @@ class Sidebar extends Component {
                     </div>
                 </li>
                 <li class="menu__item menu__has-dropdown">
-                    <span class="menu__link nav-link-mother">
+                    <span class="menu__link">
                         <i class="menu__icon fab fa-twitter"></i>
                         <span class="menu__text">Twitter</span>
                         <i class="menu__caret fas fa-angle-down"></i>
@@ -81,11 +80,11 @@ class Sidebar extends Component {
                     </ul>
                     </div>
                 </li>
-                <li class="menu__section-heading">
-                    <span>Develop</span>
+                <li class="menu__heading-item">
+                    <span class="menu__heading-title">Develop</span>
                 </li>
                 <li class="menu__item menu__has-dropdown">
-                    <span class="menu__link nav-link-mother">
+                    <span class="menu__link">
                         <i class="menu__icon fab fa-uikit"></i>
                         <span class="menu__text">UI Elements</span>
                         <i class="menu__caret fas fa-angle-down"></i>
@@ -98,11 +97,11 @@ class Sidebar extends Component {
                     </ul>
                     </div>
                 </li>
-                <li class="menu__section-heading">
-                    <span>Custom Functions</span>
+                <li class="menu__heading-item">
+                    <span class="menu__heading-title">Custom Functions</span>
                 </li>
                 <li class="menu__item">
-                    <span class="menu__link nav-link-mother">
+                    <span class="menu__link">
                         <i class="menu__icon fas fa-cogs"></i>
                         <span class="menu__text">Settings</span>
                         <i class="menu__caret fas fa-angle-down"></i>
@@ -115,6 +114,7 @@ class Sidebar extends Component {
                     </div>
                 </li>
             </ul>
+            </nav>
 
         </div>          
         </aside>  
