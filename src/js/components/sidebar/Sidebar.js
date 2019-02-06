@@ -40,13 +40,13 @@ class Sidebar extends Component {
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#todo">
-                        <i class="menu__icon far fa-calendar-check"></i>
+                        <i class="menu__icon fas fa-calendar-check"></i>
                         <span class="menu__text">To-Do</span>
                     </a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#calendar">
-                        <i class="menu__icon fas fa-calendar"></i>
+                        <i class="menu__icon fas fa-calendar-day"></i>
                         <span class="menu__text">Calendar</span>
                     </a>
                 </li>

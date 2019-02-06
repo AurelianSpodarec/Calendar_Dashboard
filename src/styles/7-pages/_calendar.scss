@@ -1,0 +1,113 @@
+// ==========================================================================
+// # Calendar
+// ==========================================================================
+
+
+.cal {
+
+    &__header {
+        height: 164px;
+        min-height: 164px;
+        max-height: 164px;
+        position: relative;
+        background-size: 100% auto;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background: rgba(0,0,0,.45);
+        }
+        @include breakpoint-up(sm) {
+            height: 200px;
+            min-height: 200px;
+            max-height: 200px;
+        }
+    }
+
+    &__header-container {
+        padding: 24px;    flex-direction: column;
+        box-sizing: border-box;
+        display: flex;
+        place-content: stretch space-between;
+        align-items: stretch;
+        height: 100%;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__header-top {
+        flex-direction: column;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-between;
+        align-items: center;
+        position: relative;
+
+        @include breakpoint-up(sm) {
+            flex-direction: row;
+        }
+    }
+
+    &__header-bottom {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+    }
+
+
+    &__page-info {
+        color: white;
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    &__page-icon {
+
+    }
+
+    &__page-title {
+
+    }
+
+    &__tool-btn {
+        height: 40px;
+        width: 40px;
+        font-size: 18px;
+        color: white;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: none;
+    }
+
+    &__tool-icon {
+        
+    }
+
+    &__current-month {
+        font-size: 20px;
+        min-width: 160px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    &__pagination-arrow {
+        background: none;
+        border: none;
+        font-size: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+        line-height: 24px;
+        padding: 0 16px;
+    }
+
+}
