@@ -1,7 +1,7 @@
 let Calendar = {
     render: async () => {
         return /*html*/`
-            <header class="cal__header" style="background-image: url('https://i.ytimg.com/vi/KLLZTAPfs4Y/maxresdefault.jpg');">
+            <header class="cal__header" style="background-image: url('https://c8.alamy.com/comp/PTB79P/vector-banner-blue-winter-background-with-ice-and-snow-PTB79P.jpg');">
             <div class="cal__header-container">
 
 
@@ -35,47 +35,59 @@ let Calendar = {
             </header>
 
 
-            <section class="cal__scheme">
-            <div class="cal__scheme-inner">
+            <section class="cal__month">
 
                 <div class="cal__month-view">
-                    <header class="cal__week">
-                        <span class="cal__weekday">Monday</span>
-                        <span class="cal__weekday">Tuesday</span>
-                        <span class="cal__weekday">Wedenesday</span>
-                        <span class="cal__weekday">Thursday</span>
-                        <span class="cal__weekday">Friday</span>
-                        <span class="cal__weekday">Saturday</span>
-                        <span class="cal__weekday">Sunday</span>
+                    <header class="cal__week-row cal__cell-row">
+                        <span class="cal__cell-weekday cal__cell">Monday</span>
+                        <span class="cal__cell-weekday cal__cell">Tuesday</span>
+                        <span class="cal__cell-weekday cal__cell">Wedenesday</span>
+                        <span class="cal__cell-weekday cal__cell">Thursday</span>
+                        <span class="cal__cell-weekday cal__cell">Friday</span>
+                        <span class="cal__cell-weekday cal__cell">Saturday</span>
+                        <span class="cal__cell-weekday cal__cell">Sunday</span>
                     </header>
-                    <section class="cal__month">
-                        <div>
-                            <div class="cal__cel cal__day-cell">
-                                <span class="day-number">1</span>
+                    <section class="cal__month-screen">
+                        <div class="cal__cell-row">
+                            <div class="cal__cell cal__cell-day">
+                                <div class="cal__cell-top">
+                                    <span class="cal__day-number">1</span>
+                                </div>
                             </div>
-                            <div class="cal__cel cal__day-cell">
-                                <span class="day-number">2</span>
+                            <div class="cal__cell cal__cell-day">
+                                <div class="cal__cell-top">
+                                    <span class="cal__day-number">2</span>
+                                </div>
                             </div>
-                            <div class="cal__cel cal__day-cell">
-                                <span class="day-number">3</span>
+                            <div class="cal__cell cal__cell-day">
+                                <div class="cal__cell-top">
+                                    <span class="cal__day-number">3</span>
+                                </div>
                             </div>
-                            <div class="cal__cel cal__day-cell">
-                                <span class="day-number">4</span>
+                            <div class="cal__cell cal__cell-day">
+                                <div class="cal__cell-top">
+                                    <span class="cal__day-number">4</span>
+                                </div>
                             </div>
-                            <div class="cal__cel cal__day-cell">
-                                <span class="day-number">5</span>
+                            <div class="cal__cell cal__cell-day">
+                                <div class="cal__cell-top">
+                                    <span class="cal__day-number">5</span>
+                                </div>
                             </div>
-                            <div class="cal__cel cal__day-cell">
-                                <span class="day-number">6</span>
+                            <div class="cal__cell cal__cell-day is-today">
+                                <div class="cal__cell-top">
+                                    <span class="cal__day-number">6</span>
+                                </div>
                             </div>
-                            <div class="cal__cel cal__day-cell">
-                                <span class="day-number">7</span>
+                            <div class="cal__cell cal__cell-day">
+                                <div class="cal__cell-top">
+                                    <span class="cal__day-number">7</span>
+                                </div>
                             </div>
                         </div>
                     </section>
                 </div>
 
-            </div>
             </section>
         `;
     }
