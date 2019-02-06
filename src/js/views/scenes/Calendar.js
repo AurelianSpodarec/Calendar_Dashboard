@@ -38,7 +38,7 @@ let Calendar = {
             <section class="cal__month">
 
                 <div class="cal__month-view">
-                    <header class="cal__week-row cal__cell-row">
+                    <header class="cal__week-row">
                         <span class="cal__cell-weekday cal__cell">Monday</span>
                         <span class="cal__cell-weekday cal__cell">Tuesday</span>
                         <span class="cal__cell-weekday cal__cell">Wedenesday</span>

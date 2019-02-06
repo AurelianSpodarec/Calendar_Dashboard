@@ -105,6 +105,10 @@
         padding: 24px;
     }
 
+    &__month-screen {
+        border: 1px solid #e1e1e1;
+    }
+
     &__cell {
         float: left;
         flex: 1;
@@ -114,6 +118,8 @@
     }
 
     &__week-row {
+        display: flex;
+        border-bottom: 1px solid #e1e1e1;
         text-align: center;
     }
 
@@ -125,22 +131,30 @@
         white-space: nowrap;
     }
 
-
     &__cell-row {
         display: flex;
         border-bottom: 1px solid #e1e1e1;
+
+        &:hover {
+            background: rgba(0,0,0,.04);
+        }
     }
 
     &__cell-day {
         min-height: 100px;
-        border-right: 1px solid #e1e1e1;
-
+        &:not(:last-child){
+            border-right: 1px solid #e1e1e1;
+        }
         @include breakpoint-up(sm) {
             min-height: 150px;
         }
         &.is-today {
             background-color: #e8fde7;
             font-size: 1.4em;
+        }
+
+        &:hover {
+            background-color: rgba(0,0,0,.04);
         }
     }
 
