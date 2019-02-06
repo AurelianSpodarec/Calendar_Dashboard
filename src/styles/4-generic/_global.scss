@@ -1,0 +1,62 @@
+// ==========================================================================
+// # Global
+// ==========================================================================
+//
+//  Table of Content
+//  
+//  - Main Wrapper
+//  - View
+//  - Scene
+//
+//
+
+
+// #Global: Main Wrapper
+// ==========================================================================
+
+.main-wrapper {
+    display: flex;   
+    min-height: 100%;
+}
+
+
+
+// #Global: Scene
+// ==========================================================================
+
+%scene {
+    padding: 24px 34px 64px;
+    height: 100%;
+}
+ 
+.scene {
+    @extend %scene;
+    // margin-top: 64px;
+    &--github {
+        @extend %scene;
+        background: white;
+        margin-top: 54px;
+    }
+}
+
+
+
+// #Global: View
+// ==========================================================================
+
+.view {
+    position: relative;
+    background-color: #f7f7f8;
+    transition: all linear .25s;
+    overflow: hidden;
+    flex: 1;
+    margin-top: 64px;
+
+    @include breakpoint-up(md) {
+        margin-left: 280px;
+    }
+    
+    &.is-toggle {
+        margin-left: 64px;
+    }
+}
