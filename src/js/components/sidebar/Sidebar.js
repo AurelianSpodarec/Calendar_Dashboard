@@ -51,7 +51,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li class="menu__heading-item">
-                    <span class="menu__heading-title">Connected APIs</span>
+                    <span class="menu__heading-title">Social Media</span>
                 </li>
                 <li class="menu__item menu__has-dropdown is-expanded">
                     <span class="menu__link">

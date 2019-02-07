@@ -1,5 +1,5 @@
 import { routes } from "./routing";
-import NotFound from "../../views/scenes/NotFound";
+import NotFound from "#views/scenes/other/NotFound";
 
 //  
 //  TODO:

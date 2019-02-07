@@ -1,17 +1,17 @@
 
 // Application Generic
-import Dashboard from './../../views/scenes/Dashboard';
-import ToDo from './../../views/scenes/ToDo';
-import Calendar from './../../views/scenes/Calendar';
+import Dashboard from '#views/scenes/dashboard/Dashboard';
+import ToDo from '#views/scenes/todo/ToDo';
+import Calendar from '#views/scenes/calendar/view';
 
 // GitHub
-import GithubProfile from './../../views/scenes/github/profile/Profile';
-import GithubSearchUser from './../../views/scenes/github/SearchUser';
+import GithubProfile from '#views/scenes/github/profile/Profile';
+import GithubSearchUser from '#views/scenes/github/SearchUser';
 
 //Develop
-import DevelopTypography from './../../views/scenes/develop/Typography';
-import DevelopButtons from './../../views/scenes/develop/Buttons';
-import DevelopForms from './../../views/scenes/develop/Forms';
+import DevelopTypography from '#views/scenes/develop/Typography';
+import DevelopButtons from '#views/scenes/develop/Buttons';
+import DevelopForms from '#views/scenes/develop/Forms';
 
 import router from '.';
 
