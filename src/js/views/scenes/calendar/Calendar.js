@@ -5,15 +5,12 @@ import calendarMonth from "./components/month";
 class Calendar extends Component {
     constructor(props) {
         super(props);
-        this.onEvent = this.onEvent.bind(this);
-        this.setSubscriber("calendar", this.onEvent);
+        this.date = new Date();
     }
 
     
 
-    onEvent(state, action) {
-        
-    }
+
 
     render() {
         this.setChild("calendar-header", calendarHeader);

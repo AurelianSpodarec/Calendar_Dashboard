@@ -1,10 +1,9 @@
-import Component from "#components/component";
+import Calendar from "../../Calendar";
 
-class CalendarHeader extends Component {
+class CalendarHeader extends Calendar {
     constructor(props) {
         super(props);
-        this.onEvent = this.onEvent.bind(this);
-        this.setSubscriber("calendar", this.onEvent);
+        
     }
 
     prevMonthBtn(event) {
@@ -15,34 +14,28 @@ class CalendarHeader extends Component {
         console.log('s')
     }
  
-    onEvent(state, action) {
-        
+    getCurrentDay() {       
+        return date.getDay();
     }
 
     getCurrentMonth() {
-        let date = new Date();
-
+        
         let months = ["January", "February", "March", "April",
                     "May", "June", "July", "August", "September", 
                     "October", "November", "December"];
-
-        var currentMonth = months[date.getMonth()]
-        console.log(currentMonth);
+        var currentMonth = months[this.date.getMonth()]
         return currentMonth;
     }
 
     getCurrentYear() {
-        let date = new Date();
-
         
+        let currentYear = this.date.getFullYear();
+        return currentYear;
     }
 
     headerMonth() {
-        
-
-        // console.log(months)
         return /*html*/`
-            ${this.getCurrentMonth()} 2019 
+            ${this.getCurrentMonth() + " " + this.getCurrentYear()}
         `;
     }
 
