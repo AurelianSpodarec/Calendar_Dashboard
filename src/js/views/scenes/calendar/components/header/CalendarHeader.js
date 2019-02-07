@@ -7,34 +7,42 @@ class CalendarHeader extends Component {
         this.setSubscriber("calendar", this.onEvent);
     }
 
+    prevMonthBtn(event) {
+        console.log('yes')
+    }
+
+    nextMonthBtn(event) {
+        console.log('s')
+    }
  
     onEvent(state, action) {
         
     }
 
-    headerToolBar() {
-        return /*html*/`
-            <div class="cal__toolbar"> 
-                <button class="cal__tool-btn">
-                    <i class="cal__tool-icon fas fa-search" arial-label="Search Calendar" title="Search Calendar"></i>
-                </button>
-                <button class="cal__tool-btn">
-                    <i class="cal__tool-icon fas fa-cal-day" arial-label="Go to current date" title="Today"></i>
-                </button>
-                <button class="cal__tool-btn">
-                    <i class="cal__tool-icon far fa-calendar-alt" arial-label="Month" title="Month"></i>
-                </button>
-            </div>
-        `;
+    getCurrentMonth() {
+        let date = new Date();
+
+        let months = ["January", "February", "March", "April",
+                    "May", "June", "July", "August", "September", 
+                    "October", "November", "December"];
+
+        var currentMonth = months[date.getMonth()]
+        console.log(currentMonth);
+        return currentMonth;
     }
 
-    headerNavigation() {
+    getCurrentYear() {
+        let date = new Date();
+
+        
+    }
+
+    headerMonth() {
+        
+
+        // console.log(months)
         return /*html*/`
-            <div class="cal__header-bottom">
-                <button data-ref="prev-month-btn" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
-                <span class="cal__current-month">February 2019</span>
-                <button data-ref="next-month-btn" class="cal__pagination-arrow"><i class="fas fa-angle-right"></i></button>
-            </div>
+            ${this.getCurrentMonth()} 2019 
         `;
     }
 
@@ -64,9 +72,9 @@ class CalendarHeader extends Component {
             </div>
 
             <div class="cal__header-bottom">
-                <button data-ref="prev-month-btn" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
-                <span class="cal__current-month">February 2019</span>
-                <button data-ref="next-month-btn" class="cal__pagination-arrow"><i class="fas fa-angle-right"></i></button>
+                <button onClick="calendarHeader.prevMonthBtn(event)" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
+                <span class="cal__current-month">${this.headerMonth()}</span>
+                <button onClick="calendarHeader.nextMonthBtn(event)" class="cal__pagination-arrow"><i class="fas fa-angle-right"></i></button>
             </div>
 
 
