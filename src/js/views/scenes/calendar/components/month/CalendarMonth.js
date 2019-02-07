@@ -1,15 +1,9 @@
-import Component from "#components/component";
+// import Component from "#components/component";
+import Calendar from "../Calendar";
 
-class CalendarMonth extends Component {
+class CalendarMonth extends Calendar {
     constructor(props) {
         super(props);
-        this.onEvent = this.onEvent.bind(this);
-        this.setSubscriber("calendar", this.onEvent);
-    }
-
- 
-    onEvent(state, action) {
-        
     }
 
     setCurrentDate() {

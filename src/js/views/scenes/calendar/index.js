@@ -2,20 +2,18 @@ import Component from "#components/component";
 import calendarHeader from "./components/header";
 import calendarMonth from "./components/month";
 
-class Calendar extends Component {
+
+class View extends Component {
     constructor(props) {
         super(props);
         this.date = new Date();
     }
 
-    
-
-
 
     render() {
         this.setChild("calendar-header", calendarHeader);
         this.setChild("calendar-month", calendarMonth)
-
+        console.log(this.children);
         return /*html*/`
             <div data-js="scene-element" class="scene">
 
@@ -27,4 +25,4 @@ class Calendar extends Component {
     }
 }
 
-export default Calendar;
+export default View;

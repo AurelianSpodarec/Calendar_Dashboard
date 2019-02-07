@@ -2,7 +2,7 @@
 // Application Generic
 import Dashboard from '#views/scenes/dashboard/Dashboard';
 import ToDo from '#views/scenes/todo/ToDo';
-import Calendar from '#views/scenes/calendar/Calendar';
+import Calendar from '#views/scenes/calendar';
 
 // GitHub
 import GithubProfile from '#views/scenes/github/profile/Profile';

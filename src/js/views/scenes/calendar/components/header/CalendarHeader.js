@@ -1,9 +1,9 @@
-import Calendar from "../../Calendar";
-
+// import Component from "#components/component";
+import Calendar from "../Calendar";
+ 
 class CalendarHeader extends Calendar {
     constructor(props) {
         super(props);
-        
     }
 
     prevMonthBtn(event) {
@@ -40,6 +40,7 @@ class CalendarHeader extends Calendar {
     }
 
     render() {
+        console.log(this.children);
         return /*html*/`
         <header class="cal__header" style="background-image: url('https://c8.alamy.com/comp/PTB79P/vector-banner-blue-winter-background-with-ice-and-snow-PTB79P.jpg');">
         <div class="cal__header-container">
