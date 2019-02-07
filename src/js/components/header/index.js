@@ -1,6 +1,6 @@
 import Header from "./Header";
-import createElement from "../../lib/createElement";
-import store from "../../lib/store/Store";
+import createElement from "#lib/createElement";
+import store from "#lib/store/Store";
 import search from "./components/search";
 
 

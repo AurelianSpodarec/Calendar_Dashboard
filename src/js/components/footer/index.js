@@ -1,5 +1,5 @@
 import Footer from "./Footer";
-import createElement from "../../lib/createElement/index";
+import createElement from "#lib/createElement/index";
 
  
 const footer = new Footer();

@@ -1,5 +1,5 @@
 import Sidebar from "./Sidebar";
-import createElement from "../../lib/createElement";
+import createElement from "#lib/createElement";
 
 const sidebar = new Sidebar();
 const sidebarElement = document.querySelector("[data-js=sidebar-element]");

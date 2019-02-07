@@ -1,5 +1,5 @@
-import store from "../../lib/store";
-import createElement from "../../lib/createElement";
+import store from "#lib/store";
+import createElement from "#lib/createElement";
 
 class Component {
     constructor(props = {}) {

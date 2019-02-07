@@ -1,4 +1,4 @@
-import Component from "../component";
+import Component from "#components/component";
 
 class Calendar extends Component {
     constructor(props) {
@@ -7,21 +7,25 @@ class Calendar extends Component {
         this.setSubscriber("calendar", this.onEvent);
     }
 
- 
+    prev(event) {
+        console.log('yes')
+    }
+
     onEvent(state, action) {
         
     }
 
     render() {
         return /*html*/`
+        <section data-js="scene-element" class="scene">
         <header class="cal__header" style="background-image: url('https://c8.alamy.com/comp/PTB79P/vector-banner-blue-winter-background-with-ice-and-snow-PTB79P.jpg');">
         <div class="cal__header-container">
 
 
-            <div class="cal__header-top">
+            <div data-ref="hello" class="cal__header-top">
                 <div class="cal__page-info">
                     <i class="cal__page-icon fas fa-cal-day"></i>
-                    <span class="cal__page-title">Calendar</span>
+                    <span class="cal__page-title">Calendarr</span>
                 </div>
 
                 <div class="cal__toolbar"> 
@@ -38,7 +42,7 @@ class Calendar extends Component {
             </div>
 
             <div class="cal__header-bottom">
-                <button data-ref="prev-month-btn" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
+                <button onClick="console.log(calendar)" type="button" data-ref="prev-month-btn" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
                 <span class="cal__current-month">February 2019</span>
                 <button data-ref="next-month-btn" class="cal__pagination-arrow"><i class="fas fa-angle-right"></i></button>
             </div>
@@ -105,8 +109,9 @@ class Calendar extends Component {
 
         </div>
         </section>
+        </section>
         `;
     }
 }
 
-export default Header;
+export default Calendar;

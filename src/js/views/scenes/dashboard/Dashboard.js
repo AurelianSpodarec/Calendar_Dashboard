@@ -1,13 +1,22 @@
-let Dashboard = {
-    render: async () => {
-        return /*html*/`
-             
-            <h1> Dashboard </h1>
+import Component from "#components/component";
 
-            <div class="card-wrapper">
-            
-            </div>
-            
+class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        this.onEvent = this.onEvent.bind(this);
+        this.setSubscriber("dashboard", this.onEvent);
+    }
+
+ 
+    onEvent(state, action) {
+        
+    }
+
+    render() {
+        return /*html*/`
+        <section data-js="scene-element" class="scene">
+            Dashboard
+        </section>
         `;
     }
 }

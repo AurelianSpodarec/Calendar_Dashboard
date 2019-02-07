@@ -1,11 +1,24 @@
-let ToDo = {
-    render : async () => {
+import Component from "#components/component";
+
+class Todo extends Component {
+    constructor(props) {
+        super(props);
+        this.onEvent = this.onEvent.bind(this);
+        this.setSubscriber("todo", this.onEvent);
+    }
+
+ 
+    onEvent(state, action) {
+        
+    }
+
+    render() {
         return /*html*/`
-            <section class="section">
-                <h1> ToDo </h1>
-            </section>
+        <section data-js="scene-element" class="scene">
+            Todo
+        </section>
         `;
     }
 }
 
-export default ToDo;
+export default Todo;
