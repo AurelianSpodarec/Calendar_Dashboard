@@ -13,34 +13,23 @@ class CalendarHeader extends Calendar {
     nextMonthBtn(event) {
         console.log('s')
     }
- 
-    getCurrentDay() {       
-        return date.getDay();
-    }
 
     getCurrentMonth() {
         
         let months = ["January", "February", "March", "April",
                     "May", "June", "July", "August", "September", 
                     "October", "November", "December"];
-        var currentMonth = months[this.date.getMonth()]
+        var currentMonth = months[this.currentMonth]
         return currentMonth;
-    }
-
-    getCurrentYear() {
-        
-        let currentYear = this.date.getFullYear();
-        return currentYear;
     }
 
     headerMonth() {
         return /*html*/`
-            ${this.getCurrentMonth() + " " + this.getCurrentYear()}
+            ${this.getCurrentMonth() + " " + this.currentYear}
         `;
     }
 
     render() {
-        console.log(this.children);
         return /*html*/`
         <header class="cal__header" style="background-image: url('https://c8.alamy.com/comp/PTB79P/vector-banner-blue-winter-background-with-ice-and-snow-PTB79P.jpg');">
         <div class="cal__header-container">

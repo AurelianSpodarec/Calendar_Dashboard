@@ -6,14 +6,12 @@ import calendarMonth from "./components/month";
 class View extends Component {
     constructor(props) {
         super(props);
-        this.date = new Date();
     }
 
 
     render() {
         this.setChild("calendar-header", calendarHeader);
-        this.setChild("calendar-month", calendarMonth)
-        console.log(this.children);
+        this.setChild("calendar-month", calendarMonth);
         return /*html*/`
             <div data-js="scene-element" class="scene">
 
