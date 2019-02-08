@@ -6,8 +6,10 @@ import calendarBody from "./components/body";
 class Calendar extends Component {
     constructor(props) {
         super(props);
+        // this.currentDate = new Date();
     }
 
+    // Pass in the Month and Days
 
     render() {
         this.setChild("calendar-header", calendarHeader);
@@ -15,7 +17,7 @@ class Calendar extends Component {
         return /*html*/`
             <div data-js="scene-element" class="scene">
 
-                <header data-child="calendar-header" class="cal__header" style="background-image: url('https://c8.alamy.com/comp/PTB79P/vector-banner-blue-winter-background-with-ice-and-snow-PTB79P.jpg');"></header>
+                <header data-child="calendar-header" class="cal__header"></header>
                 <section data-child="calendar-body" class="cal__month"></section>
 
             </div>
