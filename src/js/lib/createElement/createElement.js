@@ -24,6 +24,10 @@ const createElement = domParser => {
             elements.forEach(replaceNode(childName, childElement));
         })
 
+        delete component.children;
+
+        if (component.onCreated) component.onCreated();
+
         return doc.body.firstChild;
 
     }

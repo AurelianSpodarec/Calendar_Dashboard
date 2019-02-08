@@ -60,13 +60,13 @@ class Router {
         let sceneElement = document.querySelector('[data-js="scene-element"]');
 
 
-        let pageName = pageObj.className;
-        let pageComponent = pageObj.component;
-
-        let newPageName = new pageComponent();
-        let pageNode = createElement(newPageName)
+        // let pageName = pageObj.className;
+        // let newPageName = new pageComponent();
         
-        window[pageName] = newPageName;
+        let pageComponent = pageObj.component;
+        let pageNode = createElement(pageComponent)
+        
+        // window[pageName] = newPageName;
         sceneElement.parentNode.replaceChild(pageNode, sceneElement);
     }
 }
