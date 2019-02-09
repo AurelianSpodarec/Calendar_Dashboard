@@ -1,16 +1,16 @@
 import Component from "#components/component";
-import month from "../../../model/month";
+ 
 
 class Navigation extends Component {
     constructor(props) {
         super(props);
     }
     renderCurrentMonth(event) {
-        this.refs.currentMonth.textContent = month.monthAsName(month.date.getMonth());
+        this.refs.currentMonth.textContent = "August 2020";
     }
 
     onCreated() {
-        this.refs.currentMonth.textContent = month.monthAsName(month.date.getMonth());
+        this.refs.currentMonth.textContent = "August 2020";
     }
     render() {
         return /*html*/`

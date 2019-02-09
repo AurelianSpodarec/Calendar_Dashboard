@@ -30,6 +30,10 @@ class Month {
 
     }
 
+    daysInMonth(month, year) {
+        return new Date(year, month, 0).getDate();
+    }
+
     monthAsName(monthIndex) {
         return [
             "January",

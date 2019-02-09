@@ -1,5 +1,5 @@
 import Component from "#components/component";
-import Days from "./days";
+import Month from "./month";
 import WeekdaysLabel from "./weekdays";
 
 class CalendarBody extends Component {
@@ -9,7 +9,7 @@ class CalendarBody extends Component {
  
     render() {
         this.setChild('weekdays-label', WeekdaysLabel)
-        this.setChild("month-days", Days)
+        this.setChild("month-days", Month)
         return /*html*/`
             <section class="cal__month">
             <div class="cal__month-view">
