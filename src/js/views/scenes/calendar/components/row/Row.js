@@ -11,8 +11,9 @@ class Row extends Component {
         let html; 
         let days = 31;
         var w = 0;
-    console.log(Day);
-        for (let i = 1; i < days + 1; i++) {
+        var element = createElement(new Day);
+    
+        for (let i = 1; i < days; i++) {
             if (w == 0) {
                 html += '<div class="cal__cell-row">';
             }    
@@ -25,9 +26,7 @@ class Row extends Component {
                 // </div>  
                 // `;  
 
-                html += `
-                    ${createElement(new Day())};
-                `;
+                html += '`${ element }`'
                 
 
             if (w == 6) {
