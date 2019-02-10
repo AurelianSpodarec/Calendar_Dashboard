@@ -11,16 +11,22 @@ class Day extends Component {
     // On button click + in the header, display a row and set events, then display a circle here
 
     // Take in is-today
+
+    onEvent(event) {
+        event.preventDefault();
+        console.log(this.refs.calCel)
+    }
     
     render() {
-        // id mathes with todays day
-        let currentDate = this.date.getDate();
         let days = this.props.dayNumber;
-        let today = (currentDate === this.props.dayNumber) ? "is-today" : " ";
+        let otherMonth = this.props.otherMonth ? "is-other-month" : "";
+        
+        
+        let today = (this.date.getDate() === this.props.dayNumber) ? "is-today" : "";
 
-        console.log(this.date.getDate())
+ 
         return /*html*/`
-            <div data-day-id="${this.props.dayNumber}" class="cal__cell cal__cell-day ${today}">
+            <div data-ref="calCel" onClick="row" data-day-id="${this.props.dayNumber}" class="cal__cell cal__cell-day ${today} ${otherMonth}">
                 <div class="cal__cell-top">
                     <span class="cal__day-number">${days}</span>
                 </div>
@@ -29,9 +35,4 @@ class Day extends Component {
     }
 }
 
-export default Day;                
-                
-                
-                
-                    
-               
+export default Day;

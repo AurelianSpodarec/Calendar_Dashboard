@@ -158,6 +158,10 @@
             font-size: 1.4em;
         }
 
+        &.is-other-month {
+            background-color: gold;
+        }
+
         &:hover {
             background-color: rgba(0,0,0,.04);
         }

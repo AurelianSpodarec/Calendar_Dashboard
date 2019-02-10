@@ -8,13 +8,7 @@ class Month extends Component {
         this.date = new Date();
     }
 
-    daysInMonth(month, year) {
-        return new Date(year, month + 1, 0).getDate();
-    }
-
-    getDaysInMonth() {
-        return this.daysInMonth(this.date.getMonth(), this.date.getFullYear());
-    }
+    
  
     render() {
         this.setChild("monthScreen", Row)
