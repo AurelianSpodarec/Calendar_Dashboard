@@ -5,6 +5,7 @@ import Day from "../body/day/day";
 class Row extends Component {
     constructor(props) {
         super(props);
+        this.date = new Date();
     }
 
     renderDays() {            
@@ -12,21 +13,19 @@ class Row extends Component {
         let days = 31;
         var lastDayOfWeek = 0;
         
+        
+        // If todayDay = i, put class active
+
         for (let i = 1; i < days; i++) {
             if (lastDayOfWeek == 0) {
                 output += "<div class=\"cal__cell-row\">";
             }    
-            
-                // output += `
-                // <div class="cal__cell cal__cell-day">
-                //     <div class="cal__cell-top">
-                //         <span class="cal__day-number">${i}</span>
-                //     </div>  
-                // </div>  
-                // `;  
 
+            if(this.date === i) {
+                output +=   `${createElement(new Day({dayNumber: i, active: true })).outerHTML} `
+            } else {
                 output +=   `${createElement(new Day({dayNumber: i })).outerHTML} `
-                
+            }
 
             if (lastDayOfWeek == 6) {
                 output += "</div>";
