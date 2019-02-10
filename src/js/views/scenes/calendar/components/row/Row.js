@@ -1,6 +1,6 @@
 import Component from "#components/component";
-import Day from "../body/day/Day";
 import createElement from "#lib/createElement";
+import Day from "../body/day/day";
 
 class Row extends Component {
     constructor(props) {
@@ -11,8 +11,7 @@ class Row extends Component {
         let output = ""; 
         let days = 31;
         var lastDayOfWeek = 0;
-        var element = createElement(new Day());
- 
+        
         for (let i = 1; i < days; i++) {
             if (lastDayOfWeek == 0) {
                 output += "<div class=\"cal__cell-row\">";
@@ -26,7 +25,7 @@ class Row extends Component {
                 // </div>  
                 // `;  
 
-                output +=   `${createElement(new Day({i})).outerHTML} `
+                output +=   `${createElement(new Day({dayNumber: i })).outerHTML} `
                 
 
             if (lastDayOfWeek == 6) {

@@ -7,12 +7,11 @@ class Day extends Component {
 
  
     
-    render(i) {
-        var i = i;
+    render() {
         return /*html*/`
             <div class="cal__cell cal__cell-day is-today">
                 <div class="cal__cell-top">
-                    <span class="cal__day-number">${i}</span>
+                    <span class="cal__day-number">${this.props.dayNumber}</span>
                 </div>
             </div> 
         `;
