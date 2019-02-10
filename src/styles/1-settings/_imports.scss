@@ -1,0 +1,18 @@
+//===========================================================================
+// #Imports
+//===========================================================================
+//
+//  Table of content
+//
+//  - Font Imports
+//
+//
+
+// #Imports: Font Imports
+//===========================================================================
+// In CSS, there is a feature called @import where you can import other CSS documents. this is largely not used as it is slower than just concatenating your code.
+// However, the most common usage of it is to import google web fonts.
+// These imports take a long time to download and if done at the top of your page will prevent any pixels from being painted until they finish downloading.
+// If you move your imports to the bottom of your html file, and have the rest of your CSS at the top, then the page can start painting almost immediately
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto');

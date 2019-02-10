@@ -8,17 +8,17 @@ class Row extends Component {
     }
 
     renderDays() {            
-        let html; 
+        let output = ""; 
         let days = 31;
-        var w = 0;
-        var element = createElement(new Day);
-    
+        var lastDayOfWeek = 0;
+        var element = createElement(new Day());
+ 
         for (let i = 1; i < days; i++) {
-            if (w == 0) {
-                html += '<div class="cal__cell-row">';
+            if (lastDayOfWeek == 0) {
+                output += "<div class=\"cal__cell-row\">";
             }    
             
-                // html += `
+                // output += `
                 // <div class="cal__cell cal__cell-day">
                 //     <div class="cal__cell-top">
                 //         <span class="cal__day-number">${i}</span>
@@ -26,18 +26,18 @@ class Row extends Component {
                 // </div>  
                 // `;  
 
-                html += '`${ element }`'
+                output +=   `${createElement(new Day({i})).outerHTML} `
                 
 
-            if (w == 6) {
-                html += '</div>';
-                w = 0;
+            if (lastDayOfWeek == 6) {
+                output += "</div>";
+                lastDayOfWeek = 0;
             } else {
-                w++;
+                lastDayOfWeek++;
             }
         }
 
-        return html;
+        return output;
     }
     
     render() {

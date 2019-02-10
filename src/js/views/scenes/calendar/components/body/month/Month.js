@@ -15,15 +15,11 @@ class Month extends Component {
     getDaysInMonth() {
         return this.daysInMonth(this.date.getMonth(), this.date.getFullYear());
     }
-
- 
  
     render() {
         this.setChild("monthScreen", Row)
         return /*html*/`
-            <section data-child="monthScreen" class="cal__month-screen"> 
-             
-            </section>
+            <section data-child="monthScreen" class="cal__month-screen"> </section>
         `;
     }
 }
