@@ -6,10 +6,7 @@ import calendarBody from "./components/body";
 class Calendar extends Component {
     constructor(props) {
         super(props);
-        // this.currentDate = new Date();
     }
-
-    // Pass in the Month and Days
 
     render() {
         this.setChild("calendar-header", calendarHeader);

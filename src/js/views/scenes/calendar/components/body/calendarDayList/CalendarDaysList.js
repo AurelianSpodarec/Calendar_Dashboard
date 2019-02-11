@@ -1,21 +1,19 @@
 import Component from "#components/component";
+import CalendarDayItem from "./CalendarDayItem";
 import createElement from "#lib/createElement";
-import Day from "../body/day/day";
 
-class Row extends Component {
+
+class CalendarDaysList extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.date = new Date();
     }
 
     getDaysInMonth(month, year) {
         return new Date(year, month + 1, 0).getDate();
     }
- 
-    
 
-
-    renderDays() {            
+    renderDayItem() {            
         let output = ""; 
 
 
@@ -31,10 +29,6 @@ class Row extends Component {
                     prev_year = prev_month == 11 ? this.date.getFullYear() - 1 : this.date.getFullYear(),
                     previousMonthDays = this.getDaysInMonth(prev_month, prev_year);
 
-            // var prevMonth = this.date.getMonth() == 0 ? 11 : this.date.date.getMonth() - 1;
-
-
-
             for (let i = 1; i < 36; i++) {
 
                 // Row
@@ -42,26 +36,19 @@ class Row extends Component {
                     output += "<div class=\"cal__cell-row\">";
                 }    
 
-
-
                 if(i < new Date(this.date.getFullYear(), this.date.getMonth(), 1).getDay()) {
-                   let ol =  (previousMonthDays - firstDayWeekday + i + 1)
-                    output +=   `${createElement(new Day({
-                                dayNumber: ol,
-                                otherMonth: true 
-                            })).outerHTML} `
+                let ol =  (previousMonthDays - firstDayWeekday + i + 1)
+                    output +=   `${createElement(new CalendarDayItem({dayNumber: ol,otherMonth: true})).outerHTML} `
 
                 } else if(currentMontDays > daysInMonth) {
 
-                    output +=   `${createElement(new Day({dayNumber: nextMonthDays, otherMonth: true  })).outerHTML} `
+                    output +=   `${createElement(new CalendarDayItem({dayNumber: nextMonthDays, otherMonth: true  })).outerHTML} `
                     nextMonthDays++;
 
                 } else {
-                    output +=   `${createElement(new Day({dayNumber: currentMontDays })).outerHTML} `
+                    output +=   `${createElement(new CalendarDayItem({dayNumber: currentMontDays })).outerHTML} `
                     currentMontDays++;
                 }
-
-
 
                 // Row
                 if (lastDayOfWeek == 6) {
@@ -75,14 +62,14 @@ class Row extends Component {
 
         return output;
     }
-    
+
     render() {
         return /*html*/`
-            <section class="cal__month-screen"> 
-                ${this.renderDays()}
-            </section>
+            <div class="cal__month-screen">
+                ${this.renderDayItem()}
+            </div>
         `;
     }
 }
 
-export default Row;
+export default CalendarDaysList;

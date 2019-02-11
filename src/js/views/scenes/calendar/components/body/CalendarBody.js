@@ -1,6 +1,5 @@
 import Component from "#components/component";
-import Month from "./month";
-import WeekdaysLabel from "./weekdays";
+import CalendarDaysList from "./calendarDayList/CalendarDaysList"
 
 class CalendarBody extends Component {
     constructor(props) {
@@ -8,14 +7,22 @@ class CalendarBody extends Component {
     }
  
     render() {
-        this.setChild('weekdays-label', WeekdaysLabel)
-        this.setChild("month-days", Month)
+        this.setChild('monthScreen', new CalendarDaysList());
         return /*html*/`
             <section class="cal__month">
             <div class="cal__month-view">
 
-                <header data-child="weekdays-label" class="cal__week-row"></header>
-                <section data-child="month-days" class="cal__month-screen"></section>
+            <header class="cal__week-row">
+                <span class="cal__cell-weekday cal__cell">Monday</span>
+                <span class="cal__cell-weekday cal__cell">Tuesday</span>
+                <span class="cal__cell-weekday cal__cell">Wedenesday</span>
+                <span class="cal__cell-weekday cal__cell">Thursday</span>
+                <span class="cal__cell-weekday cal__cell">Friday</span>
+                <span class="cal__cell-weekday cal__cell">Saturday</span>
+                <span class="cal__cell-weekday cal__cell">Sunday</span>
+            </header>
+
+            <template data-child="monthScreen" class="cal__month-screen"> </template>
 
             </div>
             </section>

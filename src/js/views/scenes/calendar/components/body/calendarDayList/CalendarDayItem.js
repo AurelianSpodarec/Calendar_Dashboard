@@ -1,33 +1,25 @@
 import Component from "#components/component";
 
-class Day extends Component {
+
+class CalendarDayItem extends Component {
     constructor(props) {
         super(props);
         this.date = new Date();
-        // this.onEvent = this.onEvent.bind(this);
     }
-
-    // On click, get selected day
-
-    // On button click + in the header, display a row and set events, then display a circle here
-
-    // Take in is-today
 
     onEvent(event) {
         event.preventDefault();
         console.log(this.refs.calCel)
     }
-    
+
     render() {
         let days = this.props.dayNumber;
-        let otherMonth = this.props.otherMonth ? "is-other-month" : "";
-        
-        
-        let today = (this.date.getDate() === this.props.dayNumber) ? "is-today" : "";
 
- 
+        let otherMonth = this.props.otherMonth ? "is-other-month" : "";
+        let today = (this.date.getDate() === days) ? "is-today" : "";
+
         return /*html*/`
-            <div data-ref="calCel" onClick="day.onEvent()" data-day-id="${this.props.dayNumber}" class="cal__cell cal__cell-day ${today} ${otherMonth}">
+            <div class="cal__cell cal__cell-day ${today} ${otherMonth}">
                 <div class="cal__cell-top">
                     <span class="cal__day-number">${days}</span>
                 </div>
@@ -36,4 +28,4 @@ class Day extends Component {
     }
 }
 
-export default Day;
+export default CalendarDayItem;
