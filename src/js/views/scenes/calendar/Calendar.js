@@ -1,6 +1,6 @@
 import Component from "#components/component";
-import calendarHeader from "./components/header";
-import calendarBody from "./components/body";
+import CalendarHeader from "./components/header";
+import CalendarBody from "./components/body";
 
 
 class Calendar extends Component {
@@ -9,8 +9,8 @@ class Calendar extends Component {
     }
 
     render() {
-        this.setChild("calendar-header", calendarHeader);
-        this.setChild("calendar-body", calendarBody);
+        this.setChild("calendar-header", new CalendarHeader());
+        this.setChild("calendar-body", new CalendarBody());
         return /*html*/`
             <div data-js="scene-element" class="scene">
 
