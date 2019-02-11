@@ -4,6 +4,7 @@ class Day extends Component {
     constructor(props) {
         super(props);
         this.date = new Date();
+        // this.onEvent = this.onEvent.bind(this);
     }
 
     // On click, get selected day
@@ -26,7 +27,7 @@ class Day extends Component {
 
  
         return /*html*/`
-            <div data-ref="calCel" onClick="row" data-day-id="${this.props.dayNumber}" class="cal__cell cal__cell-day ${today} ${otherMonth}">
+            <div data-ref="calCel" onClick="day.onEvent()" data-day-id="${this.props.dayNumber}" class="cal__cell cal__cell-day ${today} ${otherMonth}">
                 <div class="cal__cell-top">
                     <span class="cal__day-number">${days}</span>
                 </div>
