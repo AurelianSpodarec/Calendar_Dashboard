@@ -4,7 +4,6 @@ import Component from "#components/component";
 class CalendarDayItem extends Component {
     constructor(props) {
         super(props);
-        this.date = new Date();
     }
 
     onEvent(event) {
@@ -16,7 +15,7 @@ class CalendarDayItem extends Component {
         let days = this.props.dayNumber;
 
         let otherMonth = this.props.otherMonth ? "is-other-month" : "";
-        let today = (this.date.getDate() === days) ? "is-today" : "";
+        let today = (this.props.currentCalendarDate.getDate() === days) ? "is-today" : "";
 
         return /*html*/`
             <div class="cal__cell cal__cell-day ${today} ${otherMonth}">

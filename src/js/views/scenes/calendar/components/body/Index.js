@@ -7,7 +7,7 @@ class CalendarBody extends Component {
     }
  
     render() {
-        this.setChild('monthScreen', new CalendarDaysList());
+        this.setChild('monthScreen', new CalendarDaysList({currentCalendarDate: this.props.currentCalendarDate}));
         return /*html*/`
             <section class="cal__month">
             <div class="cal__month-view">

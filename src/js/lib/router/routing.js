@@ -33,7 +33,7 @@ export const routes = [
     },
     {
         component: Calendar,
-        // className: 'calendar',
+        className: 'calendar',
         match: {
             action: 'index',
             controller: 'calendar',

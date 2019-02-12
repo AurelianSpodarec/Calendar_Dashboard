@@ -3,7 +3,6 @@ import CalendarToolbar from "./components/Toolbar";
 import Navigation from "./components/Navigation";
 
 
-
 class CalendarHeader extends Component {
     constructor(props) {
         super(props);
