@@ -1,8 +1,8 @@
 
 // Application Generic
-import Dashboard from '#views/scenes/dashboard/Dashboard';
-import ToDo from '#views/scenes/todo/ToDo';
-import Calendar from '#views/scenes/calendar/Calendar';
+import Dashboard from '#views/scenes/dashboard';
+import ToDo from '#views/scenes/todo';
+import Calendar from '#views/scenes/calendar';
 
 // GitHub
 import GithubProfile from '#views/scenes/github/profile/Profile';
@@ -33,7 +33,6 @@ export const routes = [
     },
     {
         component: Calendar,
-        // className: 'calendar',
         match: {
             action: 'index',
             controller: 'calendar',

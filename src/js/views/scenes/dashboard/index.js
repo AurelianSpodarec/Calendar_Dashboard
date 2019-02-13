@@ -1,6 +1,10 @@
 import Dashboard from "./Dashboard";
 
-const dashboard = new Dashboard();
-window.dashboard = dashboard;
+// const dashboard = new Dashboard();
+// window.dashboard = dashboard;
 
-export default dashboard;
+ 
+    console.log('Dashboard index')
+ 
+
+export default Dashboard;

@@ -4,10 +4,6 @@ import {
     PREV_CALENDAR_MONTH 
 } from "./calendarEvents";
 
-/*
- * reducers
- */
-
 module.exports = (state, action) => {
     switch (action.type) {
         case 'CURRENT_CALENDAR_MONTH': {

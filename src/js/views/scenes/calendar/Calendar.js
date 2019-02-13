@@ -1,28 +1,28 @@
 import Component from "#components/component";
 import CalendarHeader from "./components/header";
 import CalendarBody from "./components/body";
-import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./calendarEvents";
+// import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./calendarEvents";
 
 class Calendar extends Component {
     constructor(props) {
         super(props);
         this.date = new Date();
         this.currentCalendarDate = new Date();
-        this.onEvent = this.onEvent.bind(this);
+        // this.onEvent = this.onEvent.bind(this);
         this.setSubscriber("calendar", this.onEvent);
     }
 
-    /*
-    * handling actions/reducer
-    */
-    onEvent(state, action) {
-        if(action.type === PREV_CALENDAR_MONTH) {
-            console.log("Prev Month")
-        } else if (action.type === NEXT_CALENDAR_MONTH) {
-            // dispatch
-            console.log("Next Month")
-        }
-    }
+    // /*
+    // * handling actions/reducer
+    // */
+    // onEvent(state, action) {
+    //     if(action.type === PREV_CALENDAR_MONTH) {
+    //         console.log("Prev Month")
+    //     } else if (action.type === NEXT_CALENDAR_MONTH) {
+    //         // dispatch
+    //         console.log("Next Month")
+    //     }
+    // }
 
     render() {
         this.setChild("calendar-header", new CalendarHeader({currentCalendarDate: this.currentCalendarDate}));

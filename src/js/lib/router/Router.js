@@ -26,17 +26,17 @@ class Router {
     }
 
     checkRoute() {
-        let path = window.location.hash.substring(1);
-        let folders = path.split('/');
+        const path = window.location.hash.substring(1);
+        const folders = path.split('/');
 
-        if (folders.length == 1) folders.push('index');
+        if (folders.length === 1) folders.push('index');
        
-        let filteredRoutes = routes.find(obj => { 
-            return obj.match.controller == folders[0] &&
-            obj.match.action == folders[1]
-        });
+        const filteredRoutes = routes.find(obj => 
+            obj.match.controller === folders[0] &&
+            obj.match.action === folders[1]
+        );
         
-        if(filteredRoutes == undefined) {
+        if(filteredRoutes === undefined) {
             return NotFound;
         } else {
             return {
@@ -48,7 +48,7 @@ class Router {
     }
 
     setDocumentTitle() {
-        let documentTitle = window.location.hash;
+        const documentTitle = window.location.hash;
         document.title = "Hobo | " + documentTitle.substring(1);
         return documentTitle;
     }
@@ -59,16 +59,31 @@ class Router {
     }
 
     async render(pageObj) {
-        let sceneElement = document.querySelector('[data-js="scene-element"]');
+        const sceneElement = document.querySelector('[data-js="scene-element"]');
 
 
-        let pageName = pageObj.className;
-        let pageComponent = pageObj.component;
+        // const pageComponent = pageObj.component;
+        // console.log(pageComponent)
+        
+        // sceneElement.innerHTML = pageComponent.render();
 
-        let newPageName = new pageComponent();
-        let pageNode = createElement(newPageName)
 
-        window[pageName] = newPageName;
+
+        // const pageNode = pageComponent.render();
+        // console.log(createElement(pageNode))
+// const pageName = pageObj.className;
+
+
+        // const pageName = pageObj.className;
+        const pageComponent = pageObj.component;
+        
+        console.log(pageComponent)
+
+        const newPageName = new pageComponent();
+        console.log(newPageName)
+        const pageNode = createElement(newPageName)
+
+        // window[pageName] = newPageName;
         sceneElement.parentNode.replaceChild(pageNode, sceneElement);
     }
 }
