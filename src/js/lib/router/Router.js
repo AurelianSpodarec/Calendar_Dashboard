@@ -1,6 +1,9 @@
 import { routes } from "./routing";
 import NotFound from "#views/scenes/other/NotFound";
 import createElement from "../createElement";
+ 
+
+//  
 //  
 //  TODO:
 //  [x] Get current location
@@ -30,11 +33,9 @@ class Router {
        
         let filteredRoutes = routes.find(obj => { 
             return obj.match.controller == folders[0] &&
-            obj.match.action == folders[1];
+            obj.match.action == folders[1]
         });
-
         
-        // TODO: Add a default page for root(/);
         if(filteredRoutes == undefined) {
             return NotFound;
         } else {
@@ -43,6 +44,7 @@ class Router {
                 className: filteredRoutes.className || null
             };
         }
+
     }
 
     setDocumentTitle() {
@@ -63,7 +65,7 @@ class Router {
         let pageName = pageObj.className;
         let pageComponent = pageObj.component;
 
-        let newPageName = new [pageComponent]();
+        let newPageName = new pageComponent();
         let pageNode = createElement(newPageName)
 
         window[pageName] = newPageName;

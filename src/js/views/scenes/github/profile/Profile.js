@@ -1,7 +1,12 @@
-let GithubProfile = {
-    render : async () => {
-        return /*html*/`
+ import Component from "#components/component"
 
+class GithubProfile extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return /*html*/`
+             
             <div class="github-nav">
             <div class="github-nav__outer">
 
@@ -201,12 +206,19 @@ let GithubProfile = {
                 </div>
 
 
-            </div><!-- /github-user-profile -->
-
-
+            </div>
         `;
     }
-
 }
 
+ 
+
 export default GithubProfile;
+
+ 
+
+
+ 
+
+
+ 
