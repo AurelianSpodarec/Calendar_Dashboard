@@ -1,8 +1,18 @@
-import ToDo from "./ToDo";
+import Component from "#components/component";
 
-const todo = new ToDo();
-window.todo = todo;
+class ToDo extends Component {
+    constructor(props) {
+        super(props);
+        this.setSubscriber("todo", this.onEvent);
+    }
 
-console.log("ToDo index")
+    render() {
+        return /*html*/`
+            <section data-js="scene-element" class="scene">
+                Todo
+            </section>
+        `;
+    }
+}
 
 export default ToDo;

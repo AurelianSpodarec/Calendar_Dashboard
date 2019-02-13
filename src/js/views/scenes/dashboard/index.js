@@ -1,10 +1,18 @@
-import Dashboard from "./Dashboard";
+import Component from "#components/component";
 
-// const dashboard = new Dashboard();
-// window.dashboard = dashboard;
+class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        this.setSubscriber("dashboard", this.onEvent);
+    }
 
- 
-    console.log('Dashboard index')
- 
+    render() {
+        return /*html*/`
+            <section data-js="scene-element" class="scene">
+                Dashboard
+            </section>
+        `;
+    }
+}
 
 export default Dashboard;

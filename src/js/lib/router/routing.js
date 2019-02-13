@@ -5,7 +5,7 @@ import ToDo from '#views/scenes/todo';
 import Calendar from '#views/scenes/calendar';
 
 // GitHub
-import GithubProfile from '#views/scenes/github/profile/Profile';
+import GithubProfile from '#views/scenes/github/profile';
 import GithubSearchUser from '#views/scenes/github/SearchUser';
 
 //Develop
@@ -19,6 +19,7 @@ export const routes = [
     // Application Generic
     {
         component: Dashboard,
+        className: 'dashboard',
         match: {
             action: 'index',
             controller: 'dashboard',
@@ -26,6 +27,7 @@ export const routes = [
     },
     {
         component: ToDo,
+        className: 'ToDo',
         match: {
             action: 'index',
             controller: 'todo',
@@ -33,6 +35,7 @@ export const routes = [
     },
     {
         component: Calendar,
+        className: 'Calendar',
         match: {
             action: 'index',
             controller: 'calendar',
