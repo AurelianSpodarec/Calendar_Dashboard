@@ -62,28 +62,15 @@ class Router {
         const sceneElement = document.querySelector('[data-js="scene-element"]');
 
 
-        // const pageComponent = pageObj.component;
-        // console.log(pageComponent)
-        
-        // sceneElement.innerHTML = pageComponent.render();
-
-
-
-        // const pageNode = pageComponent.render();
-        // console.log(createElement(pageNode))
-// const pageName = pageObj.className;
-
-
-        // const pageName = pageObj.className;
+        const pageName = pageObj.className;
         const pageComponent = pageObj.component;
         
-        console.log(pageComponent)
-
+        
         const newPageName = new pageComponent();
-        console.log(newPageName)
         const pageNode = createElement(newPageName)
 
-        // window[pageName] = newPageName;
+
+        window[pageName] = newPageName;
         sceneElement.parentNode.replaceChild(pageNode, sceneElement);
     }
 }
