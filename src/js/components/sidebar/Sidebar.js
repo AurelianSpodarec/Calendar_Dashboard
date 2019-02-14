@@ -8,7 +8,7 @@ class Sidebar extends Component {
     }
 
     onEvent(action, event) {
-        event.preventDefault();        
+        // event.preventDefault();        
     }
 
     render() {

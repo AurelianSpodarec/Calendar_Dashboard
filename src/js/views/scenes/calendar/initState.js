@@ -3,5 +3,5 @@
  */
 
 export default {
-    currentMonthIndex: new Date().getMonth(),
+    currentMonthIndex: 1,
 }

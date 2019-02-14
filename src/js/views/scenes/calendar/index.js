@@ -12,15 +12,11 @@ class Calendar extends Component {
         this.currentCalendarDate = new Date();
         this.onEvent = this.onEvent.bind(this);
         this.setSubscriber("calendar", this.onEvent);
-        // this.store.setReducer("calendar", calendarReducer, initState);
+        this.setReducer("calendar", calendarReducer, initState);
     }
 
-    /*
-    * handling actions/reducer
-    */
     onEvent(state, action) {
-        console.log("cal event works")
-        
+
     }
 
     onCreated() {

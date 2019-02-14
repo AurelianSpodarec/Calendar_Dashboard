@@ -1,17 +1,15 @@
 import Component from "#components/component";
 import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./../../../calendarEvents";
 import store from "#lib/store/Store";
-
-class Navigation extends Component {
+// import calendarReducer from "./../../../calendarReducer";
+// import initState from "./../../../initState";
+class CalNavigation extends Component {
     constructor(props) {
         super(props);
         this.date = new Date();
         this.currentMonth = this.monthAsName(this.date.getMonth());
         this.currentYear = this.date.getFullYear();
-    }
-
-    renderCurrentMonth(event) {
-        this.refs.currentMonth.textContent = "August 2020";
+        this.onEvent = this.onEvent.bind(this);
     }
 
     monthAsName(monthIndex) {
@@ -37,29 +35,26 @@ class Navigation extends Component {
     }
 
     onCreated() {
-        
         this.refs.currentMonth.textContent = this.currentMonth + " " + this.currentYear;
     }
 
-/*
+    /*
     * handling actions/reducer
     */
     onEvent(state, action) {
-        // store.dispatch({ type: 'ADD' })
-    }
-
-    nextMonth(action) {
         event.preventDefault();
-        this.store.dispatch({ 
+        console.log("navigation onEvent")
+        console.log(this.state)
+        this.dispatch({ 
             type: 'PREV_CALENDAR_MONTH',
             value: 'works'
         })
     }
-
+     
     render() {
         return /*html*/`
             <div class="cal__header-bottom">
-                <button onClick="navigation.nextMonth(event);" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
+                <button onClick="calnavigation.onEvent(event);" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
                 <span class="cal__current-month" data-ref="currentMonth"> </span>
                 <button onClick="navigation.nextMonth(event)" class="cal__pagination-arrow"><i class="fas fa-angle-right"></i></button>
             </div>
@@ -67,5 +62,5 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;        
+export default CalNavigation;        
 

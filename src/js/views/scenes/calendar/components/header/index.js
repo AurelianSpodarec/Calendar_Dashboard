@@ -1,6 +1,6 @@
 import Component from "#components/component";
 import CalendarToolbar from "./components/Toolbar";
-import Navigation from "./components/Navigation";
+import CalNavigation from "./components/CalNavigation";
 
 
 class CalendarHeader extends Component {
@@ -10,8 +10,8 @@ class CalendarHeader extends Component {
 
     render() {
         this.setChild('toolbar', new CalendarToolbar());
-        window.navigation = new Navigation()
-        this.setChild('navigation', window.navigation);
+        window.calnavigation = new CalNavigation()
+        this.setChild('navigation', window.calnavigation);
         return /*html*/`
             <header class="cal__header">
             <div class="cal__header-banner" style="background-image: url('https://c8.alamy.com/comp/PTB79P/vector-banner-blue-winter-background-with-ice-and-snow-PTB79P.jpg');"></div>
