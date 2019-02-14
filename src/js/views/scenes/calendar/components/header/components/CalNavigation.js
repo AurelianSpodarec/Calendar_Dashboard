@@ -1,7 +1,9 @@
 import Component from "#components/component";
 import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./../../../calendarEvents";
-import store from "#lib/store/Store";
-// import calendarReducer from "./../../../calendarReducer";
+import store from "#lib/store";
+
+// import { SetPrevMonth } from "./../../../calendarActions";
+// // import calendarReducer from "./../../../calendarReducer";
 // import initState from "./../../../initState";
 class CalNavigation extends Component {
     constructor(props) {
@@ -29,10 +31,7 @@ class CalNavigation extends Component {
         ][monthIndex]
     }
 
-    nextMonth() {
-        var nextMonth = this.currentMonth + 2;
-        console.log(nextMonth)
-    }
+    
 
     onCreated() {
         this.refs.currentMonth.textContent = this.currentMonth + " " + this.currentYear;
@@ -42,21 +41,39 @@ class CalNavigation extends Component {
     * handling actions/reducer
     */
     onEvent(state, action) {
-        event.preventDefault();
-        console.log("navigation onEvent")
-        console.log(this.state)
-        this.dispatch({ 
-            type: 'PREV_CALENDAR_MONTH',
-            value: 'works'
+        // event.preventDefault();
+        // console.log("navigation onEvent")
+        // console.log(this.state)
+        // this.dispatch({ 
+        //     type: 'PREV_CALENDAR_MONTH',
+        //     value: 'works'
+        // })
+    }
+
+    nextCalendarMonth(event) {
+        console.log(this.getStoreState())
+        this.dispatch({
+            type: NEXT_CALENDAR_MONTH,
+            value: 99999999999
+        })
+    }
+
+    prevCalendarMonth(event) {
+        // console.log(this) 
+        // console.log(this.getStoreState().calendar.currentMonthIndex);
+        console.log(this.getStoreState())
+        this.dispatch({
+            type: PREV_CALENDAR_MONTH,
+            value: 13
         })
     }
      
     render() {
         return /*html*/`
             <div class="cal__header-bottom">
-                <button onClick="calnavigation.onEvent(event);" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
+                <button onClick="calnavigation.prevCalendarMonth(event);" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
                 <span class="cal__current-month" data-ref="currentMonth"> </span>
-                <button onClick="navigation.nextMonth(event)" class="cal__pagination-arrow"><i class="fas fa-angle-right"></i></button>
+                <button onClick="calnavigation.nextCalendarMonth(event)" class="cal__pagination-arrow"><i class="fas fa-angle-right"></i></button>
             </div>
         `;
     }

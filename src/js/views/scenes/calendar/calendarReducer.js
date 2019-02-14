@@ -1,32 +1,35 @@
 import { 
     CURRENT_CALENDAR_MONTH,
-    NEXT_CALENDAR_MONTH, 
-    PREV_CALENDAR_MONTH 
+    NEXT_CALENDAR_MONTH,
+    PREV_CALENDAR_MONTH
 } from "./calendarEvents";
-import Store from "../../../lib/store/Store";
 
 export default (state, action) => {
-    switch (action.type) {
-        case CURRENT_CALENDAR_MONTH: {
+    console.log(action.type);console.log(NEXT_CALENDAR_MONTH)
+    // switch (action.type) {
+    //     case CURRENT_CALENDAR_MONTH: {
+    //         var currentMonth = 99;
+    //         console.log(currentMonth);
+    //         console.log("REDUCER Current")
+    //         return currentMonth;
+    //     }
+
+    //     case NEXT_CALENDAR_MONTH: {
+    //         var nextMonth = 4
+    //         console.log(nextMonth)
             
-            console.log(action)
-            console.log("REDUCER")
-        }
+    //         console.log("REDUCER Next")
+    //         return nextMonth;
+    //     }
 
-        case NEXT_CALENDAR_MONTH: {
-            nextMonth = currentMonthIndex + 1
-            console.log(nextMonth)
-            return nextMonth;
-            console.log(action)
-            console.log("REDUCER")
-        }
+    //     case PREV_CALENDAR_MONTH: {
+    //         var prevMonth =  2
+    //         console.log(prevMonth)
+    //         console.log("Reducer Prev")
+    //         return prevMonth;
+    //     }
 
-        case PREV_CALENDAR_MONTH: {
-            console.log(action)
-            console.log("REDUCER")
-        }
-
-        default:
-            return state;
-    }
+    //     default:
+    //         return state;
+    // }
 }

@@ -34,8 +34,7 @@ class Store {
                 onEvent(this.state, action);
             }
         }
-        console.log(action)
-      
+      console.log(action)
     }
   }
   
