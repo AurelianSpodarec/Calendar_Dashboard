@@ -8,25 +8,26 @@ export default (state, action) => {
    
     switch (action.type) {
         case CURRENT_CALENDAR_MONTH: {
-            var currentMonth = 99;
-            console.log(currentMonth);
-            console.log("REDUCER Current")
+            var currentMonth = state.calendar.currentMonthIndex + 9999;
             return currentMonth;
         }
 
         case NEXT_CALENDAR_MONTH: {
-            var nextMonth = 4
-            console.log(nextMonth)
+            console.log(state)
+            var nextMonth =  state.currentMonthIndex + action.value;
+            console.log(state)
+            console.log(nextMonth);
             
-            console.log("REDUCER Next")
-            return nextMonth;
+            return Object.assign({}, state, {  currentMonthIndex: nextMonth });
         }
 
         case PREV_CALENDAR_MONTH: {
-            var prevMonth =  2
-            console.log(prevMonth)
-            console.log("Reducer Prev")
-            return prevMonth;
+            console.log(state)
+            var prevMonth =  state.currentMonthIndex - action.value;
+            console.log(state)
+            console.log(prevMonth);
+             
+            return Object.assign({}, state, { currentMonthIndex: prevMonth });
         }
 
         default:

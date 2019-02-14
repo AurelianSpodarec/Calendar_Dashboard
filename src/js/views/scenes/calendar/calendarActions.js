@@ -30,7 +30,7 @@ const SetPrevMonth = function(value) {
     };
 };
 
-export default {
+export {
     SetCurrentMonth,
     SetNextMonth,
     SetPrevMonth

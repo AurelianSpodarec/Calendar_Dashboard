@@ -1,10 +1,10 @@
 import Component from "#components/component";
 import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./../../../calendarEvents";
+import { 
+    SetPrevMonth, 
+    SetNextMonth 
+} from "./../../../calendarActions";
 
-
-// import { SetPrevMonth } from "./../../../calendarActions";
-// // import calendarReducer from "./../../../calendarReducer";
-// import initState from "./../../../initState";
 class CalNavigation extends Component {
     constructor(props) {
         super(props);
@@ -34,43 +34,27 @@ class CalNavigation extends Component {
     
 
     onCreated() {
-        this.refs.currentMonth.textContent = this.currentMonth + " " + this.currentYear;
+        this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
 
     /*
     * handling actions/reducer
     */
     onEvent(state, action) {
-        // event.preventDefault();
-        // console.log("navigation onEvent")
-        // console.log(this.state)
-        // this.dispatch({ 
-        //     type: 'PREV_CALENDAR_MONTH',
-        //     value: 'works'
-        // })
     }
 
     nextCalendarMonth(event) {
-        console.log(this.getStoreState())
-        this.dispatch({
-            type: NEXT_CALENDAR_MONTH,
-            value: 99999999999
-        })
+        this.dispatch(SetNextMonth(1))
+        this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
 
     prevCalendarMonth(event) {
-        // console.log(this) 
-        // console.log(this.getStoreState().calendar.currentMonthIndex);
-        console.log(this.getStoreState())
-        this.dispatch({
-            type: PREV_CALENDAR_MONTH,
-            value: 13
-        })
+        this.dispatch(SetPrevMonth(1))
+        this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
      
     render() {
-        console.log(PREV_CALENDAR_MONTH)
-        console.log("hi")
+        console.log()
         return /*html*/`
             <div class="cal__header-bottom">
                 <button onClick="calnavigation.prevCalendarMonth(event);" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
