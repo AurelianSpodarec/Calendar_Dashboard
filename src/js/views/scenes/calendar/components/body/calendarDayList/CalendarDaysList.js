@@ -1,77 +1,39 @@
 import Component from "#components/component";
-import CalendarDayItem from "./CalendarDayItem";
+import CalendarBody from "./CalendarBody";
 import createElement from "#lib/createElement";
-
+import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./../../../calendarEvents";
 
 class CalendarDaysList extends Component {
     constructor(props) {
         super(props)
-        this.onEevent = this.onEvent.bind(this);
+        this.onEvent = this.onEvent.bind(this);
+        this.setSubscriber("CalendarDaysList", this.onEvent);
     }
 
-    getDaysInMonth(month, year) {
-        return new Date(year, month + 1, 0).getDate();
-    }
+   
 
-    renderDayItem() {            
-        let output = ""; 
-
-
-            var lastDayOfWeek = 0;
-            var currentMontDays = 1;
-            var nextMonthDays = 1;
-            
-            var daysInMonth = this.getDaysInMonth(this.getStoreState().calendar.currentMonthIndex, this.props.currentCalendarDate.getFullYear()),
-                firstDayMonth = new Date(this.props.currentCalendarDate.getFullYear(), this.getStoreState().calendar.currentMonthIndex, 1),
-                firstDayWeekday = firstDayMonth.getDay();
-
-                var prev_month = this.getStoreState().calendar.currentMonthIndex == 0 ? 11 : this.getStoreState().calendar.currentMonthIndex - 1,
-                    prev_year = prev_month == 11 ? this.props.currentCalendarDate.getFullYear() - 1 : this.props.currentCalendarDate.getFullYear(),
-                    previousMonthDays = this.getDaysInMonth(prev_month, prev_year);
-
-            for (let i = 1; i < 36; i++) {
-
-                // Row
-                if (lastDayOfWeek == 0) {
-                    output += "<div class=\"cal__cell-row\">";
-                }    
-
-                if(i < new Date(this.props.currentCalendarDate.getFullYear(), this.getStoreState().calendar.currentMonthIndex, 1).getDay()) {
-                let ol =  (previousMonthDays - firstDayWeekday + i + 1)
-                    output +=   `${createElement(new CalendarDayItem({currentCalendarDate: this.props.currentCalendarDate, dayNumber: ol,otherMonth: true})).outerHTML} `
-
-                } else if(currentMontDays > daysInMonth) {
-
-                    output +=   `${createElement(new CalendarDayItem({currentCalendarDate: this.props.currentCalendarDate, dayNumber: nextMonthDays, otherMonth: true  })).outerHTML} `
-                    nextMonthDays++;
-
-                } else {
-                    output +=   `${createElement(new CalendarDayItem({currentCalendarDate: this.props.currentCalendarDate, dayNumber: currentMontDays })).outerHTML} `
-                    currentMontDays++;
-                }
-
-                // Row
-                if (lastDayOfWeek == 6) {
-                    output += "</div>";
-                    lastDayOfWeek = 0;
-                } else {
-                    lastDayOfWeek++;
-                }
-            }
-
-
-        return output;
-    }
+    
 
     onEvent(state, action) {
-        this.renderDayItem();
+        if(action.type === NEXT_CALENDAR_MONTH) {
+            console.log(this.getStoreState().calendar.currentMonthIndex)
+            this.refs.monthScreen.innerHTML = "";
+
+            const calendarBody = createElement(new CalendarBody);
+            this.refs.monthScreen.appendChild(calendarBody)
+        }
+        
+    }
+
+    onCreated() {
+        const calendarBody = createElement(new CalendarBody);
+        this.refs.monthScreen.appendChild(calendarBody)
     }
     
     render() {
+        
         return /*html*/`
-            <div class="cal__month-screen">
-                ${this.renderDayItem()}
-            </div>
+            <div data-ref="monthScreen" class="cal__month-screen"> </div>
         `;
     }
 }

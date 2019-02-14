@@ -12,6 +12,7 @@ class CalNavigation extends Component {
         this.currentMonth = this.monthAsName(this.date.getMonth());
         this.currentYear = this.date.getFullYear();
         this.onEvent = this.onEvent.bind(this);
+        this.setSubscriber("CalNavigation", this.onEvent);
     }
 
     monthAsName(monthIndex) {
@@ -41,16 +42,19 @@ class CalNavigation extends Component {
     * handling actions/reducer
     */
     onEvent(state, action) {
+        if(action.type === NEXT_CALENDAR_MONTH) {
+            this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
+        }
     }
 
     nextCalendarMonth(event) {
         this.dispatch(SetNextMonth(1))
-        this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
+        // this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
 
     prevCalendarMonth(event) {
         this.dispatch(SetPrevMonth(1))
-        this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
+        // this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
      
     render() {

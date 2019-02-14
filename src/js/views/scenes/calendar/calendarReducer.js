@@ -13,20 +13,12 @@ export default (state, action) => {
         }
 
         case NEXT_CALENDAR_MONTH: {
-            console.log(state)
             var nextMonth =  state.currentMonthIndex + action.value;
-            console.log(state)
-            console.log(nextMonth);
-            
             return Object.assign({}, state, {  currentMonthIndex: nextMonth });
         }
 
         case PREV_CALENDAR_MONTH: {
-            console.log(state)
             var prevMonth =  state.currentMonthIndex - action.value;
-            console.log(state)
-            console.log(prevMonth);
-             
             return Object.assign({}, state, { currentMonthIndex: prevMonth });
         }
 
