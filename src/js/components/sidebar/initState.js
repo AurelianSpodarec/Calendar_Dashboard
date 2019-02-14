@@ -1,10 +1,7 @@
-// export default {
-//     selectedMenu: {
-//         id: ,
-//         isActive: false,
-//         isDropdownActive: false,
-//         dropdownMenu: isActive: false
-
-//     },
-    
-// };
+export default {
+    selectedMenu: {
+        id: 0,
+        isActive: true,
+        hasDorpdown: false,
+    }
+}

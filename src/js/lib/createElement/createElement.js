@@ -22,9 +22,7 @@ const createElement = domParser => {
         children.forEach(childName => {
             const childElement = component.children[childName];
             elements.forEach(replaceNode(childName, childElement));
-            const element = elements;
-            window.element = element;
-        })
+        });
 
         delete component.children;
 

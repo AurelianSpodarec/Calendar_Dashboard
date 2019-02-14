@@ -1,32 +1,34 @@
 import Component from "#components/component";
 import CalendarHeader from "./components/header";
 import CalendarBody from "./components/body";
-// import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./calendarEvents";
+
+import calendarReducer from "./calendarReducer";
+import initState from "./initState";
 
 class Calendar extends Component {
     constructor(props) {
         super(props);
         this.date = new Date();
         this.currentCalendarDate = new Date();
-        // this.onEvent = this.onEvent.bind(this);
+        this.onEvent = this.onEvent.bind(this);
         this.setSubscriber("calendar", this.onEvent);
+        // this.store.setReducer("calendar", calendarReducer, initState);
     }
 
-    // /*
-    // * handling actions/reducer
-    // */
-    // onEvent(state, action) {
-    //     if(action.type === PREV_CALENDAR_MONTH) {
-    //         console.log("Prev Month")
-    //     } else if (action.type === NEXT_CALENDAR_MONTH) {
-    //         // dispatch
-    //         console.log("Next Month")
-    //     }
-    // }
-onCreated() {
+    /*
+    * handling actions/reducer
+    */
+    onEvent(state, action) {
+        console.log("cal event works")
+        
+    }
 
-}
+    onCreated() {
+
+    }
+
     render() {
+        console.log(calendarReducer);
         this.setChild("calendar-header", new CalendarHeader({currentCalendarDate: this.currentCalendarDate}));
         this.setChild("calendar-body", new CalendarBody({currentCalendarDate: this.currentCalendarDate}));
         return /*html*/`

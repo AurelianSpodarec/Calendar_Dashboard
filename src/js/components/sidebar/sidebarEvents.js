@@ -1,0 +1,5 @@
+const SET_SELECTED_PAGE = "SET_SELECTED_PAGE";
+
+export default {
+    SET_SELECTED_PAGE
+}

@@ -1,9 +1,8 @@
 class Store {
     constructor() {
         this.state = {};
-        this.reducers = {};
-        this.subscribers = {};
-        this.setReducer = this.setReducer.bind(this);
+        console.log(this.reducers = {});
+        console.log(this.subscribers = {});
         this.setSubscriber = this.setSubscriber.bind(this);
         this.dispatch = this.dispatch.bind(this);
     }
@@ -18,23 +17,24 @@ class Store {
     }
   
     dispatch(action) {
-        let newState = {};
-        const reducerNames = Object.keys(this.reducers);
+        // let newState = {};
+        // const reducerNames = Object.keys(this.reducers);
 
-        for (const reducerName of reducerNames) {
-            const currentState = this.state[reducerName];
-            newState = this.reducers[reducerName](currentState, action);
-            this.state[reducerName] = Object.assign({}, currentState, newState);
-        }
+        // for (const reducerName of reducerNames) {
+        //     const currentState = this.state[reducerName];
+        //     newState = this.reducers[reducerName](currentState, action);
+        //     this.state[reducerName] = Object.assign({}, currentState, newState);
+        // }
 
-        const subscriberNames = Object.keys(this.subscribers);
+        // const subscriberNames = Object.keys(this.subscribers);
 
-        for (const subscriberName of subscriberNames) {
-            const onEvent = this.subscribers[subscriberName];
-            if (onEvent) {
-                onEvent(this.state, action);
-            }
-        }
+        // for (const subscriberName of subscriberNames) {
+        //     const onEvent = this.subscribers[subscriberName];
+        //     if (onEvent) {
+        //         onEvent(this.state, action);
+        //     }
+        // }
+        console.log(action)
     }
   }
   
