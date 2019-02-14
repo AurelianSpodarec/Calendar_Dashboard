@@ -1,6 +1,6 @@
 import Component from "#components/component";
 import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./../../../calendarEvents";
-import store from "#lib/store";
+
 
 // import { SetPrevMonth } from "./../../../calendarActions";
 // // import calendarReducer from "./../../../calendarReducer";
@@ -69,6 +69,8 @@ class CalNavigation extends Component {
     }
      
     render() {
+        console.log(PREV_CALENDAR_MONTH)
+        console.log("hi")
         return /*html*/`
             <div class="cal__header-bottom">
                 <button onClick="calnavigation.prevCalendarMonth(event);" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>
