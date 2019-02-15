@@ -33,9 +33,6 @@ class CalNavigation extends Component {
         ][monthIndex]
     }
 
-    
-   
-
     async nextMonthKey(event) {
         event.preventDefault();
         if (event.keyCode === 39) {

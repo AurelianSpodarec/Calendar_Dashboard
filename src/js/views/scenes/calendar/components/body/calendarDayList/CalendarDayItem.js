@@ -18,7 +18,7 @@ class CalendarDayItem extends Component {
         let today = (new Date().getDate() === days) ? "is-today" : "";
 
         return /*html*/`
-            <div class="cal__cell cal__cell-day ${today} ${otherMonth}">
+            <div class="cal__cell cal__cell-day ${today} ${otherMonth}" data-timestamp="${new Date().toDateString()}">
                 <div class="cal__cell-top">
                     <span class="cal__day-number">${days}</span>
                 </div>

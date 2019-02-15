@@ -24,20 +24,19 @@ class CalendarBody extends Component {
                 firstDayMonth = new Date( this.fullYear, this.currentMonth, 1),
                 firstDayWeekday = firstDayMonth.getDay();
 
-                let prev_month = this.currentMonth == 0 ? 11 : this.currentMonth - 1,
-                    prev_year = prev_month == 11 ?  this.fullYear - 1 :  this.fullYear,
-                    previousMonthDays = this.getDaysInMonth(prev_month, prev_year);
+                    let prev_year = this.currentMonth == 11 ?  this.fullYear - 1 :  this.fullYear,
+                    previousMonthDays = this.getDaysInMonth(this.currentMonth, prev_year);
 
             for (let i = 1; i < 36; i++) {
 
                 // Row
                 if (lastDayOfWeek == 0) {
-                    output += "<div class=\"cal__cell-row\">";
+                    output += "<div data-timestamp=\"${new Date().toDateString()}\" class=\"cal__cell-row\">";
                 }    
 
                 if(i < new Date( this.fullYear, this.currentMonth, 1).getDay()) {
                     let ol =  (previousMonthDays - firstDayWeekday + i + 1)
-                    output += `${createElement(new CalendarDayItem({dayNumber: ol,otherMonth: true})).outerHTML} `
+                    output += `${createElement(new CalendarDayItem({dayNumber: ol, otherMonth: true})).outerHTML} `
 
                 } else if(currentMonthDays > daysInMonth) {
                     output += `${createElement(new CalendarDayItem({dayNumber: nextMonthDays, otherMonth: true  })).outerHTML} `
