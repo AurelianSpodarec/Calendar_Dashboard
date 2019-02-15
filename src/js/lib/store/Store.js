@@ -1,10 +1,10 @@
 class Store {
     constructor() {
-        console.log(this.state = {});
-        console.log(this.reducers = {});
-        console.log(this.subscribers = {});
-        console.log(this.setSubscriber = this.setSubscriber.bind(this));
-        console.log(this.dispatch = this.dispatch.bind(this));
+        this.state = {};
+        this.reducers = {};
+        this.subscribers = {};
+        this.setSubscriber = this.setSubscriber.bind(this);
+        this.dispatch = this.dispatch.bind(this);
     }
   
     setSubscriber(name, subscriber) {
@@ -34,9 +34,8 @@ class Store {
                 onEvent(this.state, action);
             }
         }
-      console.log(action)
     }
-  }
-  
 
+}
+  
 export default Store;

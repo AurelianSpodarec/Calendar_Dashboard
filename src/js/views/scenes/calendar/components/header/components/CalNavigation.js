@@ -12,6 +12,7 @@ class CalNavigation extends Component {
         this.currentMonth = this.monthAsName(this.date.getMonth());
         this.currentYear = this.date.getFullYear();
         this.onEvent = this.onEvent.bind(this);
+        this.nextMonthKey = this.nextMonthKey.bind(this)
         this.setSubscriber("CalNavigation", this.onEvent);
     }
 
@@ -33,9 +34,13 @@ class CalNavigation extends Component {
     }
 
     
+   
 
-    onCreated() {
-        this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
+    async nextMonthKey(event) {
+        event.preventDefault();
+        if (event.keyCode === 39) {
+            await this.nextCalendarMonth();
+        }
     }
 
     /*
@@ -43,6 +48,10 @@ class CalNavigation extends Component {
     */
     onEvent(state, action) {
         if(action.type === NEXT_CALENDAR_MONTH) {
+            this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
+        }
+
+        if(action.type === PREV_CALENDAR_MONTH) {
             this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
         }
     }
@@ -56,7 +65,11 @@ class CalNavigation extends Component {
         this.dispatch(SetPrevMonth(1))
         // this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
-     
+
+    onCreated() {
+        this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
+    }
+
     render() {
         console.log()
         return /*html*/`

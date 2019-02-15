@@ -5,26 +5,27 @@ class CalendarBody extends Component {
     constructor(props) {
         super(props);
         //  new Date() = new Date();
+        this.fullYear = new Date().getFullYear();
+        this.currentMonth = this.getStoreState().calendar.currentMonthIndex;
     }
 
     getDaysInMonth(month, year) {
         return new Date(year, month + 1, 0).getDate();
     }
 
-    renderCalendarBody() {            
+    renderCalendarBody() {     
         let output = ""; 
 
-
-            var lastDayOfWeek = 0;
-            var currentMontDays = 1;
-            var nextMonthDays = 1;
-            
-            var daysInMonth = this.getDaysInMonth(this.getStoreState().calendar.currentMonthIndex,  new Date().getFullYear()),
-                firstDayMonth = new Date( new Date().getFullYear(), this.getStoreState().calendar.currentMonthIndex, 1),
+            let lastDayOfWeek = 0;
+            let currentMonthDays = 1;
+            let nextMonthDays = 1;
+          
+            let daysInMonth = this.getDaysInMonth(this.currentMonth,  this.fullYear),
+                firstDayMonth = new Date( this.fullYear, this.currentMonth, 1),
                 firstDayWeekday = firstDayMonth.getDay();
 
-                var prev_month = this.getStoreState().calendar.currentMonthIndex == 0 ? 11 : this.getStoreState().calendar.currentMonthIndex - 1,
-                    prev_year = prev_month == 11 ?  new Date().getFullYear() - 1 :  new Date().getFullYear(),
+                let prev_month = this.currentMonth == 0 ? 11 : this.currentMonth - 1,
+                    prev_year = prev_month == 11 ?  this.fullYear - 1 :  this.fullYear,
                     previousMonthDays = this.getDaysInMonth(prev_month, prev_year);
 
             for (let i = 1; i < 36; i++) {
@@ -34,18 +35,17 @@ class CalendarBody extends Component {
                     output += "<div class=\"cal__cell-row\">";
                 }    
 
-                if(i < new Date( new Date().getFullYear(), this.getStoreState().calendar.currentMonthIndex, 1).getDay()) {
-                let ol =  (previousMonthDays - firstDayWeekday + i + 1)
-                    output +=   `${createElement(new CalendarDayItem({currentCalendarDate:  new Date(), dayNumber: ol,otherMonth: true})).outerHTML} `
+                if(i < new Date( this.fullYear, this.currentMonth, 1).getDay()) {
+                    let ol =  (previousMonthDays - firstDayWeekday + i + 1)
+                    output += `${createElement(new CalendarDayItem({dayNumber: ol,otherMonth: true})).outerHTML} `
 
-                } else if(currentMontDays > daysInMonth) {
-
-                    output +=   `${createElement(new CalendarDayItem({currentCalendarDate:  new Date(), dayNumber: nextMonthDays, otherMonth: true  })).outerHTML} `
+                } else if(currentMonthDays > daysInMonth) {
+                    output += `${createElement(new CalendarDayItem({dayNumber: nextMonthDays, otherMonth: true  })).outerHTML} `
                     nextMonthDays++;
 
                 } else {
-                    output +=   `${createElement(new CalendarDayItem({currentCalendarDate:  new Date(), dayNumber: currentMontDays })).outerHTML} `
-                    currentMontDays++;
+                    output += `${createElement(new CalendarDayItem({dayNumber: currentMonthDays })).outerHTML} `
+                    currentMonthDays++;
                 }
 
                 // Row
@@ -57,14 +57,14 @@ class CalendarBody extends Component {
                 }
             }
 
-
         return output;
     }
 
     render() {
-        
         return /*html*/`
+        <div> 
             ${this.renderCalendarBody()};
+        </div>
         `;
     }
 }

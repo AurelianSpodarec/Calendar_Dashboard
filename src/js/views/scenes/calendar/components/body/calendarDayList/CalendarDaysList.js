@@ -11,14 +11,16 @@ class CalendarDaysList extends Component {
     }
 
    
-
-    
-
     onEvent(state, action) {
         if(action.type === NEXT_CALENDAR_MONTH) {
             console.log(this.getStoreState().calendar.currentMonthIndex)
             this.refs.monthScreen.innerHTML = "";
+            const calendarBody = createElement(new CalendarBody);
+            this.refs.monthScreen.appendChild(calendarBody)
+        }
 
+        if(action.type === PREV_CALENDAR_MONTH) {
+            this.refs.monthScreen.innerHTML = "";
             const calendarBody = createElement(new CalendarBody);
             this.refs.monthScreen.appendChild(calendarBody)
         }

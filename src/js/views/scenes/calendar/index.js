@@ -24,7 +24,6 @@ class Calendar extends Component {
     }
 
     render() {
-        console.log(calendarReducer);
         this.setChild("calendar-header", new CalendarHeader({currentCalendarDate: this.currentCalendarDate}));
         this.setChild("calendar-body", new CalendarBody({currentCalendarDate: this.currentCalendarDate}));
         return /*html*/`
