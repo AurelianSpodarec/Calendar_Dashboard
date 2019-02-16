@@ -22,13 +22,11 @@ class CalendarBody extends Component {
           
             let daysInMonth = this.getDaysInMonth(this.currentMonth,  this.fullYear),
                 firstDayMonth = new Date( this.fullYear, this.currentMonth, 1),
-                firstDayWeekday = firstDayMonth.getDay();
-
-                    let prev_year = this.currentMonth == 11 ?  this.fullYear - 1 :  this.fullYear,
-                    previousMonthDays = this.getDaysInMonth(this.currentMonth, prev_year);
-
+                firstDayWeekday = firstDayMonth.getDay(),
+                previousMonthDays = this.getDaysInMonth(this.currentMonth, this.fullYear);
+                  
             for (let i = 1; i < 36; i++) {
-
+                
                 // Row
                 if (lastDayOfWeek == 0) {
                     output += "<div data-timestamp=\"${new Date().toDateString()}\" class=\"cal__cell-row\">";

@@ -15,6 +15,7 @@ class CalendarDayItem extends Component {
         let days = this.props.dayNumber;
 
         let otherMonth = this.props.otherMonth ? "is-other-month" : "";
+        // TODO: display the correct today date
         let today = (new Date().getDate() === days) ? "is-today" : "";
 
         return /*html*/`
