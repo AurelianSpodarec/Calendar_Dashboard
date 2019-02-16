@@ -21,6 +21,7 @@
             z-index: 1;
             background: rgba(0,0,0,.45);
         }
+        
         @include breakpoint-up(sm) {
             height: 200px;
             min-height: 200px;
@@ -31,7 +32,8 @@
     &__header-banner {
         @include absolute(top 0 right 0 bottom 0 left 0);
         background-size: cover;
-        transition: 0.10s linear;
+        transition: 0.25s linear;
+        background-position: center center;
     }
 
     &__header-container {
@@ -107,6 +109,11 @@
 
     // Calendar Month
 
+    &__month-screen {
+        border: 1px solid #e1e1e1;
+        border-bottom: 0;
+    }
+
     &__month-view {
         padding: 24px;
     }
@@ -125,7 +132,6 @@
 
     &__week-row {
         display: flex;
-        border-bottom: 1px solid #e1e1e1;
         text-align: center;
     }
 
@@ -164,7 +170,7 @@
             font-size: 1.4em;
         }
 
-        &.is-other-month {
+        &.is-other-month > div{
             opacity: .3;
         }
 

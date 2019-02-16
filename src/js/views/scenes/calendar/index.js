@@ -11,16 +11,25 @@ class Calendar extends Component {
         this.date = new Date();
         this.currentCalendarDate = new Date();
         this.onEvent = this.onEvent.bind(this);
+        this.nextMonthKey = this.nextMonthKey.bind(this);
         this.setSubscriber("calendar", this.onEvent);
         this.setReducer("calendar", calendarReducer, initState);
     }
 
-    onEvent(state, action) {
+    nextMonthKey(event) {
+        event.preventDefault();
+        console.log(window.event);
+        if (this.event.keyCode === 37) {
+            console.log("Yes")
+        }
+    }
 
+    onEvent(state, action) {
+        
     }
 
     onCreated() {
-
+        
     }
 
     render() {

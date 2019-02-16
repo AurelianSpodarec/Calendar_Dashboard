@@ -60,7 +60,7 @@ class CalendarBody extends Component {
     render() {
         return /*html*/`
         <div> 
-            ${this.renderCalendarBody()};
+            ${this.renderCalendarBody()}
         </div>
         `;
     }

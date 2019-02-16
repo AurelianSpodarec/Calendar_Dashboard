@@ -15,7 +15,7 @@ class CalBannerImage extends Component {
             case 11:
             case 0:
             case 1: {
-                imageUrl = "https://c8.alamy.com/comp/PTB79P/vector-banner-blue-winter-background-with-ice-and-snow-PTB79P.jpg";
+                imageUrl = "https://store-images.s-microsoft.com/image/apps.17555.14449609212792458.454eef9f-a0a5-4522-b519-e81aa7b40d6e.176d9e9a-fb7a-473e-90f6-26c2993854f4?mode=scale&q=90&h=1080&w=1920";
                 break;
             }
             case 2:
@@ -27,7 +27,7 @@ class CalBannerImage extends Component {
             case 5:
             case 6:
             case 7: {
-                imageUrl = "https://childrenstree.org/wp-content/uploads/2014/03/pink-flowers-summer-wallpapers-hd-wallpaper-wallpaper-nature-landscape-photo-summer-wallpaper-1024x640.jpg";
+                imageUrl = "https://wallpapercave.com/wp/eKuXiWb.jpg";
                 break;
             }
             case 8:
