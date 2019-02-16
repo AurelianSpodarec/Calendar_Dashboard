@@ -19,20 +19,42 @@ export default (state, action) => {
 
         case NEXT_CALENDAR_MONTH: {
             let currentMonthIndex =  state.currentMonthIndex + action.value;
+            let currentYear = state.currentYear;
 
-            if(state.currentMonthIndex >= 11) {
+            if(state.currentMonthIndex === 11) {
                 currentMonthIndex = 0;
+                currentYear++;
             }
-            return Object.assign({}, state, {  currentMonthIndex });
+
+            // if(state.currentMonthIndex >= 11) {
+            //     currentMonthIndex = 0;
+            // }
+
+            // if(state.currentMonthIndex % 12 === 0) {
+            //     currentYear = state.currentYear + 1;
+            // }
+
+            return Object.assign({}, state, {  currentMonthIndex, currentYear });
         }
 
         case PREV_CALENDAR_MONTH: {
             let currentMonthIndex =  state.currentMonthIndex - action.value;
+            let currentYear = state.currentYear;
 
-            if(state.currentMonthIndex <= 0) {
+            if(state.currentMonthIndex === 0) {
                 currentMonthIndex = 11;
+                currentYear--;
             }
-            return Object.assign({}, state, { currentMonthIndex });
+
+            // if(state.currentMonthIndex <= 0) {
+            //     currentMonthIndex = 11;
+            // }
+
+            // if(state.currentMonthIndex % 12 === 0) {
+            //     currentYear = state.currentYear - 1;
+            // }
+
+            return Object.assign({}, state, { currentMonthIndex, currentYear });
         }
 
         default:
