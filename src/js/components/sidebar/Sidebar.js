@@ -1,19 +1,40 @@
 import Component from "../component/index";
+import { IS_SIDEBAR_TOGGLE, SIDEBAR_OPEN, SIDEBAR_CLOSE } from "./sidebarEvents";
+import { isSidebarToggle, setSidebarOpen, setSidebarClose } from "./sidebarAction";
+
+import sidebarReducer from "./sidebarReducer";
+import initState from "./initState";
 
 class Sidebar extends Component {
     constructor(props) {
         super(props); 
         this.onEvent = this.onEvent.bind(this);
         this.setSubscriber("sidebar", this.onEvent);
+        this.setReducer("sidebar", sidebarReducer, initState);
     }
 
-    onEvent(action, event) {
-        // event.preventDefault();        
+    sidebarToggle() {
+        console.log(this.getStoreState().sidebar)
+        if(this.getStoreState().sidebar.isSidebarOpen) {
+            this.dispatch(setSidebarClose());
+        } else {
+            this.dispatch(setSidebarOpen());
+        }
+    }
+
+    onEvent(state, action) {
+        if(action.type === SIDEBAR_OPEN) {
+            this.refs.sidebarElement.classList.add('is-toggle');
+        }
+
+        if(action.type === SIDEBAR_CLOSE) {
+            this.refs.sidebarElement.classList.remove('is-toggle');
+        }
     }
 
     render() {
         return /*html*/`
-        <aside data-ref="sidebar-element" class="sidebar">
+        <aside data-ref="sidebarElement" class="sidebar">
         <div class="sidebar__inner">
 
             <div class="sidebar__header">
@@ -21,7 +42,7 @@ class Sidebar extends Component {
                     <i class="sidebar__logo-icon fas fa-fire"></i>
                     <span class="sidebar__logo-text">Hobo</span>
                 </a>
-                <button data-js="toggle-sidebar" class="sidebar__toggle-sidebar" onClick="sidebar.onEvent()">
+                <button data-js="toggle-sidebar" class="sidebar__toggle-sidebar" onclick="sidebar.sidebarToggle()">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>

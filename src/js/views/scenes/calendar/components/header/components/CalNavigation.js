@@ -8,7 +8,6 @@ import {
 class CalNavigation extends Component {
     constructor(props) {
         super(props);
-        // this.date = this.getStoreState().calendar.currentYear;
         this.currentMonth = this.monthAsName(this.getStoreState().calendar.currentMonthIndex);
         this.currentYear = this.getStoreState().calendar.currentYear;
         this.onEvent = this.onEvent.bind(this);
