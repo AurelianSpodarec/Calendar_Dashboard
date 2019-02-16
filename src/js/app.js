@@ -10,18 +10,23 @@ fontawesome.library.add(brands)
 import store from "#lib/store"
 
 import '../styles/index.scss';
-import Sidebar from './components/sidebar';
-import Header from './components/header';
-import Footer from './components/footer';
+
 import Router from './lib/router';
 
 
- 
-    // store.setReducer("sidebar", sidebarReducer, sidebarInitState);
-
-    
 
  
+
+import Layout from './views/Layout';
+import createElement from './lib/createElement';
+
+
+const layoutElement = document.querySelector("[data-js=wrapper-element]");
+const layout = new Layout();
+const layoutNode = createElement(layout);
+
+
+window.layout = layout;
+layoutElement.parentNode.replaceChild(layoutNode, layoutElement);
 
 new Router().listen();
- 

@@ -11,7 +11,7 @@ class CalNavigation extends Component {
         this.currentMonth = this.monthAsName(this.getStoreState().calendar.currentMonthIndex);
         this.currentYear = this.getStoreState().calendar.currentYear;
         this.onEvent = this.onEvent.bind(this);
-        this.nextMonthKey = this.nextMonthKey.bind(this)
+        // this.nextMonthKey = this.nextMonthKey.bind(this)
         this.setSubscriber("CalNavigation", this.onEvent);
     }
 
@@ -31,14 +31,6 @@ class CalNavigation extends Component {
             "December"
         ][monthIndex]
     }
-
-    async nextMonthKey(event) {
-        event.preventDefault();
-        if (event.keyCode === 39) {
-            await this.nextCalendarMonth();
-        }
-    }
-
     /*
     * handling actions/reducer
     */
@@ -60,8 +52,9 @@ class CalNavigation extends Component {
         this.dispatch(SetNextMonth(1))
         // this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
-
+    
     prevCalendarMonth(event) {
+        console.log(this.getStoreState().sidebar)
         this.dispatch(SetPrevMonth(1))
         // this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
@@ -71,7 +64,6 @@ class CalNavigation extends Component {
     }
 
     render() {
-        console.log()
         return /*html*/`
             <div class="cal__header-bottom">
                 <button onClick="calnavigation.prevCalendarMonth(event);" class="cal__pagination-arrow"><i class="fas fa-angle-left"></i></button>

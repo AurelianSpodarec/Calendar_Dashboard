@@ -1,21 +1,24 @@
 import Component from "#components/component";
-
+import sidebar from '#components/sidebar';
+import main from "./Main";
 
 class Layout extends Component {
     constructor(props) {
         super(props);
- 
+        // this.setSubscriber("layout", this.onEvent);
     }
 
-     
-
     render() {
-        return /*html*/`
-            <main data-js="view-element" class="view">
-                <header data-js="header-element" class="header"></header>
-                <section data-js="scene-element" class="scene"></section>
-                <footer data-js="footer-element" class="footer"></footer>
-            </main>
+        
+        this.setChild('sidebar-element', sidebar);
+        this.setChild('main-element', main);
+        return /*html*/`     
+        <div class="main-wrapper">
+
+            <aside data-child="sidebar-element" class="sidebar"> </aside>
+            <main data-child="main-element" class="view"> </main>
+        
+        </div>
         `;
     }
 }

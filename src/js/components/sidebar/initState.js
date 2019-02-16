@@ -1,5 +1,5 @@
 export default {
-    isSidebarOpen: true,
+    isSidebarToggled: true,
     selectedMenu: {
         id: 0,
         isActive: true,

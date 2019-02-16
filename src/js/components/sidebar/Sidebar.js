@@ -14,20 +14,18 @@ class Sidebar extends Component {
     }
 
     sidebarToggle() {
-        console.log(this.getStoreState().sidebar)
-        if(this.getStoreState().sidebar.isSidebarOpen) {
-            this.dispatch(setSidebarClose());
-        } else {
+        console.log(this.getStoreState().sidebar.isSidebarToggled)
+        if(!this.getStoreState().sidebar.isSidebarToggled) {
             this.dispatch(setSidebarOpen());
+        } else {
+            this.dispatch(setSidebarClose());
         }
     }
 
     onEvent(state, action) {
-        if(action.type === SIDEBAR_OPEN) {
+        if(!this.getStoreState().sidebar.isSidebarToggled) {
             this.refs.sidebarElement.classList.add('is-toggle');
-        }
-
-        if(action.type === SIDEBAR_CLOSE) {
+        } else {
             this.refs.sidebarElement.classList.remove('is-toggle');
         }
     }
