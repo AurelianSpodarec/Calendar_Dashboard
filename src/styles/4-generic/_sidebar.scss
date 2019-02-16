@@ -5,13 +5,13 @@
 
 .sidebar {
     width: 280px;
+    z-index: 99999;
     @include fixed(top 0 bottom 0 left 0);
     background-color: #14171c;
     color: #fff!important;
     transition-property: transform,width,min-width,max-width,-webkit-transform;
     transition-duration: 150ms;
     transition-timing-function: ease-in-out;
-    z-index: 10;
    
     @include breakpoint-down(md) {
         transform: translatex(-100%);
@@ -66,6 +66,28 @@
         transition-timing-function: ease-in-out;
     }
 
+    &__toggle-sidebar-desktop {
+        display: none;
+        @include breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    &__toggle-sidebar-mobile {
+        @include breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    &.is-mobile-toggle {
+        @include breakpoint-down(md) {
+            transform: translatex(0);
+        }
+        @include breakpoint-up(md) {
+            transform: translatex(-100%);
+        }
+    }
+
     &.is-toggle {
         width: 64px;
 
@@ -78,7 +100,12 @@
             &__logo-text {
                 display: none;
             }
-
+        
+            &__toggle-sidebar-mobile {
+                @include breakpoint-up(lg) {
+                    display: none;
+                }
+            }
         }
 
         .menu {
@@ -127,7 +154,12 @@
                 &__logo-text {
                     display: block;
                 }
-
+                
+                &__toggle-sidebar-mobile {
+                    @include breakpoint-up(lg) {
+                        display: none;
+                    }
+                }
             }
 
             .menu {

@@ -17,6 +17,14 @@ class Main extends Component {
         }
     }
 
+    onCreated() {
+        if(!this.getStoreState().sidebar.isSidebarToggled) {
+            this.refs.viewElement.classList.add('is-toggle');
+        } else {
+            this.refs.viewElement.classList.remove('is-toggle');
+        }
+    }
+
     render() {
         this.setChild("header-element", header);
         this.setChild("footer-element", footer)

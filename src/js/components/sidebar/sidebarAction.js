@@ -1,23 +1,11 @@
 import { 
-    SET_SELECTED_PAGE, 
-    IS_SIDEBAR_TOGGLE, 
     SIDEBAR_OPEN, 
-    SIDEBAR_CLOSE 
+    SIDEBAR_CLOSE,
+    SIDEBAR_MOBILE_OPEN,
+    SIDEBAR_MOBILE_CLOSE
 } from "./sidebarEvents";
 
-const SetSelectedPage = function(value) {
-    return {
-        type: SET_SELECTED_PAGE,
-        value: 1,
-    };
-};
-
-const isSidebarToggle = function(value) {
-    return {
-        type: IS_SIDEBAR_TOGGLE,
-        value: true,
-    };
-};
+ 
 
 const setSidebarOpen = function() {
     return {
@@ -33,9 +21,23 @@ const setSidebarClose = function() {
     };
 }
 
+const setSidebarMobileOpen = function() {
+    return {
+        type: SIDEBAR_MOBILE_OPEN,
+        value: true,
+    };
+}
+
+const setSidebarMobileClose = function() {
+    return {
+        type: SIDEBAR_MOBILE_CLOSE,
+        value: false,
+    };
+}
+
 export {
-    SetSelectedPage,
-    isSidebarToggle,
     setSidebarOpen,
-    setSidebarClose
+    setSidebarClose,
+    setSidebarMobileOpen,
+    setSidebarMobileClose
 }

@@ -1,6 +1,10 @@
 import Component from "../component/index";
-import { IS_SIDEBAR_TOGGLE, SIDEBAR_OPEN, SIDEBAR_CLOSE } from "./sidebarEvents";
-import { isSidebarToggle, setSidebarOpen, setSidebarClose } from "./sidebarAction";
+import { 
+    setSidebarOpen,
+    setSidebarClose,
+    setSidebarMobileOpen,
+    setSidebarMobileClose
+} from "./sidebarAction";
 
 import sidebarReducer from "./sidebarReducer";
 import initState from "./initState";
@@ -11,6 +15,15 @@ class Sidebar extends Component {
         this.onEvent = this.onEvent.bind(this);
         this.setSubscriber("sidebar", this.onEvent);
         this.setReducer("sidebar", sidebarReducer, initState);
+    }
+
+    sidebarMobileClose() {
+        console.log('ye')
+        if(!this.getStoreState().sidebar.isSidebarMobileToggled) {
+            this.dispatch(setSidebarMobileOpen());
+        } else {
+            this.dispatch(setSidebarMobileClose());
+        }
     }
 
     sidebarToggle() {
@@ -28,6 +41,25 @@ class Sidebar extends Component {
         } else {
             this.refs.sidebarElement.classList.remove('is-toggle');
         }
+        if(this.getStoreState().sidebar.isSidebarMobileToggled) {
+            this.refs.sidebarElement.classList.add('is-mobile-toggle');
+        } else {
+            this.refs.sidebarElement.classList.remove('is-mobile-toggle');
+        }
+    }
+
+    onCreated() {
+        if(!this.getStoreState().sidebar.isSidebarToggled) {
+            this.refs.sidebarElement.classList.add('is-toggle');
+        } else {
+            this.refs.sidebarElement.classList.remove('is-toggle');
+        }
+        
+        if(!this.getStoreState().sidebar.isSidebarMobileToggled) {
+            this.refs.sidebarElement.classList.remove('is-mobile-toggle');
+        } else {
+            this.refs.sidebarElement.classList.add('is-mobile-toggle');
+        }
     }
 
     render() {
@@ -40,8 +72,11 @@ class Sidebar extends Component {
                     <i class="sidebar__logo-icon fas fa-fire"></i>
                     <span class="sidebar__logo-text">Hobo</span>
                 </a>
-                <button data-js="toggle-sidebar" class="sidebar__toggle-sidebar" onclick="sidebar.sidebarToggle()">
+                <button class="sidebar__toggle-sidebar sidebar__toggle-sidebar-desktop" onclick="sidebar.sidebarToggle()">
                     <i class="fas fa-bars"></i>
+                </button>
+                <button class="sidebar__toggle-sidebar sidebar__toggle-sidebar-mobile" onclick="sidebar.sidebarMobileClose()">
+                    <i class="fas fa-arrow-left"></i>
                 </button>
             </div>
             
