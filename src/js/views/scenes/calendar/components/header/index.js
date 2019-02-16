@@ -9,7 +9,8 @@ class CalendarHeader extends Component {
     }
 
     render() {
-        this.setChild('toolbar', new CalendarToolbar());
+        window.calendarToolbar = new CalendarToolbar();
+        this.setChild('toolbar', window.calendarToolbar);
         window.calnavigation = new CalNavigation()
         this.setChild('navigation', window.calnavigation);
         return /*html*/`

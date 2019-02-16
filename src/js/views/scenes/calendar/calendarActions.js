@@ -1,6 +1,7 @@
 
 import { 
     CURRENT_CALENDAR_MONTH,
+    SET_CURRENT_DATE,
     NEXT_CALENDAR_MONTH, 
     PREV_CALENDAR_MONTH
 } from "./calendarEvents";
@@ -13,6 +14,16 @@ const SetCurrentMonth = function(value) {
     return {
         type: CURRENT_CALENDAR_MONTH,
         value: value,
+    };
+};
+
+const SetCurrentDate = function(currentMonth, currentYear) {
+    return {
+        type: SET_CURRENT_DATE,
+        payload: {
+            currentMonth: currentMonth,
+            currentYear: currentYear
+        }
     };
 };
 
@@ -32,6 +43,7 @@ const SetPrevMonth = function(value) {
 
 export {
     SetCurrentMonth,
+    SetCurrentDate,
     SetNextMonth,
     SetPrevMonth
 }

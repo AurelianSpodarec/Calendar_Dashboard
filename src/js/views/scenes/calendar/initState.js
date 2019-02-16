@@ -2,7 +2,10 @@
  * state
  */
 
+
+const today = new Date();
+
 export default {
-    currentYear: 2019,
-    currentMonthIndex: 1,
+    currentYear: today.getFullYear(),
+    currentMonthIndex: today.getMonth()
 }

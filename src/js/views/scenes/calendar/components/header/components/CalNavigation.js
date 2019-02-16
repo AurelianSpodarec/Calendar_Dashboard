@@ -1,5 +1,5 @@
 import Component from "#components/component";
-import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH } from "./../../../calendarEvents";
+import { NEXT_CALENDAR_MONTH, PREV_CALENDAR_MONTH, SET_CURRENT_DATE } from "./../../../calendarEvents";
 import { 
     SetPrevMonth, 
     SetNextMonth 
@@ -49,6 +49,10 @@ class CalNavigation extends Component {
         }
 
         if(action.type === PREV_CALENDAR_MONTH) {
+            this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.getStoreState().calendar.currentYear;
+        }
+
+        if(action.type === SET_CURRENT_DATE) {
             this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.getStoreState().calendar.currentYear;
         }
     }
