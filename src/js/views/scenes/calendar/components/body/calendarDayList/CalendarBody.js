@@ -4,7 +4,6 @@ import createElement from "#lib/createElement";
 class CalendarBody extends Component {
     constructor(props) {
         super(props);
-        //  new Date() = new Date();
         this.fullYear = this.getStoreState().calendar.currentMonthIndex;
         this.currentMonth = this.getStoreState().calendar.currentMonthIndex;
     }
