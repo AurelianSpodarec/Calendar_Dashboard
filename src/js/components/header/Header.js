@@ -10,18 +10,8 @@ import {
 class Header extends Component {
     constructor(props) {
         super(props);
-        // this.search = this.search;
-        this.onEvent = this.onEvent.bind(this);
-        // this.openSearch = this.openSearch.bind(this);
         this.setSubscriber("header", this.onEvent);
     }
-
-    // openSearch(event) {
-    //     event.preventDefault();
-    //     console.log("Open Search"); 
-    //     // console.log(this.refs)
-    //     this.refs.headerSearchElement.classList.add("is-expanded");
-    // }
 
     sidebarMobileOpen() {
         console.log('ye')
@@ -32,10 +22,6 @@ class Header extends Component {
         }
     }
     
-    onEvent(state, action) {
-        // if (action.type === )
-    }
-
     render() {
         this.setChild("headerSearchContainer", search);
         return /*html*/`

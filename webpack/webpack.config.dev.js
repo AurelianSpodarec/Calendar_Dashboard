@@ -38,13 +38,5 @@ module.exports = merge(common, {
         use: ['style-loader', 'css-loader?sourceMap=true', 'sass-loader']
       }
     ]
-  },
-  resolve: {
-    extensions: ['.js', '.json', '.jsx'],
-    alias: {
-        '#components': __dirname + './../src/js/components',
-        '#lib': __dirname + './../src/js/lib',
-        '#views': __dirname + './../src/js/views',
-    },
-},
+  }
 });

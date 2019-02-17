@@ -48,5 +48,13 @@ module.exports = {
         }
       },
     ]
-  }
+  },
+  resolve: {
+    extensions: ['.js', '.json', '.jsx'],
+    alias: {
+        '#components': __dirname + './../src/js/components',
+        '#lib': __dirname + './../src/js/lib',
+        '#views': __dirname + './../src/js/views',
+    },
+},
 };

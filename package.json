@@ -1,7 +1,7 @@
 {
-  "name": "js-github-replica",
+  "name": "hobo-dashboard",
   "version": "1.0.0",
-  "description": "Vanilla JavaScript Application - Replica of GitHub using API",
+  "description": "Vanilla JavaScript Application - Hobo Dashboard",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
