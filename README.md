@@ -1,8 +1,8 @@
 # [Hobo Dashboard](https://hobo-dashboard.netlify.com/#calendar)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9e7ff6c1-6de5-4714-99ff-419a3fca56fe/deploy-status)](https://app.netlify.com/sites/hobo-dashboard/deploys)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9e7ff6c1-6de5-4714-99ff-419a3fca56fe/deploy-status)](https://app.netlify.com/sites/hobo-dashboard/deploys) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Product Teaser](src/assets/github/hobo-dashboard-image.png)
+![Product Teaser](./src/assets/github/hobo-dashboard-image.png)
 
 The webapp is created totally in Vanilla JavaScript - every single thing! 
 
@@ -28,14 +28,14 @@ The webapp is deployed automatically to production mode on master. Any current d
 
 ## Installation
 
-1. Clone this repo (https://github.com/AurelianSpodarec/Hobo_Dashboard.git)
+1. Clone this repo `https://github.com/AurelianSpodarec/Hobo_Dashboard.git)`
 2. Run `npm install`
 
 ## Using this repo
 
 For development work, run:
 
-1. `npm start`
+`npm start`
 
 ## Deployment
 
