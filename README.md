@@ -1,6 +1,6 @@
 # [Hobo Dashboard](https://hobo-dashboard.netlify.com/#calendar)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9e7ff6c1-6de5-4714-99ff-419a3fca56fe/deploy-status)](https://app.netlify.com/sites/hobo-dashboard/deploys) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/9e7ff6c1-6de5-4714-99ff-419a3fca56fe/deploy-status)](https://app.netlify.com/sites/hobo-dashboard/deploys)
 
 ![Product Teaser](./src/assets/github/hobo-dashboard-image.png)
 
