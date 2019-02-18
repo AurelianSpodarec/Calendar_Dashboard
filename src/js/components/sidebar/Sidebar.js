@@ -99,7 +99,7 @@ class Sidebar extends Component {
                 </li>
                 <li data-item-id="2" class="menu__item">
                     <a class="menu__link" href="#calendar">
-                        <i class="menu__icon fas fa-calendar-day"></i>
+                        <i class="menu__icon far fa-calendar-alt"></i>
                         <span class="menu__text">Calendar</span>
                     </a>
                 </li>

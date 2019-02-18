@@ -23,7 +23,7 @@ class CalendarHeader extends Component {
 
                 <div class="cal__header-top">
                     <div class="cal__page-info">
-                        <i class="cal__page-icon fas fa-cal-day"></i>
+                        <i class="cal__page-icon far fa-calendar-alt"></i>
                         <span class="cal__page-title">Calendar</span>
                     </div>
                     <template data-child="toolbar" class="cal__toolbar"></template>
