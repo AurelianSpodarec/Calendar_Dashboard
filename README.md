@@ -1,24 +1,27 @@
 # [Hobo Dashboard](https://hobo-dashboard.netlify.com/#calendar)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/9e7ff6c1-6de5-4714-99ff-419a3fca56fe/deploy-status)](https://app.netlify.com/sites/hobo-dashboard/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) (https://app.netlify.com/sites/hobo-dashboard/deploys)
 
 ![Product Teaser](./src/assets/github/hobo-dashboard-image.png)
 
-The webapp is created totally in Vanilla JavaScript - every single thing! 
+The webapp is created totally in Vanilla JavaScript - EVERY. SINGLE. THING! 
 
-The dashboard will/include many common featues such as a Dashboard, ToDo, Calendar and more to come.
+The dashboard will/includes many common featues such as a Dashboard, ToDo, Calendar and more to come.
  
 [Hobo Dashboard Demo](https://hobo-dashboard.netlify.com/#calendar)
 
 ## Motivation
 
-The project exists because I wanted to expand my JavaScript knowledge and graps new concepts. And the best way to do it? Get an exciting project to work on and start writing some code!
+I wanted to expand my knowledge of JavaScript and grasp new concepts, meanwhile at the same time learn about how Single Page Application works under the hood.
 
-I wanted to challenge my self and see if I can create a Calendar, a ToDo (well,the project is in early stages) but that's the intention.
+I have used ideas from React and Redux. Why? Because I get to use the entire JavaScript engine and use every single bit to get more practice with no abstraction. I used thing such as: Classes, Objects, Arrays of Objets, Functions for Objects, how to work with data, how exactly `this` works, and most importantly how to utilize all of that, to solve the problem I'm having.
 
-I have used ideas of React and Redux for my project, so I can understand how React and SPA applications actually work under the hood. 
+I've also wanted to create a UI Library and really polish my architecture of CSS/Scss on a large project, which will allow me to get out from my comfort zone and expand. I've used front-end Methodologies such as BEM and properly set up each file, so it has the ability to scale, maintain and add new features in record time!
 
-Another readon I've choosed to develop a dashbord is so I can work on a UI library and get the max out of architecturing the project by using some front-end Methodologies such as BEM, and properly set up the settings file so the project can be scaled and maintained in the long term run.
+So, what is the best way to improve? Get an exciting project to work on and start outputting some code!
+
+## Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9e7ff6c1-6de5-4714-99ff-419a3fca56fe/deploy-status)]
 
 ## Getting Started
 
@@ -28,7 +31,7 @@ The webapp is deployed automatically to production mode on master. Any current d
 
 ## Installation
 
-1. Clone this repo `https://github.com/AurelianSpodarec/Hobo_Dashboard.git)`
+1. Clone this repo `git clone https://github.com/AurelianSpodarec/Hobo_Dashboard.git`
 2. Run `npm install`
 
 ## Using this repo
