@@ -1,6 +1,6 @@
 # [Hobo Dashboard](https://hobo-dashboard.netlify.com/#calendar)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) (https://app.netlify.com/sites/hobo-dashboard/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![Product Teaser](./src/assets/github/hobo-dashboard-image.png)
 
@@ -21,7 +21,7 @@ I've also wanted to create a UI Library and really polish my architecture of CSS
 So, what is the best way to improve? Get an exciting project to work on and start outputting some code!
 
 ## Status
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9e7ff6c1-6de5-4714-99ff-419a3fca56fe/deploy-status)]
+![Netlify Status](https://api.netlify.com/api/v1/badges/9e7ff6c1-6de5-4714-99ff-419a3fca56fe/deploy-status)
 
 ## Getting Started
 
