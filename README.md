@@ -34,13 +34,13 @@ The webapp is deployed automatically to production mode on master. Any current d
 1. Clone this repo `git clone https://github.com/AurelianSpodarec/Hobo_Dashboard.git`
 2. Run `npm install`
 
-## Using this repo
+### Using this repo
 
 For development work, run:
 
 `npm start`
 
-## Deployment
+### Deployment
 
 For a compiled file run:
 
