@@ -20,9 +20,11 @@ class CalendarBody extends Component {
             let nextMonthDays = 1;
           
             let daysInMonth = this.getDaysInMonth(this.currentMonth,  this.fullYear),
-                firstDayMonth = new Date( this.fullYear, this.currentMonth, 1),
+                firstDayMonth = new Date( new Date().getFullYear(), this.currentMonth, 1),
                 firstDayWeekday = firstDayMonth.getDay(),
-                previousMonthDays = this.getDaysInMonth(this.currentMonth, this.fullYear);
+                prev_month = this.getStoreState().calendar.currentMonthIndex == 0 ? 11 : this.getStoreState().calendar.currentMonthIndex - 1,
+                prev_year = prev_month == 11 ?  new Date().getFullYear() - 1 :  new Date().getFullYear(),
+                previousMonthDays = this.getDaysInMonth(prev_month, prev_year);
                   
             for (let i = 1; i < 36; i++) {
                 
