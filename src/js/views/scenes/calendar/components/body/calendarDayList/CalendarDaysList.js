@@ -14,6 +14,33 @@ class CalendarDaysList extends Component {
         this.setSubscriber("CalendarDaysList", this.onEvent);
     }
 
+    removeClasses() {
+        let cellDays = document.querySelectorAll('[data-ref=cellDay]');
+        for (var i = 0; i < cellDays.length; i++) {
+            let cellDay = cellDays[i]
+            cellDay.classList.remove('is-selected')
+            let v = new Date().toDateString();
+
+            if(cellDay.getAttribute('date-timestamp') === v) {
+                console.log(cellDay.classList.add('is-today'))
+            };
+
+        }
+        console.log(this.refs.monthScreen.children[0])
+        
+       
+    }
+
+    selectActive(obj) {
+        this.removeClasses();
+        obj.classList.add('is-selected')
+        const ad = obj.getAttribute('date-timestamp');
+
+        console.log(ad)
+        
+    }
+
+
     renderMonthBody() {
         this.refs.monthScreen.innerHTML = "";
         const calendarBody = createElement(new CalendarBody());
@@ -37,10 +64,18 @@ class CalendarDaysList extends Component {
 
     onCreated() {
         this.renderMonthBody();
+        // this.removeClasses();
+         
+      
+       
+        // console.log(Array.of(this.refs.monthScreen.childNodes).forEach(element => {
+        //     // element.classList.add('is-today');
+        //     console.log(element)
+        // }));
     }
     
     render() {
-        
+     
         return /*html*/`
             <div data-ref="monthScreen" class="cal__month-screen"> </div>
         `;
