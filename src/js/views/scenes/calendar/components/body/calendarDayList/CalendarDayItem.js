@@ -8,7 +8,7 @@ class CalendarDayItem extends Component {
         this.currentMonth = this.getStoreState().calendar.currentMonthIndex;
         this.setSubscriber("CalendarDayItem", this.onEvent);
     }
-  
+
     todayDate() {
         // console.log(this.refs)
       
@@ -24,12 +24,6 @@ class CalendarDayItem extends Component {
 
     renderDayCell() {
         
-        let days = this.props.day;
-        let otherMonth = this.props.otherMonth ? "is-other-month" : "";
-
-        // TODO: display the correct today date with a timestamp
-        // let today = (new Date().getDate() === days) ? "is-today" : "";
-
         let curMonth;
         if(this.props.prevMonth) {
             curMonth = this.currentMonth - 1;
@@ -38,10 +32,15 @@ class CalendarDayItem extends Component {
         } else {
             curMonth = this.currentMonth;
         }
+        
+        let days = this.props.day;
+        let timestamp = new Date( this.currentYear, curMonth, days).toDateString();
+        let isToday = timestamp === new Date().toDateString() ? "is-today" : "";
+        let otherMonth = this.props.otherMonth ? "is-other-month" : "";
 
         return `
-            <div data-ref="cellDay" onclick="CalendarDaysList.selectActive(this)" class="cal__cell cal__cell-day ${otherMonth}" 
-                date-timestamp="${new Date( this.currentYear, curMonth, days).toDateString()}" >
+            <div data-ref="cellDay" onclick="CalendarDaysList.selectActive(this)" class="cal__cell cal__cell-day ${isToday} ${otherMonth}" 
+                date-timestamp="${timestamp}" >
                 <div class="cal__cell-top">
                     <span class="cal__day-number">${days}</span>
                 </div>

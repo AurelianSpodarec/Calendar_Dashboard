@@ -14,19 +14,25 @@ class CalendarDaysList extends Component {
         this.setSubscriber("CalendarDaysList", this.onEvent);
     }
 
+    setTodayClass() {
+        let cellDays = document.querySelectorAll('[data-ref=cellDay]');
+            for (var i = 0; i < cellDays.length; i++) {
+                let cellDay = cellDays[i]
+            if(cellDay.getAttribute('date-timestamp') === new Date().toDateString()) {
+                console.log(cellDay.classList.add('is-today'))
+            };
+        }
+    }
+
     removeClasses() {
         let cellDays = document.querySelectorAll('[data-ref=cellDay]');
         for (var i = 0; i < cellDays.length; i++) {
             let cellDay = cellDays[i]
             cellDay.classList.remove('is-selected')
-            let v = new Date().toDateString();
-
-            if(cellDay.getAttribute('date-timestamp') === v) {
-                console.log(cellDay.classList.add('is-today'))
-            };
+           
 
         }
-        console.log(this.refs.monthScreen.children[0])
+        // console.log(this.refs.monthScreen.children[0])
         
        
     }
@@ -65,7 +71,7 @@ class CalendarDaysList extends Component {
     onCreated() {
         this.renderMonthBody();
         // this.removeClasses();
-         
+        this.setTodayClass();
       
        
         // console.log(Array.of(this.refs.monthScreen.childNodes).forEach(element => {
