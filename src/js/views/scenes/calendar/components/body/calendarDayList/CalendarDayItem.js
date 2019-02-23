@@ -1,5 +1,5 @@
 import Component from "#components/component";
-import createElement from "#lib/createElement";
+import calendarJSON from "#json/calendarJSON";
 
 class CalendarDayItem extends Component {
     constructor(props) {
@@ -9,21 +9,20 @@ class CalendarDayItem extends Component {
         this.setSubscriber("CalendarDayItem", this.onEvent);
     }
 
-    todayDate() {
-        // console.log(this.refs)
-      
-        // const element = Array.from(this.refs.cellDay.childNodes).classList.add('is-today')
-        // this.refs.cellDay.classList.add('is-today');
-        // this.refs.cellDay.forEach(ref => {
-        //     ref.classList.remove("sidebar__li");
-        //     ref.classList.remove("sidebar__li--selected");
-        //     ref.classList.add("sidebar__li");
-        // });
-        // console.log(Array.of(this.refs))
-   }
+    //
+    //  TODO:
+    //  Find the current date in JSON and display the info
+    //  Take the day year, find the years month
+    //      - Take the day month, and loop throw the years month
+    //      - Take the month, and match the timestamp with the object timestamp
+    //  Display the data in the UI from the object
+    //  
+    //
+    //
 
     renderDayCell() {
-        
+        // const calendarData = calendarJSON;
+        // console.log(calendarData)
         let curMonth;
         if(this.props.prevMonth) {
             curMonth = this.currentMonth - 1;
@@ -35,6 +34,9 @@ class CalendarDayItem extends Component {
         
         let days = this.props.day;
         let timestamp = new Date( this.currentYear, curMonth, days).toDateString();
+        
+
+
         let isToday = timestamp === new Date().toDateString() ? "is-today" : "";
         let otherMonth = this.props.otherMonth ? "is-other-month" : "";
 
