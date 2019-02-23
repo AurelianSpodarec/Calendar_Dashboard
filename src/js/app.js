@@ -7,15 +7,9 @@ fontawesome.library.add(regular)
 fontawesome.library.add(solid)
 fontawesome.library.add(brands)
 
-import store from "#lib/store"
-
 import '../styles/index.scss';
 
 import Router from './lib/router';
-
-
-
- 
 
 import Layout from './views/Layout';
 import createElement from './lib/createElement';

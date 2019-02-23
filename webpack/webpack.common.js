@@ -55,6 +55,7 @@ module.exports = {
         '#components': __dirname + './../src/js/components',
         '#lib': __dirname + './../src/js/lib',
         '#views': __dirname + './../src/js/views',
+        '#json': __dirname + './../src/js/json',
     },
 },
 };

@@ -154,6 +154,7 @@
 
     &__cell-day {
         min-height: 100px;
+        cursor: pointer;
         &:not(:last-child){
             border-right: 1px solid #e1e1e1;
         }
@@ -182,6 +183,40 @@
     &__cell-top {
         flex: 1;
         min-height: 78px;
+    }
+
+    &__cell-bottom {
+        flex: 1;
+        align-items: flex-end;
+        margin: 3px;
+        line-height: 10px;
+        display: flex;
+        flex-wrap: wrap;;
+    }
+
+    &__event-day-count {
+        background: #039be5;
+        color: #fff;
+        margin: 18px 0 0 10px;
+        padding: 3px 7px;
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-block;
+        min-width: 10px;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border-radius: 10px;
+    }
+
+    &__event-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 2px;
+        background: #039be5;
     }
 
     &__day-number {

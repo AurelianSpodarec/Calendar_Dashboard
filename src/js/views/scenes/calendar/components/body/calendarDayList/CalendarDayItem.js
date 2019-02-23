@@ -38,18 +38,21 @@ class CalendarDayItem extends Component {
         let isToday = timestamp === new Date().toDateString() ? "is-today" : "";
         let otherMonth = this.props.otherMonth ? "is-other-month" : "";
 
-        return `
+        return /*html*/`
             <div data-ref="cellDay" onclick="CalendarDaysList.selectActive(this)" class="cal__cell cal__cell-day ${isToday} ${otherMonth}" 
                 date-timestamp="${timestamp}" >
                 <div class="cal__cell-top">
+                    <span class="cal__event-day-count">3</span>
                     <span class="cal__day-number">${days}</span>
                 </div>
+                <div class="cal__cell-bottom">
+                    <div class="cal__event-dot" title="Karate Tournament"></div>
+                </div>
             </div> 
-        `
+        `;
     }
 
     render() {
-        this.todayDate();
         return /*html*/`
             ${this.renderDayCell()}
         `;
