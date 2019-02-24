@@ -30,7 +30,7 @@ class CalendarHeader extends Component {
                 </div>
 
                 <template data-child="navigation" class="cal__header-bottom"></template>
-
+                <button class="cal__create-event"><i class="fas fa-plus"></i></button>
             </div>
             </header>
         `;

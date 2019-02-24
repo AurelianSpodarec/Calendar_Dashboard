@@ -141,6 +141,9 @@
         text-overflow: ellipsis;
         display: block;
         white-space: nowrap;
+        font-weight: 600;
+        color: #434343;
+        font-family: arial;
     }
 
     &__cell-row {
@@ -154,7 +157,6 @@
 
     &__cell-day {
         min-height: 100px;
-        cursor: pointer;
         &:not(:last-child){
             border-right: 1px solid #e1e1e1;
         }
@@ -173,6 +175,10 @@
 
         &.is-other-month > div{
             opacity: .3;
+        }
+
+        &.has-events {
+            cursor: pointer;
         }
 
         &:hover {
@@ -195,7 +201,7 @@
     }
 
     &__event-day-count {
-        background: #e9601e;
+        background: $primary-color;
         color: #fff;
         margin: 18px 0 0 10px;
         padding: 3px 7px;
@@ -216,7 +222,7 @@
         border-radius: 50%;
         display: inline-block;
         margin: 2px;
-        background: #e9601e;
+        background: $primary-color;
     }
 
     &__day-number {
@@ -229,23 +235,33 @@
         margin-bottom: 10px;
     }
 
-    &__dayEvents {
-        background: #e9601e;
+    &__dayEvents {    
+        display: none;
+        height: 0;
+        overflow: hidden;
+        transition: height 350ms ease-in-out;
+    
+        background: $primary-color;
         display: flex;
         box-shadow: inset 0 0 2px 0 rgba(0,0,0,.54);
         padding: 0;
         display: flex;
         flex-direction: column;
+
+        &.is-visible {
+            display: block;
+	        height: auto;
+        }
     }
 
     &__dayEvent-color {
-        background-color: #e9601e;
+        background-color: $primary-color;
         width: 10px;
         height: 10px;
         border-radius: 50%;
         display: inline-block;
         margin: 2px;
-        background-color: #e9601e;
+        background-color: $primary-color;
         border-color: #d1e8ff;
         color: #fff;
     }
@@ -260,6 +276,14 @@
         box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
         transition: box-shadow .3s ease;
         background: #fff;
+
+        &:first-of-type {
+            margin-top: 16px;
+        }
+        
+        &:last-of-type {
+            margin-bottom: 16px;
+        }
     }
 
     &__dayEvent-title {
@@ -289,9 +313,28 @@
         line-height: 1;
         padding: 8px;
         &:hover .cal__dayEvent-actionSvg {
-            border-bottom: 1px solid #e9601e;
+            border-bottom: 1px solid $primary-color;
             padding-bottom: 2px;
         }
+    }
+
+    &__create-event {
+        border-radius: 50%;
+        background-color: $primary-color;
+        position: absolute;
+        right: 18px;
+        bottom: -26px;
+        z-index: 10;
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+        color: rgba(0,0,0,.87);
+        width: 56px;
+        height: 56px;
+        white-space: nowrap;
+        user-select: none;
+        cursor: pointer;
+        outline: 0;
+        border: none;
+
     }
 
 }

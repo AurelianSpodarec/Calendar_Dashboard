@@ -9,17 +9,7 @@ class CalendarDayItem extends Component {
         this.setSubscriber("CalendarDayItem", this.onEvent);
     }
 
-    //
-    //  TODO:
-    //  Find the current date in JSON and display the info
-    //  Take the day year, find the years month
-    //      - Take the day month, and loop throw the years month
-    //      - Take the month, and match the timestamp with the object timestamp
-    //  Display the data in the UI from the object
-    //  
-    //
-    //
-
+ 
     getDayEvents(year, month, day) {
         const eventYear = calendarJSON[year];
         if (eventYear !== undefined) {
@@ -73,13 +63,14 @@ class CalendarDayItem extends Component {
         
         const dayData =  this.getDayEvents(this.currentYear, curMonth, days)
         const eventCount = this.getDayEventsLenght(dayData) ? `<span class="cal__event-day-count">${this.getDayEventsLenght(dayData)}</span>` : "" ;
- 
+        const hasEvents = this.getDayEventsLenght(dayData) ? "has-events" : "";
 
         return /*html*/`
-            <div data-ref="cellDay" onclick="CalendarDaysList.selectActive(this)" class="cal__cell cal__cell-day ${isToday} ${otherMonth}" 
+            <div data-ref="cellDay" onclick="CalendarDaysList.selectActive(this)" class="cal__cell cal__cell-day ${hasEvents} ${isToday} ${otherMonth}" 
                 date-timestamp="${timestampISO}" >
                 <div class="cal__cell-top">
                     ${eventCount}
+                    
                     <span class="cal__day-number">${days}</span>
                 </div>
                 <div  class="cal__cell-bottom">
