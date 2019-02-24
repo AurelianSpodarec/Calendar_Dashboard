@@ -14,6 +14,31 @@ class CalendarBody extends Component {
         return new Date(year, month + 1, 0).getDate();
     }
 
+    renderDayEvents() {
+        return /*html*/`
+            <div class="cal__dayEvents">
+
+                <div class="cal__dayEvent">
+                    <span class="cal__dayEvent-color"></span>
+
+                    <div class="cal__dayEvent-title">
+                        <span>Karate TOurnament</span>
+                    </div>
+
+                    <div class="cal__dayEvent-actions">
+                        <button class="cal__dayEvent-action btn--clean"><i class="cal__dayEvent-actionSvg far fa-edit"></i></button>
+                        <button class="cal__dayEvent-action btn--clean"><i class="cal__dayEvent-actionSvg far fa-trash-alt"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        `;
+    }
+
+    renderDayCells() {
+
+    }
+
     renderCalendarBody() {            
         let output = ""; 
 
@@ -46,9 +71,10 @@ class CalendarBody extends Component {
                         output +=   `${createElement(new CalendarDayItem({ day: currentMontDays })).outerHTML} `
                         currentMontDays++;
                     }
-
+                   
                 if (lastDayOfWeek == 6) {
                     output += "</div>";
+                    output += this.renderDayEvents();
                     lastDayOfWeek = 0;
                 } else {
                     lastDayOfWeek++;

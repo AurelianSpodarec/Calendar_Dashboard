@@ -42,13 +42,12 @@ class CalendarDayItem extends Component {
     }
 
     renderEventDot(dayEvents) {
-        
         if (dayEvents === undefined) {
-            return 0;
+            return "";
         }
 
         return dayEvents.map(function(event){
-            return `<div class="cal__event-dot" title="${event.title}"></div>`
+            return `<div class="cal__event-dot" title="${event.title}"></div>`;
         }).join("")
     }
 
