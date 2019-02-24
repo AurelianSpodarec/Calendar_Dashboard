@@ -2,6 +2,7 @@ import Component from "#components/component";
 import CalendarBody from "./CalendarBody";
 import createElement from "#lib/createElement";
 import CalendarDayEvents from "./CalendarDayEvents";
+import calendarData from "#json/calendarData";
 import { 
     NEXT_CALENDAR_MONTH,
     PREV_CALENDAR_MONTH,
@@ -24,6 +25,16 @@ class CalendarDaysList extends Component {
     removeDayEvents() {
 
     }
+
+
+    editDayEvent() {
+        alert("Edit Event");
+    }
+
+    deleteDayEvent() {
+        alert("Delete Event");
+    }
+
     
 
     selectActive(element) {
@@ -40,27 +51,31 @@ class CalendarDaysList extends Component {
         }
         // if its open, just update the inndex content
         
-        let calendarDayEvents = createElement(new CalendarDayEvents())
+        let calendarDayEvents = createElement(new CalendarDayEvents({calendarData}))
         let apend = cellRowWrap.appendChild(calendarDayEvents);
-
-        apend.style.display = 'block';
-        let apendHeight = apend.scrollHeight;
-        apend.style.display = '';
-         
+        apend.style.height = '';
         apend.classList.add('is-visible')
+
+
+        
+        // apend.style.display = 'block';
+        // let apendHeight = apend.scrollHeight;
+        // apend.style.display = '';
+         
+        // apend.classList.add('is-visible')
         
          
-        apend.style.height = apendHeight + "px";
-        window.setTimeout(function () {
-            apend.style.height = '';
-        }, 250);
+        // apend.style.height = apendHeight + "px";
+        // window.setTimeout(function () {
+        //     apend.style.height = '';
+        // }, 250);
         
         
     }
 
     renderMonthBody() {
         this.refs.monthScreen.innerHTML = "";
-        const calendarBody = createElement(new CalendarBody());
+        const calendarBody = createElement(new CalendarBody({calendarData}));
         this.refs.monthScreen.appendChild(calendarBody)
     }
    

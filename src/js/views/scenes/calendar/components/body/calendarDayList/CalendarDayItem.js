@@ -1,5 +1,4 @@
 import Component from "#components/component";
-import calendarJSON from "#json/calendarJSON";
 
 class CalendarDayItem extends Component {
     constructor(props) {
@@ -7,11 +6,12 @@ class CalendarDayItem extends Component {
         this.currentYear = this.getStoreState().calendar.currentYear;
         this.currentMonth = this.getStoreState().calendar.currentMonthIndex;
         this.setSubscriber("CalendarDayItem", this.onEvent);
+        this.calendarData = this.props.calendarData;
     }
 
  
     getDayEvents(year, month, day) {
-        const eventYear = calendarJSON[year];
+        const eventYear = this.calendarData[year];
         if (eventYear !== undefined) {
             const eventMonth = eventYear[month];
       

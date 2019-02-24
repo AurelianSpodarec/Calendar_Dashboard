@@ -4,6 +4,7 @@ class CalendarDaysList extends Component {
     constructor(props) {
         super(props)
         this.onEvent = this.onEvent.bind(this);
+        this.calendarData = this.props.calendarData
     }
 
     onEvent(state, action) {
@@ -22,15 +23,23 @@ class CalendarDaysList extends Component {
     //
     //
 
-    toggleDayEvent(element) {
-
-    }
+    
 
     showDayEvents(element) {
-
+        // elem.style.display = 'block';
+        // var height = elem.scrollHeight + 'px';
+        // elem.style.display = '';
+        
+        // var height = getHeight();
+        // elem.classList.add('is-visible'); // Make the element visible
+	    // elem.style.height = height;
     }
 
     closeDayEvents(element) {
+
+    }
+
+    toggleDayEvent(element) {
 
     }
 
@@ -47,10 +56,10 @@ class CalendarDaysList extends Component {
                     </div>
 
                     <div class="cal__dayEvent-actions">
-                        <button class="cal__dayEvent-action btn--clean">
+                        <button onclick="{CalendarDaysList.editDayEvent()}" class="cal__dayEvent-action btn--clean">
                             <i class="cal__dayEvent-actionSvg far fa-edit"></i>
                         </button>
-                        <button class="cal__dayEvent-action btn--clean">
+                        <button onclick="{CalendarDaysList.deleteDayEvent()}" class="cal__dayEvent-action btn--clean">
                             <i class="cal__dayEvent-actionSvg far fa-trash-alt"></i>
                         </button>
                     </div>
