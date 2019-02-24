@@ -8,13 +8,13 @@ export default {
                     {
                         "id": 1,
                         "time": "2019-01-11T22:05:09",
-                        "title": "Karate Tournament",
+                        "title": "Karate January",
                         "description": "Go do it"
                     },
                     {
                         "id": 2,
                         "time": "2019-01-11T22:05:09",
-                        "title": "Date",
+                        "title": "Date January",
                         "description": "Romantic night on the beach"
                     }
                 ]
@@ -24,7 +24,7 @@ export default {
                     {
                         "id": 1,
                         "time": "2019-01-11T22:05:09",
-                        "title": "Karate Tournament",
+                        "title": "Karate January 23rf",
                         "description": "Go do it"
                     },
                     {
@@ -42,7 +42,7 @@ export default {
                     {
                         "id": 1,
                         "time": "2019-01-11T22:05:09",
-                        "title": "Karate Tournament",
+                        "title": "Karate Feb 24",
                         "description": "Go do it"
                     },
                     {
@@ -58,7 +58,7 @@ export default {
                     {
                         "id": 1,
                         "time": "2019-01-11T22:05:09",
-                        "title": "Karate Tournament",
+                        "title": "Karate Feb 28",
                         "description": "Go do it"
                     },
                     {

@@ -53,7 +53,7 @@ class CalendarDayItem extends Component {
         let isToday = timestampISO === new Date().toISOString().substring(0, 10) ? "is-today" : "";
         let otherMonth = this.props.otherMonth ? "is-other-month" : "";
         
-        let jsonData = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + days;
+        // let jsonData = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + days;
         const dayData =  this.getDayEvents(this.currentYear, this.currentMonth, days)
 
          
