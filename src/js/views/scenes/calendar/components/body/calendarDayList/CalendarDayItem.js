@@ -49,6 +49,8 @@ class CalendarDayItem extends Component {
                 </div>
                 <div class="cal__cell-bottom">
                     <div class="cal__event-dot" title="Karate Tournament"></div>
+                    <div class="cal__event-dot" title="Karate Tournament"></div>
+                    <div class="cal__event-dot" title="Karate Tournament"></div>
                 </div>
             </div> 
         `;
