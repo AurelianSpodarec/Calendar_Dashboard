@@ -21,8 +21,7 @@ class CalendarDayItem extends Component {
     //
 
     renderDayCell() {
-        // const calendarData = calendarJSON;
-        // console.log(calendarData)
+        let days = this.props.day;
         let curMonth;
         if(this.props.prevMonth) {
             curMonth = this.currentMonth - 1;
@@ -31,18 +30,47 @@ class CalendarDayItem extends Component {
         } else {
             curMonth = this.currentMonth;
         }
-        
-        let days = this.props.day;
-        let timestamp = new Date( this.currentYear, curMonth, days).toDateString();
-        
 
+        let date = new Date( this.currentYear, curMonth, days);
+        let timestamp = date.toDateString();
+        let timestampISO = date.toISOString().substring(0, 10);
 
-        let isToday = timestamp === new Date().toDateString() ? "is-today" : "";
+        let isToday = timestampISO === new Date().toISOString().substring(0, 10) ? "is-today" : "";
         let otherMonth = this.props.otherMonth ? "is-other-month" : "";
+
+        let jsonData = date.getFullYear() + "-" + date.getMonth() + 1 + "-" + days;
+        
+
+        // console.log("Cell data " + cellData)
+        console.log(timestamp)
+        console.log(timestampISO)
+        console.log(jsonData)
+        
+        // if(timestampISO === jsonData.toISOString().substring(0, 10)) { // 2019-01-28
+        //     console.log("Matches");
+        //     console.log(calendarData[2019][1][24])
+        // } else {
+        //     console.log("Doesn't match");
+        // }
+    
+        // const cellData = {
+        //     year: timestampISO.split("-"),
+        //     month: timestampISO.split("-"),
+        //     day:  timestampISO.split("-"),
+        // }
+        
+
+        // if(jsonData) { // Timestamp =  Sun Feb 24 2019
+        //     console.log("Matches");
+        //     console.log(calendarData[2019][1][24])
+        // } else {
+        //     console.log("Doesn't match");
+        // }
+
 
         return /*html*/`
             <div data-ref="cellDay" onclick="CalendarDaysList.selectActive(this)" class="cal__cell cal__cell-day ${isToday} ${otherMonth}" 
-                date-timestamp="${timestamp}" >
+                date-timestamp="${timestampISO}" >
                 <div class="cal__cell-top">
                     <span class="cal__event-day-count">3</span>
                     <span class="cal__day-number">${days}</span>

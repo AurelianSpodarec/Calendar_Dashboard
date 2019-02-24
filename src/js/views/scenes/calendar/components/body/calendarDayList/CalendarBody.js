@@ -1,6 +1,8 @@
 import Component from "#components/component";
 import CalendarDayItem from "./CalendarDayItem";
 import createElement from "#lib/createElement";
+import calendarJSON from "#json/calendarJSON";
+
 class CalendarBody extends Component {
     constructor(props) {
         super(props);
@@ -36,7 +38,6 @@ class CalendarBody extends Component {
 
                     if(i < new Date( this.currentYear, this.currentMonth, 1).getDay()) {
                         let day =  (previousMonthDays - firstDayWeekday + i + 1)
-                
                         output +=   `${createElement(new CalendarDayItem({ day, prevMonth: true, otherMonth: true})).outerHTML} `
                     } else if(currentMontDays > daysInMonth) {
                         output +=   `${createElement(new CalendarDayItem({ day:  nextMonthDays, nextMonth: true, otherMonth: true  })).outerHTML} `

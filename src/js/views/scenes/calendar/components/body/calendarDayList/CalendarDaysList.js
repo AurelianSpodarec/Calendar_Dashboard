@@ -27,7 +27,7 @@ class CalendarDaysList extends Component {
         element.classList.add('is-selected')
 
         const timestamp = element.getAttribute('date-timestamp');
-        console.log(timestamp)
+        // console.log(timestamp)
     }
 
     renderMonthBody() {
