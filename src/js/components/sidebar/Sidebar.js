@@ -98,7 +98,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li data-item-id="2" class="menu__item">
-                    <a class="menu__link" href="#calendar">
+                    <a class="menu__link is-active" href="#calendar">
                         <i class="menu__icon far fa-calendar-alt"></i>
                         <span class="menu__text">Calendar</span>
                     </a>
@@ -114,12 +114,26 @@ class Sidebar extends Component {
                     </span>
                     <div class="menu__dropdown-collapse is-expanded">
                     <ul class="menu__dropdown">
-                        <li data-item-id="4" class="menu__item"><a class="menu__link is-active" href="#github/profile"><span class="menu__text">My Profile</span></a></li>
+                        <li data-item-id="4" class="menu__item"><a class="menu__link" href="#github/profile"><span class="menu__text">My Profile</span></a></li>
                         <li data-item-id="5" class="menu__item"><a class="menu__link" href="#github/stats"><span class="menu__text">Stats</span></a></li>
                         <li data-item-id="6" class="menu__item"><a class="menu__link" href="#github/search-user"><span class="menu__text">Search User</span></a></li>
                     </ul>
                     </div>
                 </li>
+                <!-- <li data-item-id="3" class="menu__item menu__has-dropdown is-expanded">
+                    <span class="menu__link">
+                        <i class="menu__icon fab fa-github"></i>
+                        <span class="menu__text">GitHub</span>
+                        <i class="menu__caret fas fa-angle-down"></i>
+                    </span>
+                    <div class="menu__dropdown-collapse is-expanded">
+                    <ul class="menu__dropdown">
+                        <li data-item-id="4" class="menu__item"><a class="menu__link is-active" href="#github/profile"><span class="menu__text">My Profile</span></a></li>
+                        <li data-item-id="5" class="menu__item"><a class="menu__link" href="#github/stats"><span class="menu__text">Stats</span></a></li>
+                        <li data-item-id="6" class="menu__item"><a class="menu__link" href="#github/search-user"><span class="menu__text">Search User</span></a></li>
+                    </ul>
+                    </div>
+                </li> -->
                 <li data-item-id="7" class="menu__item menu__has-dropdown">
                     <span class="menu__link">
                         <i class="menu__icon fab fa-twitter"></i>

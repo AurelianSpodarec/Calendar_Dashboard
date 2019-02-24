@@ -51,6 +51,10 @@ class CalendarDaysList extends Component {
         
          
         apend.style.height = apendHeight + "px";
+        window.setTimeout(function () {
+            apend.style.height = '';
+        }, 250);
+        
         
     }
 
