@@ -20,6 +20,21 @@ class CalendarDayItem extends Component {
     //
     //
 
+    getDayEvents(year, month, day) {
+        const eventYear = calendarJSON[year];
+        if (eventYear !== undefined) {
+            const eventMonth = eventYear[month];
+      
+            if (eventMonth !== undefined) {
+                const eventDay = eventMonth[day];
+
+               if (eventDay !== undefined)
+                 return eventDay.events;
+            }
+        }
+    }
+    
+
     renderDayCell() {
         let days = this.props.day;
         let curMonth;
@@ -37,14 +52,17 @@ class CalendarDayItem extends Component {
 
         let isToday = timestampISO === new Date().toISOString().substring(0, 10) ? "is-today" : "";
         let otherMonth = this.props.otherMonth ? "is-other-month" : "";
-
-        let jsonData = date.getFullYear() + "-" + date.getMonth() + 1 + "-" + days;
         
+        let jsonData = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + days;
+        const dayData =  this.getDayEvents(this.currentYear, this.currentMonth, days)
 
+         
+        console.log(dayData)
+        // console.log(dayData)
         // console.log("Cell data " + cellData)
-        console.log(timestamp)
-        console.log(timestampISO)
-        console.log(jsonData)
+        // console.log(timestamp)
+        // console.log(timestampISO)
+        // console.log(jsonData)
         
         // if(timestampISO === jsonData.toISOString().substring(0, 10)) { // 2019-01-28
         //     console.log("Matches");
