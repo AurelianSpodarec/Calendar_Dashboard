@@ -11,6 +11,7 @@ import initState from "./../initState";
 import reducer from "./../calendarBodyReducer";
 import { SET_SELECTED_DAY_CELL } from "../calendarBodyEvents";
 import CalendarDayEvents from "./CalendarDayEvents";
+import * as model from "./model";
 
 class CalendarDaysList extends Component {
     constructor(props) {
@@ -20,7 +21,6 @@ class CalendarDaysList extends Component {
         this.currentMonth = this.getStoreState().calendar.currentMonthIndex;
         this.setReducer("calendarDaysList", reducer, initState);
         this.setSubscriber("calendarDaysList", this.onEvent);
-        this.selectedDayCell = this.getStoreState().calendarDaysList.selectedDayCellId;
     }
 
     selectActive(element) {
@@ -39,25 +39,46 @@ class CalendarDaysList extends Component {
 
         if(action.type === SET_SELECTED_DAY_CELL) {
             let dayTimestamp = this.getStoreState().calendarDaysList.selectedDayCellId;
-            let dayElement = document.querySelector(`[date-timestamp="${dayTimestamp}"]`)
+            let dayElement = document.querySelector(`[date-timestamp="${dayTimestamp}"]`);
+
+          
+            const cellDate = {
+                year: dayTimestamp.split("-")[0],
+                month: dayTimestamp.split("-")[1],
+                day:  dayTimestamp.split("-")[2],
+            }
+            let cellDateEvents = model.getDayEvents(parseFloat(cellDate.year), parseFloat(cellDate.month - 1), parseFloat(cellDate.day));
+
+
+
+
 
             // Remove THe Cell Row Dropdown From ALl
             let allCellRowWrap = document.querySelectorAll(".cal__cell-row-wrap");
             allCellRowWrap.forEach(element => {
                 let dayEventDropdown = element.childNodes[1];
                 if(dayEventDropdown !== undefined) {
-                    dayEventDropdown.remove()
+                    dayEventDropdown.remove();
                 }
             })
 
             // Creates the dropdown
             let cellRowWrap = dayElement.parentNode.parentNode;
-        
-                let dayEventElement = createElement(new CalendarDayEvents())
-                dayEventElement.style.height = '';
-                dayEventElement.classList.add('is-visible')
-
-            cellRowWrap.appendChild(dayEventElement);
+            
+            
+                let dayEventElement = createElement(new CalendarDayEvents({ cellDateEvents }))
+                let dayEvent = cellRowWrap.appendChild(dayEventElement);
+                // Show START
+                dayEvent.style.display = 'block';
+                let dayEventHeight = dayEvent.scrollHeight;
+                dayEvent.style.display = '';
+                dayEvent.classList.add('is-visible')
+                dayEvent.style.height = dayEventHeight + "px";
+                window.setTimeout(function () {
+                    dayEvent.style.height = '';
+                }, 250);
+                // Show END
+          
             
         }
 

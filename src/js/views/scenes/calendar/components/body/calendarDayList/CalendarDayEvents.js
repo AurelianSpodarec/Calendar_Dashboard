@@ -1,4 +1,5 @@
 import Component from "#components/component";
+import * as model from "./model";
 
 class CalendarDaysList extends Component {
     constructor(props) {
@@ -57,29 +58,36 @@ class CalendarDaysList extends Component {
     toggleDayEvent(element) {
 
     }
+ 
+    renderDayEvent() {
+        let dayEventsData = this.props.cellDateEvents;
 
-    render() {
-        let title = "Karate Tournament";
-        return /*html*/`
-            <div class="cal__dayEvents">
+        return dayEventsData.map(function(event) {
+            return /*html*/`
+            <div class="cal__dayEvent">
+                <span class="cal__dayEvent-color"></span>
 
-                <div class="cal__dayEvent">
-                    <span class="cal__dayEvent-color"></span>
-
-                    <div class="cal__dayEvent-title">
-                        <span>${title}</span>
-                    </div>
-
-                    <div class="cal__dayEvent-actions">
-                        <button onclick="{CalendarDaysList.editDayEvent()}" class="cal__dayEvent-action btn--clean">
-                            <i class="cal__dayEvent-actionSvg far fa-edit"></i>
-                        </button>
-                        <button onclick="{CalendarDaysList.deleteDayEvent()}" class="cal__dayEvent-action btn--clean">
-                            <i class="cal__dayEvent-actionSvg far fa-trash-alt"></i>
-                        </button>
-                    </div>
+                <div class="cal__dayEvent-title">
+                    <span>${event.title}</span>
                 </div>
 
+                <div class="cal__dayEvent-actions">
+                    <button onclick="{CalendarDaysList.editDayEvent()}" class="cal__dayEvent-action btn--clean">
+                        <i class="cal__dayEvent-actionSvg far fa-edit"></i>
+                    </button>
+                    <button onclick="{CalendarDaysList.deleteDayEvent()}" class="cal__dayEvent-action btn--clean">
+                        <i class="cal__dayEvent-actionSvg far fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+        }).join("");
+    }
+
+    render() {
+        return /*html*/`
+            <div class="cal__dayEvents">         
+                ${this.renderDayEvent()}
             </div>
         `;
     }

@@ -1,5 +1,6 @@
 import calendarData from "#json/calendarData";
 
+
 function getDayEvents(year, month, day) {
     const eventYear = calendarData[year];
     if (eventYear !== undefined) {
