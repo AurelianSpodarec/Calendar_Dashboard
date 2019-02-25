@@ -50,13 +50,10 @@ class CalNavigation extends Component {
 
     nextCalendarMonth(event) {
         this.dispatch(SetNextMonth(1))
-        // this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
     
     prevCalendarMonth(event) {
-        console.log(this.getStoreState().sidebar)
         this.dispatch(SetPrevMonth(1))
-        // this.refs.currentMonth.textContent = this.monthAsName(this.getStoreState().calendar.currentMonthIndex) + " " + this.currentYear;
     }
 
     onCreated() {

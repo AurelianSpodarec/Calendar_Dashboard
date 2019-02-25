@@ -4,7 +4,7 @@ class CalendarDaysList extends Component {
     constructor(props) {
         super(props)
         this.onEvent = this.onEvent.bind(this);
-        this.calendarData = this.props.calendarData
+        this.calendarData = this.props.calendarData;
     }
 
     onEvent(state, action) {
