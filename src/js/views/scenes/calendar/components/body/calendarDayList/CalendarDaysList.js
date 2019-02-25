@@ -1,14 +1,16 @@
 import Component from "#components/component";
 import createElement from "#lib/createElement";
-import CalendarDayEvents from "./CalendarDayEvents";
 import CalendarBody from "./CalendarBody";
-import calendarData from "#json/calendarData";
 import { 
     NEXT_CALENDAR_MONTH,
     PREV_CALENDAR_MONTH,
     SET_CURRENT_DATE
  } from "./../../../calendarEvents";
- import * as model from "./model";
+import { SetSelectedDayCell } from "./../calendarBodyActions";
+import initState from "./../initState";
+import reducer from "./../calendarBodyReducer";
+import { SET_SELECTED_DAY_CELL } from "../calendarBodyEvents";
+import CalendarDayEvents from "./CalendarDayEvents";
 
 class CalendarDaysList extends Component {
     constructor(props) {
@@ -16,7 +18,9 @@ class CalendarDaysList extends Component {
         this.onEvent = this.onEvent.bind(this);
         this.currentYear = this.getStoreState().calendar.currentYear;
         this.currentMonth = this.getStoreState().calendar.currentMonthIndex;
-        this.setSubscriber("CalendarDaysList", this.onEvent);
+        this.setReducer("calendarDaysList", reducer, initState);
+        this.setSubscriber("calendarDaysList", this.onEvent);
+        this.selectedDayCell = this.getStoreState().calendarDaysList.selectedDayCellId;
     }
 
     selectActive(element) {
@@ -24,22 +28,27 @@ class CalendarDaysList extends Component {
             ref.classList.remove("is-selected");         
         });
         element.classList.add('is-selected')
-
-
-
-        let cellRowWrap = element.parentNode.parentNode;
-        const timestamp = element.getAttribute('date-timestamp');
-
-        var el = document.getElementsByClassName('cal__dayEvents')[0];
-        if(el) el.remove();
-
-        let calendarDayEvents = createElement(new CalendarDayEvents({calendarData}))
-        let dayEvents = cellRowWrap.appendChild(calendarDayEvents);
-        dayEvents.style.height = '';
-        dayEvents.classList.add('is-visible')
+        this.dispatch(SetSelectedDayCell(element.getAttribute('date-timestamp')))
     }
-   
+
+    getDayCell() {
+        
+    }
+
     onEvent(state, action) {
+
+        if(action.type === SET_SELECTED_DAY_CELL) {
+            let dayTimestamp = this.getStoreState().calendarDaysList.selectedDayCellId;
+            let a = document.querySelector(`[date-timestamp="${dayTimestamp}"]`)
+            console.log(a)
+
+            let dayEventElement = createElement(new CalendarDayEvents())
+            dayEventElement.style.height = '';
+            dayEventElement.classList.add('is-visible')
+            this.refs.monthScreen.appendChild(dayEventElement);
+            
+        }
+
         if(action.type === NEXT_CALENDAR_MONTH) {
             this.renderMonthBody();
         }

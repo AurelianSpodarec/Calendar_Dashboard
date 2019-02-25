@@ -39,19 +39,19 @@ class CalendarBody extends Component {
                     if(i < new Date( this.currentYear, this.currentMonth, 1).getDay()) {
                         let day =  (previousMonthDays - firstDayWeekday + i + 1)
                         let month = (this.currentMonth - 1);
-                        let data = {title: "Hello"};
-                        output +=   `${createElement(new CalendarDayItem({ data, month, day })).outerHTML} `
+                        let dayData = model.getDayEvents(this.currentYear, month, day)
+                        output +=   `${createElement(new CalendarDayItem({ dayData, month, day })).outerHTML} `
                     } else if(currentMonthDays > daysInMonth) {
                         let day = nextMonthDays;
                         let month = this.currentMonth + 1;
-                        let data = {title: "Hello"};
-                        output +=   `${createElement(new CalendarDayItem({ data, month, day })).outerHTML} `
+                        let dayData = model.getDayEvents(this.currentYear, month, day)
+                        output +=   `${createElement(new CalendarDayItem({ dayData, month, day })).outerHTML} `
                         nextMonthDays++;
                     } else {
                         let day = currentMonthDays;
                         let month = this.currentMonth;
-                        let data = {title: "Hello"};
-                        output +=   `${createElement(new CalendarDayItem({ data, month, day })).outerHTML} `
+                        let dayData = model.getDayEvents(this.currentYear, month, day)
+                        output +=   `${createElement(new CalendarDayItem({ dayData, month, day })).outerHTML} `
                         currentMonthDays++;
                     }
                    
