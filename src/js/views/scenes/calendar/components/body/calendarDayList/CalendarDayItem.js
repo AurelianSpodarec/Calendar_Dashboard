@@ -1,4 +1,5 @@
 import Component from "#components/component";
+import * as model from "./model";
 
 class CalendarDayItem extends Component {
     constructor(props) {
@@ -7,8 +8,6 @@ class CalendarDayItem extends Component {
         this.currentMonth = this.getStoreState().calendar.currentMonthIndex;
         this.setSubscriber("CalendarDayItem", this.onEvent);
     }
-
- 
 
     renderEventDot(dayEvents) {
         if (dayEvents === undefined) return "";
@@ -19,32 +18,28 @@ class CalendarDayItem extends Component {
     }
 
     renderDayCell() {
-        let days = this.props.day;
 
-
-        // Change to curr cal month
-        // let date = new Date( this.currentYear, curMonth, days);
-        let date = new Date( this.currentYear, this.props.month, days);
+        // let this.propsdate = new Date( this.currentYear, this.props.month, days);
+        let date = new Date( this.currentYear, this.props.month, this.props.day);
         let timestamp = date.toDateString();
         let timestampISO = date.toISOString().substring(0, 10);
 
         let isToday = timestampISO === new Date().toISOString().substring(0, 10) ? "is-today" : "";
         let otherMonth = (this.props.month !== this.currentMonth) ? "is-other-month" : "";
+
+        const data =  model.getDayEvents(this.currentYear, this.props.month, this.props.day)
+        const eventCount = model.getDayEventsLenght(data) ? `<span class="cal__event-day-count">${model.getDayEventsLenght(data)}</span>` : "" ;
+        const hasEvents = model.getDayEventsLenght(data) ? "has-events" : "";
         
-        // const dayData =  this.getDayEvents(this.currentYear, curMonth, days)
-        // const eventCount = this.getDayEventsLenght(dayData) ? `<span class="cal__event-day-count">${this.getDayEventsLenght(dayData)}</span>` : "" ;
-        // const hasEvents = this.getDayEventsLenght(dayData) ? "has-events" : "";
-        // <!-- ${this.renderEventDot(dayData)} -->
         return /*html*/`
-            <div data-ref="cellDay" onclick="CalendarDaysList.selectActive(this)" class="cal__cell cal__cell-day ${isToday} ${otherMonth}" 
-                date-timestamp="${timestampISO}" >
+            <div data-ref="cellDay" onclick="CalendarDaysList.selectActive(this)" class="cal__cell cal__cell-day ${hasEvents} ${isToday} ${otherMonth}" 
+                date-timestamp=" " >
                 <div class="cal__cell-top">
-                     
-                    
-                    <span class="cal__day-number">${days}</span>
+                    ${eventCount}
+                    <span class="cal__day-number">${this.props.day}</span>
                 </div>
                 <div  class="cal__cell-bottom">
-                    
+                    ${this.renderEventDot(data)}
                 </div>
             </div> 
         `;
