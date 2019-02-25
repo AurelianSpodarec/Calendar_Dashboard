@@ -39,13 +39,25 @@ class CalendarDaysList extends Component {
 
         if(action.type === SET_SELECTED_DAY_CELL) {
             let dayTimestamp = this.getStoreState().calendarDaysList.selectedDayCellId;
-            let a = document.querySelector(`[date-timestamp="${dayTimestamp}"]`)
-            console.log(a)
+            let dayElement = document.querySelector(`[date-timestamp="${dayTimestamp}"]`)
 
-            let dayEventElement = createElement(new CalendarDayEvents())
-            dayEventElement.style.height = '';
-            dayEventElement.classList.add('is-visible')
-            this.refs.monthScreen.appendChild(dayEventElement);
+            // Remove THe Cell Row Dropdown From ALl
+            let allCellRowWrap = document.querySelectorAll(".cal__cell-row-wrap");
+            allCellRowWrap.forEach(element => {
+                let dayEventDropdown = element.childNodes[1];
+                if(dayEventDropdown !== undefined) {
+                    dayEventDropdown.remove()
+                }
+            })
+
+            // Creates the dropdown
+            let cellRowWrap = dayElement.parentNode.parentNode;
+        
+                let dayEventElement = createElement(new CalendarDayEvents())
+                dayEventElement.style.height = '';
+                dayEventElement.classList.add('is-visible')
+
+            cellRowWrap.appendChild(dayEventElement);
             
         }
 
