@@ -12,8 +12,7 @@ class CalNavigation extends Component {
         this.currentYear = this.getStoreState().calendar.currentYear;
         this.onEvent = this.onEvent.bind(this);
         window.addEventListener("keydown", this.keyListen.bind(this), false)
-        this.setSubscriber("CalNavigation", this.onEvent);
-         
+        this.setSubscriber("CalNavigation", this.onEvent);  
     }
 
     monthAsName(monthIndex) {
@@ -49,18 +48,14 @@ class CalNavigation extends Component {
         }
     }
 
-    keyListen = (event) => {
-        console.log(event)
-            let key = event.keyCode;
-            console.log(key)
-             if(key === 39) {
-                 console.log("click")
-                 this.nextCalendarMonth()
-             } else if(key === 37) {
-                 this.prevCalendarMonth()
-             } 
-             console.log("no")
-         
+    keyListen = event => {
+        let key = event.keyCode;
+        if(key === 39) {
+            console.log("click")
+            this.nextCalendarMonth()
+        } else if(key === 37) {
+            this.prevCalendarMonth()
+        } 
     }
 
     nextCalendarMonth(event) {
