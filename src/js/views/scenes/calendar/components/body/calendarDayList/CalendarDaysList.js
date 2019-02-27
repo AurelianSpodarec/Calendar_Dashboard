@@ -6,7 +6,10 @@ import {
     PREV_CALENDAR_MONTH,
     SET_CURRENT_DATE
  } from "./../../../calendarEvents";
-import { SetSelectedDayCell } from "./../calendarBodyActions";
+import {
+    SetSelectedDayCell,
+    SetDayEvents 
+} from "./../calendarBodyActions";
 import initState from "./../initState";
 import reducer from "./../calendarBodyReducer";
 import { SET_SELECTED_DAY_CELL } from "../calendarBodyEvents";
@@ -31,8 +34,21 @@ class CalendarDaysList extends Component {
         this.dispatch(SetSelectedDayCell(element.getAttribute('date-timestamp')))
     }
 
-    getDayCell() {
+    updateDayEvent() {
+        alert("Update day event");
         
+    }
+
+    deleteDayEvent = (e) => {
+        document.querySelector(`[event-id="${e}"]`).remove()
+        // console.log(model.getEventId(e));
+        // this.dispatch((model.deleteEventDay(this.getStoreState().calendarDaysList.day.events, `${e}`)));
+        // console.log(this.getStoreState().calendarDaysList.events)
+        // console.log((this.getStoreState().calendarDaysList.events, `${e}`))
+        let newEvents = model.deleteEventDay(this.getStoreState().calendarDaysList.events, `${e}`);
+        this.dispatch(newEvents)
+        // console.log(model.deleteEventDay(this.getStoreState().calendarDaysList.events, `${e}`))
+        // this.renderMonthBody();
     }
 
     onEvent(state, action) {
@@ -41,16 +57,17 @@ class CalendarDaysList extends Component {
             let dayTimestamp = this.getStoreState().calendarDaysList.selectedDayCellId;
             let dayElement = document.querySelector(`[date-timestamp="${dayTimestamp}"]`);
 
-          
             const cellDate = {
                 year: dayTimestamp.split("-")[0],
                 month: dayTimestamp.split("-")[1],
                 day:  dayTimestamp.split("-")[2],
             }
+            // Get the id and replace the object index with the id
+
             let cellDateEvents = model.getDayEvents(parseFloat(cellDate.year), parseFloat(cellDate.month - 1), parseFloat(cellDate.day));
-
-
-
+            console.log(cellDateEvents)
+            this.dispatch(SetDayEvents(cellDateEvents))
+            
 
 
             // Remove THe Cell Row Dropdown From ALl
@@ -68,7 +85,7 @@ class CalendarDaysList extends Component {
             
                 let dayEventElement = createElement(new CalendarDayEvents({ cellDateEvents }))
                 let dayEvent = cellRowWrap.appendChild(dayEventElement);
-                // Show START
+                // START Show Animate Dropdown 
                 dayEvent.style.display = 'block';
                 let dayEventHeight = dayEvent.scrollHeight;
                 dayEvent.style.display = '';
@@ -77,7 +94,7 @@ class CalendarDaysList extends Component {
                 window.setTimeout(function () {
                     dayEvent.style.height = '';
                 }, 250);
-                // Show END
+                // END Show Animate Dropdown
           
             
         }

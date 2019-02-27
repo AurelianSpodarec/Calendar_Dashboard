@@ -1,5 +1,6 @@
 import { 
-    SET_SELECTED_DAY_CELL,
+    SET_SELECTED_DAY_CELL, 
+    SET_DAY_EVENTS,
 } from "./calendarBodyEvents";
 
 /*
@@ -13,6 +14,14 @@ const SetSelectedDayCell = function(value) {
     };
 };
 
+const SetDayEvents = function(objects) {
+    return {
+        type: SET_DAY_EVENTS,
+        value: objects,
+    }
+}
+
 export {
-    SetSelectedDayCell
+    SetSelectedDayCell,
+    SetDayEvents
 }

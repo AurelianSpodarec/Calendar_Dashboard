@@ -1,6 +1,4 @@
 export default {
-    selectedDayCellId: "",
-    day: {
-        events: [],
-    }
+    selectedDayCellId: "",    
+    events: []
 }

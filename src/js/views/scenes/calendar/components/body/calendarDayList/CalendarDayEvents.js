@@ -59,12 +59,12 @@ class CalendarDaysList extends Component {
 
     }
  
-    renderDayEvent() {
-        let dayEventsData = this.props.cellDateEvents;
+    
 
-        return dayEventsData.map(function(event) {
+    renderDayEvent(events) {
+        return events.map(function(event, index) {
             return /*html*/`
-            <div class="cal__dayEvent">
+            <div class="cal__dayEvent" event-id="${event.id}">
                 <span class="cal__dayEvent-color"></span>
 
                 <div class="cal__dayEvent-title">
@@ -72,10 +72,10 @@ class CalendarDaysList extends Component {
                 </div>
 
                 <div class="cal__dayEvent-actions">
-                    <button onclick="{CalendarDaysList.editDayEvent()}" class="cal__dayEvent-action btn--clean">
+                    <button onclick="{CalendarDaysList.updateDayEvent()}" class="cal__dayEvent-action btn--clean">
                         <i class="cal__dayEvent-actionSvg far fa-edit"></i>
                     </button>
-                    <button onclick="{CalendarDaysList.deleteDayEvent()}" class="cal__dayEvent-action btn--clean">
+                    <button onclick="{CalendarDaysList.deleteDayEvent(${event.id})}" class="cal__dayEvent-action btn--clean">
                         <i class="cal__dayEvent-actionSvg far fa-trash-alt"></i>
                     </button>
                 </div>
@@ -87,7 +87,7 @@ class CalendarDaysList extends Component {
     render() {
         return /*html*/`
             <div class="cal__dayEvents">         
-                ${this.renderDayEvent()}
+                ${this.renderDayEvent(this.props.cellDateEvents)}
             </div>
         `;
     }
