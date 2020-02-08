@@ -15,7 +15,7 @@ class Footer extends Component {
                 <div class="footer__info">
                     <span class="footer__logo-container">
                         <i class="footer__logo-icon fas fa-fire"></i>
-                        <span class="footer__logo-text">Hobo</span>
+                        <span class="footer__logo-text">Calendar</span>
                     </span>
 
                     <ul class="footer__social-list">
