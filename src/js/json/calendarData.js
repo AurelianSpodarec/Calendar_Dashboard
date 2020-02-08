@@ -147,25 +147,73 @@ export default {
                     }
                 ]
             },
-            23: {
+            7: {
                 "events": [
                     {
                         "id": 1,
                         "time": "2019-01-11T22:05:09",
-                        "title": "Karate Tournament",
+                        "title": "Swimming",
                         "description": "Go do it"
                     },
                     {
                         "id": 2,
                         "time": "2019-01-11T22:05:09",
-                        "title": "Date",
+                        "title": "Cycling",
                         "description": "Romantic night on the beach"
+                    }
+                ]
+            },
+            14: {
+                "events": [
+                    {
+                        "id": 1,
+                        "time": "2019-01-11T22:05:09",
+                        "title": "Swimming",
+                        "description": "Go do it"
+                    },
+                    {
+                        "id": 2,
+                        "time": "2019-01-11T22:05:09",
+                        "title": "Cycling",
+                        "description": "Romantic night on the beach"
+                    },
+                    {
+                        "id": 2,
+                        "time": "2019-01-11T22:05:09",
+                        "title": "Interivew NASA",
+                        "description": "Going to be an astronout!"
+                    }
+                ]
+            },
+            16: {
+                "events": [
+                    {
+                        "id": 1,
+                        "time": "2019-01-11T22:05:09",
+                        "title": "Swimming",
+                        "description": "Go do it"
+                    },
+                    {
+                        "id": 2,
+                        "time": "2019-01-11T22:05:09",
+                        "title": "Cycling",
+                        "description": "Romantic night on the beach"
+                    }
+                ]
+            },
+            23: {
+                "events": [
+                    {
+                        "id": 1,
+                        "time": "2019-01-11T22:05:09",
+                        "title": "Gym",
+                        "description": "Triceps and Biceps workout"
                     }
                 ]
             }
         },
-        1: {
-            23: {
+         
+            25: {
                 "events": [
                     {
                         "id": 1,
@@ -180,7 +228,7 @@ export default {
                         "description": "Romantic night on the beach"
                     }
                 ]
-            }
+            
         }
     }
 }
