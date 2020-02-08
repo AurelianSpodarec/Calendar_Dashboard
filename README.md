@@ -1,4 +1,4 @@
-# [Hobo Dashboard](https://hobo-dashboard.netlify.com/#calendar)
+# [Calendar Dashboard](https://calendar-dashboard.netlify.com/#calendar)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -8,7 +8,7 @@ The webapp is created totally in Vanilla JavaScript - EVERY. SINGLE. THING!
 
 The dashboard will/includes many common featues such as a Dashboard, ToDo, Calendar and more to come.
  
-[Hobo Dashboard Demo](https://hobo-dashboard.netlify.com/#calendar)
+[Calendar Dashboard Demo](https://calendar-dashboard.netlify.com/#calendar)
 
 ## Motivation
 
