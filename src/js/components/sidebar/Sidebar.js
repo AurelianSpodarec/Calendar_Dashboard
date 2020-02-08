@@ -68,9 +68,9 @@ class Sidebar extends Component {
         <div class="sidebar__inner">
 
             <div class="sidebar__header">
-                <a class="sidebar__logo-container" href="#dashboard" title="Hobo">
+                <a class="sidebar__logo-container" href="#dashboard" title="Calendar">
                     <i class="sidebar__logo-icon fas fa-fire"></i>
-                    <span class="sidebar__logo-text">Hobo</span>
+                    <span class="sidebar__logo-text">Calendar</span>
                 </a>
                 <button class="sidebar__toggle-sidebar sidebar__toggle-sidebar-desktop" onclick="sidebar.sidebarToggle()">
                     <i class="fas fa-bars"></i>
