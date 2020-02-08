@@ -103,6 +103,7 @@ class Sidebar extends Component {
                         <span class="menu__text">Calendar</span>
                     </a>
                 </li>
+<!--
                 <li class="menu__heading-item">
                     <span class="menu__heading-title">Social Media</span>
                 </li>
@@ -120,7 +121,7 @@ class Sidebar extends Component {
                     </ul>
                     </div>
                 </li>
-                <!-- <li data-item-id="3" class="menu__item menu__has-dropdown is-expanded">
+                <li data-item-id="3" class="menu__item menu__has-dropdown is-expanded">
                     <span class="menu__link">
                         <i class="menu__icon fab fa-github"></i>
                         <span class="menu__text">GitHub</span>
@@ -133,7 +134,7 @@ class Sidebar extends Component {
                         <li data-item-id="6" class="menu__item"><a class="menu__link" href="#github/search-user"><span class="menu__text">Search User</span></a></li>
                     </ul>
                     </div>
-                </li> -->
+                </li>
                 <li data-item-id="7" class="menu__item menu__has-dropdown">
                     <span class="menu__link">
                         <i class="menu__icon fab fa-twitter"></i>
@@ -179,7 +180,7 @@ class Sidebar extends Component {
                         <li data-item-id="15" class="menu__item"><a class="menu__link" href=""><span class="menu__text">Theme</span></a></li>
                     </ul>
                     </div>
-                </li>
+                </li> -->
             </ul>
             </nav>
 
