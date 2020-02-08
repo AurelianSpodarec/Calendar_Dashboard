@@ -31,7 +31,7 @@ The webapp is deployed automatically to production mode on master. Any current d
 
 ## Installation
 
-1. Clone this repo `git clone https://github.com/AurelianSpodarec/Hobo_Dashboard.git`
+1. Clone this repo `git clone https://github.com/AurelianSpodarec/Calendar_Dashboard.git`
 2. Run `npm install`
 
 ### Using this repo
